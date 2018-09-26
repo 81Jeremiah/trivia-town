@@ -1,0 +1,2 @@
+class TrviaScore < ApplicationRecord
+end
