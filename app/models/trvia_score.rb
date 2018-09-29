@@ -1,2 +1,0 @@
-class TrviaScore < ApplicationRecord
-end
