@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :users, only: [:new, :create, :index, :show]
-
+  resources :quizzes
 
   get "/signin", to: 'sessions#new'
   post "/signin",  to:'sessions#create'
