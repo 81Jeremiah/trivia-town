@@ -1,26 +1,19 @@
 <%= form_for @quiz do |f| %>
 
-    <%= f.label "QUIZ NAME" %>
+    <%= f.label :name %>
     <%= f.text_field :name %>
 
 
-    <!-- <%= f.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
-    <%= f.fields_for :genres, quiz.genres.build do |genres_fields| %>
-    <%= categories_fields.text_field :name %> -->
-    <!-- <%= f.label :genre %>
-    <%= f.text_field :genre %> -->
+    <%= f.fields_for :questions do |q| %>
+        <%= q.label :question %>
+        <%= q.text_field :question %><br>
+    <% end %>
 
+    <%= f.fields_for :answers do |a| %>
+        <%= a.label :answer %>
+        <%= a.text_field :answer %><br>
+    <% end %>
 
-    <%= f.label :question_1 %>
-    <%= f.text_field :question_1 %>
-    <br>
-    <%= f.label :email %>
-    <%= f.text_field :password %>
-    <br>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    <br>
 
     <%= f.submit %>
-
-<% end %
+<% end %>
