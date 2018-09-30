@@ -1,7 +1,23 @@
 <% @quiz.questions.each do |q| %>
  <%= q.question %>
 <% end %>
-
+<% if @quiz.user_id == current_user.id %>
 <% @quiz.answers.each do |a| %>
 <%= a.answer %>
 <% end %>
+
+<% else %>
+Take the <%= @quiz.name %> Quiz!!
+
+    answer <% form_for do |f| %>
+
+            <% f.text_field :guess %>
+
+ <% end %>
+  <% end %>
+      <% f.submit %>
+<% end %>
+
+
+<%= button_to "take quiz", games_new_path(quiz_id: @quiz.id)  %>
+<h5><%= params[:message]  %></h5>
