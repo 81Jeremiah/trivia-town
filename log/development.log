@@ -265,3 +265,2355 @@ Migrating to CreateQuizScores (20180929203514)
   ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/quiz/new" for 127.0.0.1 at 2018-09-29 14:46:27 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/quiz/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 14:46:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/quizzes/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 14:48:50 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/application_controller.rb:24: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/application_controller.rb:24: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/quizzes_controller.rb:1:in `<main>'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 14:49:19 -0700
+Processing by QuizzesController#new as HTML
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'quiz_id' for Question.):
+  
+app/controllers/quizzes_controller.rb:8:in `new'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddQuizIdToQuestions (20180929215508)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "questions" ADD "quiz_id" integer[0m
+  ↳ db/migrate/20180929215508_add_quiz_id_to_questions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180929215508"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 14:55:50 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by QuizzesController#new as HTML
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `answer' for #<Quiz:0x007f9c74705f18>
+Did you mean?  answers
+               answers=):
+  
+app/controllers/quizzes_controller.rb:9:in `new'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 14:56:21 -0700
+Processing by QuizzesController#new as HTML
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'quiz_id' for Answer.):
+  
+app/controllers/quizzes_controller.rb:9:in `new'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddQuizIdToAnswers (20180929215700)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "answers" ADD "quiz_id" integer[0m
+  ↳ db/migrate/20180929215700_add_quiz_id_to_answers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180929215700"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 14:57:28 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by QuizzesController#new as HTML
+Redirected to http://localhost:3000/quizzes
+Completed 302 Found in 75ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2018-09-29 14:57:28 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:1
+  Rendered quizzes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 427ms (Views: 422.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 14:57:41 -0700
+Processing by QuizzesController#new as HTML
+Redirected to http://localhost:3000/quizzes
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2018-09-29 14:57:41 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:1
+  Rendered quizzes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 14:57:48 -0700
+Processing by QuizzesController#new as HTML
+Redirected to http://localhost:3000/quizzes
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2018-09-29 14:57:48 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:1
+  Rendered quizzes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 14:58:30 -0700
+Processing by QuizzesController#new as HTML
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"quizzes", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/quizzes_controller.rb:11:in `new'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:00:57 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/quizzes_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:01:24 -0700
+Processing by QuizzesController#new as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"quizzes", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/quizzes_controller.rb:11:in `new'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:02:28 -0700
+Processing by QuizzesController#new as HTML
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"quizzes", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/quizzes_controller.rb:11:in `new'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:05:05 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 2.3ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/new.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/new.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:06:12 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:08:36 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:14:02 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+...t(:name, :questions_attributes: [:questions], :answers_attri...
+...                               ^
+/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+...tions_attributes: [:questions], :answers_attributes: [:answe...
+...                               ^
+/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ')', expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:15:19 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+...t(:name, :questions_attributes: [:question], :answers_attrib...
+...                               ^
+/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+...stions_attributes: [:question], :answers_attributes: [:answe...
+...                               ^
+/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ')', expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:17:25 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+...t(:name, :questions_attributes: :question, :answers_attribut...
+...                               ^):
+  
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:18:02 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:20:13 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:22:20 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/new.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/new.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:22:37 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/new.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/new.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:22:54 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/new.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/new.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/new.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:23:58 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (50.4ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Genre):
+    4:     <%= f.text_field :name %>
+    5: 
+    6: 
+    7:     <!-- <%= f.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
+    8:     <%= f.fields_for :genres, quiz.genres.build do |genres_fields| %>
+    9:     <%= categories_fields.text_field :name %> -->
+   10:     <!-- <%= f.label :genre %>
+  
+app/views/quizzes/new.html.erb:7:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70331922069860'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331922069860'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:24:42 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Genre):
+    4:     <%= f.text_field :name %>
+    5: 
+    6: 
+    7:     <!-- <%= f.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
+    8:     <%= f.fields_for :genres, quiz.genres.build do |genres_fields| %>
+    9:     <%= categories_fields.text_field :name %> -->
+   10:     <!-- <%= f.label :genre %>
+  
+app/views/quizzes/new.html.erb:7:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70331981321300'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331981321300'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:25:24 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `question' for #<Quiz:0x007feeddb27c48>
+Did you mean?  questions
+               questions=):
+    16: 
+    17: 
+    18:     <!-- <%= f.label :question %>
+    19:     <%= f.text_field :question %>
+    20:     <br>
+    21:     <%= f.label :answer %>
+    22:     <%= f.text_field :answer %> -->
+  
+app/views/quizzes/new.html.erb:19:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70331949136700'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331949136700'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:25:58 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `questions' for #<Question:0x007feee1db9d90>
+Did you mean?  question
+               question=
+               question?
+               question_was):
+     6: 
+     7:     <%= f.fields_for :questions do |q| %>
+     8:         <%= q.label :question %>
+     9:         <%= q.text_field :questions %><br>
+    10:     <% end %>
+    11: 
+    12:     <%= f.fields_for :answers do |a| %>
+  
+app/views/quizzes/new.html.erb:9:in `block (2 levels) in _app_views_quizzes_new_html_erb__1185229591843324251_70331984053400'
+app/views/quizzes/new.html.erb:7:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70331984053400'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331984053400'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:27:34 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `question' for #<Quiz:0x007feee1b45500>
+Did you mean?  questions
+               questions=):
+    16: 
+    17: 
+    18:     <!-- <%= f.label :question %>
+    19:     <%= f.text_field :question %>
+    20:     <br>
+    21:     <%= f.label :answer %>
+    22:     <%= f.text_field :answer %> -->
+  
+app/views/quizzes/new.html.erb:19:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70331993474560'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331993474560'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to RemoveQuestionIdFromQuiz (20180929223501)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180929223501"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to RemoveAnswerIdFromQuiz (20180929223517)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180929223517"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:35:39 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `question' for #<Quiz:0x007feedda15300>
+Did you mean?  questions
+               questions=):
+    16: 
+    17: 
+    18:     <!-- <%= f.label :question %>
+    19:     <%= f.text_field :question %>
+    20:     <br>
+    21:     <%= f.label :answer %>
+    22:     <%= f.text_field :answer %> -->
+  
+app/views/quizzes/new.html.erb:19:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70331917121080'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331917121080'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:37:48 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `question' for #<Quiz:0x007feee2de9378>
+Did you mean?  questions
+               questions=):
+    16: 
+    17: 
+    18:     <!-- <%= f.label :question %>
+    19:     <%= f.text_field :question %>
+    20:     <br>
+    21:     <%= f.label :answer %>
+    22:     <%= f.text_field :answer %> -->
+  
+app/views/quizzes/new.html.erb:19:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70332002159000'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70332002159000'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to RemoveAnswerIdFromQuiz (20180929223517)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to RemoveAnswerIdFromQuiz (20180929223517)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to RemoveAnswerIdFromQuiz (20180929223517)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to RemoveAnswerIdFromQuizzes (20180929224938)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180929224938_remove_answer_id_from_quizzes.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquizzes" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "question_id" integer DEFAULT NULL, "answer_id" integer DEFAULT NULL, "quiz_score_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180929224938_remove_answer_id_from_quizzes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquizzes" ("id","name","question_id","answer_id","quiz_score_id","user_id","created_at","updated_at")
+                     SELECT "id","name","question_id","answer_id","quiz_score_id","user_id","created_at","updated_at" FROM "quizzes"[0m
+  ↳ db/migrate/20180929224938_remove_answer_id_from_quizzes.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "quizzes"[0m
+  ↳ db/migrate/20180929224938_remove_answer_id_from_quizzes.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "quizzes" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "question_id" integer DEFAULT NULL, "quiz_score_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180929224938_remove_answer_id_from_quizzes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quizzes" ("id","name","question_id","quiz_score_id","user_id","created_at","updated_at")
+                     SELECT "id","name","question_id","quiz_score_id","user_id","created_at","updated_at" FROM "aquizzes"[0m
+  ↳ db/migrate/20180929224938_remove_answer_id_from_quizzes.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aquizzes"[0m
+  ↳ db/migrate/20180929224938_remove_answer_id_from_quizzes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180929224938"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to RemoveQuestionIdFromQuizzes (20180929225003)
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquizzes" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "question_id" integer DEFAULT NULL, "quiz_score_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180929225003_remove_question_id_from_quizzes.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aquizzes" ("id","name","question_id","quiz_score_id","user_id","created_at","updated_at")
+                     SELECT "id","name","question_id","quiz_score_id","user_id","created_at","updated_at" FROM "quizzes"[0m
+  ↳ db/migrate/20180929225003_remove_question_id_from_quizzes.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "quizzes"[0m
+  ↳ db/migrate/20180929225003_remove_question_id_from_quizzes.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "quizzes" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "question_id" integer DEFAULT NULL, "quiz_score_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180929225003_remove_question_id_from_quizzes.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "quizzes" ("id","name","question_id","quiz_score_id","user_id","created_at","updated_at")
+                     SELECT "id","name","question_id","quiz_score_id","user_id","created_at","updated_at" FROM "aquizzes"[0m
+  ↳ db/migrate/20180929225003_remove_question_id_from_quizzes.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "aquizzes"[0m
+  ↳ db/migrate/20180929225003_remove_question_id_from_quizzes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180929225003"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to RemoveQuestionIdFromQuizzes (20180929225236)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180929225236_remove_question_id_from_quizzes.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquizzes" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "question_id" integer DEFAULT NULL, "quiz_score_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180929225236_remove_question_id_from_quizzes.rb:3
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "aquizzes" ("id","name","question_id","quiz_score_id","user_id","created_at","updated_at")
+                     SELECT "id","name","question_id","quiz_score_id","user_id","created_at","updated_at" FROM "quizzes"[0m
+  ↳ db/migrate/20180929225236_remove_question_id_from_quizzes.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "quizzes"[0m
+  ↳ db/migrate/20180929225236_remove_question_id_from_quizzes.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "quizzes" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "quiz_score_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180929225236_remove_question_id_from_quizzes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quizzes" ("id","name","quiz_score_id","user_id","created_at","updated_at")
+                     SELECT "id","name","quiz_score_id","user_id","created_at","updated_at" FROM "aquizzes"[0m
+  ↳ db/migrate/20180929225236_remove_question_id_from_quizzes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aquizzes"[0m
+  ↳ db/migrate/20180929225236_remove_question_id_from_quizzes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180929225236"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (25.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:53:37 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `question' for #<Quiz:0x007feeddeea600>
+Did you mean?  questions
+               questions=):
+    16: 
+    17: 
+    18:     <!-- <%= f.label :question %>
+    19:     <%= f.text_field :question %>
+    20:     <br>
+    21:     <%= f.label :answer %>
+    22:     <%= f.text_field :answer %> -->
+  
+app/views/quizzes/new.html.erb:19:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70331951656500'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331951656500'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 15:56:12 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `q' for #<Question:0x007feee0126660>):
+     6: 
+     7:     <%= f.fields_for :questions do |q| %>
+     8:         <%= q.label :q %>
+     9:         <%= q.text_field :q %><br>
+    10:     <% end %>
+    11: 
+    12:     <%= f.fields_for :answers do |a| %>
+  
+app/views/quizzes/new.html.erb:9:in `block (2 levels) in _app_views_quizzes_new_html_erb__1185229591843324251_70331991886920'
+app/views/quizzes/new.html.erb:7:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70331991886920'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331991886920'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:02:08 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `question' for #<Quiz:0x007feee2f42558>
+Did you mean?  questions
+               questions=):
+    16: 
+    17: 
+    18:     <!-- <%= f.label :question %>
+    19:     <%= f.text_field :question %>
+    20:     <br>
+    21:     <%= f.label :answer %>
+    22:     <%= f.text_field :answer %> -->
+  
+app/views/quizzes/new.html.erb:19:in `block in _app_views_quizzes_new_html_erb__1185229591843324251_70331982799060'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331982799060'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:02:33 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 49ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:04:25 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+....require(:quiz).permit(:name) , :questions_attributes: :ques...
+...                               ^):
+  
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+Started GET "/quizzes" for 127.0.0.1 at 2018-09-29 16:04:54 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+...(:name , :questions_attributes: :question, :answers_attribut...
+...                               ^):
+  
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:05:02 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+...(:name , :questions_attributes: :question, :answers_attribut...
+...                               ^):
+  
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:05:54 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+...(:name , :questions_attributes: [:question], :answers_attrib...
+...                               ^
+/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+...stions_attributes: [:question], :answers_attributes: [:answe...
+...                               ^
+/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:31: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ':', expecting ')'
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ',', expecting keyword_end
+app/controllers/quizzes_controller.rb:31: syntax error, unexpected ')', expecting keyword_end
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:07:19 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 89ms (Views: 51.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:07:31 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IuheGZDA8/mXgD33aq2X1UrU+Hbzk50ps7NcSIkf9D2tn2XEMnv4Qz5Mj2cDy0V25X+KGqIMeTOWgjpK+YgXsg==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}, "answers_attributes"=>{"0"=>{"answer"=>"no!"}}}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @quiz do |f| %>
+    2: 
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name %>
+  
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331984139980'
+app/controllers/quizzes_controller.rb:24:in `create'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:10:20 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:10:27 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKjziLSArniYLTg4qnnK4DTBFoEgNxftvzXnM9WlC50H38hVFjulwjHhiqjDHxhDm2pk7XGo8/eaBIExpTLoEg==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}, "answers_attributes"=>{"0"=>{"answer"=>"no!"}}}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @quiz do |f| %>
+    2: 
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name %>
+  
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331991989860'
+app/controllers/quizzes_controller.rb:24:in `create'
+Started GET "/quizzes" for 127.0.0.1 at 2018-09-29 16:12:15 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:1
+  Rendered quizzes/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 71ms (Views: 56.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:12:21 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 74ms (Views: 24.4ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:12:32 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MDEGmpY1j2zvlOq6IUjwePRWur0xFTqzqbnCrcD9Vh2/Rj1HNI6E1kZYWCpILiLbW/3I0WCK3qmMiKSvsGq1kg==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}, "answers_attributes"=>{"0"=>{"answer"=>"no!"}}}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @quiz do |f| %>
+    2: 
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name %>
+  
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331927668280'
+app/controllers/quizzes_controller.rb:24:in `create'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:13:25 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:13:29 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yttCy47DA3GAy3VsMku6SFX8W/rQgcXc5Rax1rioTv5FrHkWLHgIyykHx/xbLWjr+lcploEeIcbAJ9fUyD+tcQ==", "quiz"=>{"name"=>"test"}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  [1m[36mQuiz Create (0.7ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2018-09-29 23:13:29.612347"], ["updated_at", "2018-09-29 23:13:29.612347"]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"quizzes", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/quizzes_controller.rb:22:in `create'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:13:57 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 86ms (Views: 20.6ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:14:02 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BMtxBvXTBmx6MSEpfvizQD5UA4RR7ZWdrpNoiVsV1u2LvErbV2gN1tP9k7kXnmHjkf9x6ABycYeLog6LK4I1Yg==", "quiz"=>{"name"=>"test"}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  [1m[36mQuiz Create (0.6ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2018-09-29 23:14:02.668835"], ["updated_at", "2018-09-29 23:14:02.668835"]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+Redirected to http://localhost:3000/quizzes/2
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/quizzes/2" for 127.0.0.1 at 2018-09-29 16:14:02 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuiz Load (0.7ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  Rendered quizzes/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 41ms (Views: 24.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:14:25 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 54ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:14:36 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7BqU1Ysu9xl1CC/xQTlvc26LO5MLQkWwVtd7FR2B+J1jba8IKZX8o9zEnWEoX73QwSBJ/1rdoapz5h0XbRYbEg==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}, "answers_attributes"=>{"0"=>{"answer"=>"yes!"}}}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @quiz do |f| %>
+    2: 
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name %>
+  
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1185229591843324251_70331920320640'
+app/controllers/quizzes_controller.rb:24:in `create'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:21:19 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 107ms (Views: 40.8ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:21:27 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tektcoS0rQKfu+EITUP6xlZJCwp65lzGJHfaqRv89ew6nhavJg+muDZ3U5gkJShl+eJ5Zit5uNwBRryra2sWYw==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}, "answers_attributes"=>{"0"=>{"answer"=>"no!"}}}, "commit"=>"Create Quiz"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x007feedf427e50>
+Did you mean?  pretty_print
+               pretty_inspect
+               pretty_print_cycle
+               try):
+  
+app/controllers/quizzes_controller.rb:20:in `create'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:22:29 -0700
+  
+LoadError (cannot load such file -- pry):
+  
+app/controllers/quizzes_controller.rb:1:in `<main>'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:23:03 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 88ms (Views: 48.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:23:11 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uvr9hfuJk8HWyPTbINjNRtG7IpJdhXeQ6/KFlAZw+/U1jcZYWTKYe38ERktJvh/lfhBQ/gwak4rOw+OWducYeg==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}, "answers_attributes"=>{"0"=>{"answer"=>"no!"}}}, "commit"=>"Create Quiz"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x007feedf34b428>
+Did you mean?  pretty_print
+               pretty_inspect
+               pretty_print_cycle
+               try):
+  
+app/controllers/quizzes_controller.rb:20:in `create'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:23:54 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 389ms (Views: 302.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:24:01 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AmJawkdE2K7ijBmrV86wy8DawhxVoc/pYn2p5rbkbNmNFWEf5f/TFEtAqzs+qGJob3GwcAQ+K/NHTM/kxnOPVg==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}, "answers_attributes"=>{"0"=>{"answer"=>"no!"}}}, "commit"=>"Create Quiz"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (pry):3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):7
+  [1m[36mQuiz Create (0.9ms)[0m  [1m[32mINSERT INTO "quizzes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-09-29 23:27:11.296291"], ["updated_at", "2018-09-29 23:27:11.296291"]]
+  ↳ (pry):7
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):7
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 3]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:21
+Redirected to http://localhost:3000/quizzes/3
+Completed 302 Found in 269787ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/quizzes/3" for 127.0.0.1 at 2018-09-29 16:28:31 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  Rendered quizzes/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 67ms (Views: 59.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:29:06 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 423ms (Views: 323.9ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:29:13 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nAXvgPpx6VEnpfNvz8P40N2ggzNeJAwUxRNBk681ItYTctRdWMri645pQf+mpSpzcgvxXw+76A7gIieR36LBWQ==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}, "answers_attributes"=>{"0"=>{"answer"=>"no!"}}}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):5
+  [1m[36mQuiz Create (0.9ms)[0m  [1m[32mINSERT INTO "quizzes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-09-29 23:32:50.929136"], ["updated_at", "2018-09-29 23:32:50.929136"]]
+  ↳ (pry):5
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:21
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 326886ms (ActiveRecord: 4.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @quiz do |f| %>
+    2: 
+    3:     <%= f.label :name %>
+    4:     <%= f.text_field :name %>
+  
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb___155566556450628393_70216465237280'
+app/controllers/quizzes_controller.rb:25:in `create'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:37:11 -0700
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:37:21 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 93ms (Views: 41.6ms | ActiveRecord: 2.4ms)
+
+
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 73ms (Views: 24.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:38:00 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qWN25ga3FSvpZth4ZA9Jv+oioqqXyFJ+yzNee/ZAlwMmFE07pAwekUCqaugNaZscRYnQxsZXtmTuAjh5htd0jA==", "quiz"=>{"name"=>"test"}, "commit"=>"Create Quiz"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[36mQuiz Create (0.8ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2018-09-29 23:38:00.125036"], ["updated_at", "2018-09-29 23:38:00.125036"]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+Redirected to http://localhost:3000/quizzes/5
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/quizzes/5" for 127.0.0.1 at 2018-09-29 16:38:00 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  Rendered quizzes/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 49ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:38:05 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 47ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mQuiz Load (0.6ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuiz Create (0.7ms)[0m  [1m[32mINSERT INTO "quizzes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-09-29 23:43:26.715776"], ["updated_at", "2018-09-29 23:43:26.715776"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:51:40 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:51:45 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+BSq3waCbRTlBHpTGWY6R1nHEiwkpLBxWwrxUcYQbCJ3Y5ECpDlmrkzIyMNwAOjk9mxgQHU7VGt+O5dTtoePrQ==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[36mQuiz Create (0.5ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2018-09-29 23:51:45.485402"], ["updated_at", "2018-09-29 23:51:45.485402"]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[36mQuestion Create (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("question", "created_at", "updated_at", "quiz_id") VALUES (?, ?, ?, ?)[0m  [["question", "will this work?"], ["created_at", "2018-09-29 23:51:45.488983"], ["updated_at", "2018-09-29 23:51:45.488983"], ["quiz_id", 7]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+Redirected to http://localhost:3000/quizzes/7
+Completed 302 Found in 16ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/quizzes/7" for 127.0.0.1 at 2018-09-29 16:51:45 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  Rendered quizzes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 16:52:46 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 65ms (Views: 20.0ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 16:52:54 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NyL8CK5rE1Y51C9LKcbIciAP8BxfMttce4BGRd9sInC4VcfVDNAY7JAYndtAoBrRj6SCcA6tP0ZesSBHr/vB/w==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"will this work?"}}, "answers_attributes"=>{"0"=>{"answer"=>"maybe"}}}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[36mQuiz Create (0.4ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2018-09-29 23:52:54.801199"], ["updated_at", "2018-09-29 23:52:54.801199"]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("question", "created_at", "updated_at", "quiz_id") VALUES (?, ?, ?, ?)[0m  [["question", "will this work?"], ["created_at", "2018-09-29 23:52:54.803046"], ["updated_at", "2018-09-29 23:52:54.803046"], ["quiz_id", 8]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "created_at", "updated_at", "quiz_id") VALUES (?, ?, ?, ?)[0m  [["answer", "maybe"], ["created_at", "2018-09-29 23:52:54.805111"], ["updated_at", "2018-09-29 23:52:54.805111"], ["quiz_id", 8]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+Redirected to http://localhost:3000/quizzes/8
+Completed 302 Found in 17ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 16:52:54 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  Rendered quizzes/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 48ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 16:55:42 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 27ms (Views: 22.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 16:55:54 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddGuessToGames (20180930021535)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "games" ADD "guess" text[0m
+  ↳ db/migrate/20180930021535_add_guess_to_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180930021535"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuiz Create (0.8ms)[0m  [1m[32mINSERT INTO "quizzes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-09-30 02:26:17.255755"], ["updated_at", "2018-09-30 02:26:17.255755"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["password_digest", "$2a$10$MewpibfsNvI6rlG1AIzjdeOaC4n.5IvPz8tpTbz7LZam62wn19p0W"], ["created_at", "2018-09-30 02:34:30.664674"], ["updated_at", "2018-09-30 02:34:30.664674"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["quiz_id", 3], ["created_at", "2018-09-30 02:35:34.901420"], ["updated_at", "2018-09-30 02:35:34.901420"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 20:21:02 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 127ms (Views: 93.5ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:21:05 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/games/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:26:38 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/games/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 20:26:45 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (181.6ms)
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `games_new_path' for #<#<Class:0x007fb919f24098>:0x007fb91ba7a810>
+Did you mean?  games_path):
+     7: <% end %>
+     8: 
+     9: 
+    10: <%= button_to "take quiz", games_new_path(quiz_id: @quiz.id)  %>
+    11: <h5><%= params[:message]  %></h5>
+  
+app/views/quizzes/show.html.erb:10:in `_app_views_quizzes_show_html_erb___2249461724231239279_70216504826100'
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 20:27:18 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.7ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 62ms (Views: 54.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/games?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:27:20 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for GamesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/games?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:30:55 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/games"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 20:32:49 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 86ms (Views: 64.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:32:50 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"UMwnFd/8b1GiQhpmKAkCT+aUa5pC/qZm5aUuQpPKx/DfuxzIfUdk6wuOqPZBb9DsST8Z9hNhQnzAlEhA410kfw==", "quiz_id"=>"8"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/models/game.rb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/game.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/games_controller.rb:4:in `new'
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 20:33:31 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 54ms (Views: 37.8ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:33:32 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"dEfrOpp5nIw5VEocuyPvKWPdIxA1cqvdXfeqkfPoFX77MNDnOMKXNpCY+IzSRT2KzHZRfGTtT8d4xsyTg3/28Q==", "quiz_id"=>"8"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/games_controller.rb:6:in `new'
+Started GET "/users/new" for 127.0.0.1 at 2018-09-29 20:34:48 -0700
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-09-29 20:38:08 -0700
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2018-09-29 20:38:28 -0700
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 20:39:05 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 55ms (Views: 24.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-09-29 20:39:16 -0700
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2018-09-29 20:39:49 -0700
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/user" for 127.0.0.1 at 2018-09-29 20:43:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2018-09-29 20:43:55 -0700
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-09-29 20:49:12 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/users_controller.rb:29: syntax error, unexpected ':', expecting ')'
+    params.require(:user).permit(:name, :email :password)
+                                                ^):
+  
+app/controllers/users_controller.rb:29: syntax error, unexpected ':', expecting ')'
+Started GET "/users/new" for 127.0.0.1 at 2018-09-29 20:49:38 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 80ms (Views: 56.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-29 20:49:52 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BNpW2duIZwo67EbnXDPi1m9TbA4VxPL7jRQU/EydJMyLrW0EeTNssJMg9Hc1VTB1wPgeYkRbFuGoJXL+PArHQw==", "user"=>{"username"=>"jeremiah", "email"=>"jeremiahlutes@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: :username
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jeremiahlutes@gmail.com"], ["password_digest", "$2a$10$7ws7bHCmIW0eaxFA/.topuRVwiIMaFxa6MckfhWQInP41hMFOHgbO"], ["created_at", "2018-09-30 03:49:52.230657"], ["updated_at", "2018-09-30 03:49:52.230657"]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 81ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-09-29 20:49:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 406 Not Acceptable in 158ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/2" for 127.0.0.1 at 2018-09-29 20:50:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 27.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-09-29 20:50:55 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 57ms (Views: 20.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-09-29 20:51:17 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L5S1uXF2HSo9HOj2HuQNtlvxsgTs0rdbrsoi0UWK2kWg445k080WkJTQWmZ3gt8V9FrAaL1NU0GL+0TTNR05yg==", "quiz"=>{"name"=>"test", "questions_attributes"=>{"0"=>{"question"=>"r u cool"}}, "answers_attributes"=>{"0"=>{"answer"=>"yes"}}}, "commit"=>"Create Quiz"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[36mQuiz Create (0.4ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2018-09-30 03:51:17.782241"], ["updated_at", "2018-09-30 03:51:17.782241"]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[36mQuestion Create (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("question", "created_at", "updated_at", "quiz_id") VALUES (?, ?, ?, ?)[0m  [["question", "r u cool"], ["created_at", "2018-09-30 03:51:17.784254"], ["updated_at", "2018-09-30 03:51:17.784254"], ["quiz_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[36mAnswer Create (0.4ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "created_at", "updated_at", "quiz_id") VALUES (?, ?, ?, ?)[0m  [["answer", "yes"], ["created_at", "2018-09-30 03:51:17.787962"], ["updated_at", "2018-09-30 03:51:17.787962"], ["quiz_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:19
+Redirected to http://localhost:3000/quizzes/10
+Completed 302 Found in 18ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/quizzes/10" for 127.0.0.1 at 2018-09-29 20:51:17 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQuiz Load (0.9ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 10]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 10]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 32.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/games/new?quiz_id=10" for 127.0.0.1 at 2018-09-29 20:51:22 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"VEFv632HunpMV24M/oiXoQQM7jPoFW9C7SRBh+MlSrXbNlQ23zyxwOWb3JyX7kUCq6ecX7mKi1jIFSeFk7KpOg==", "quiz_id"=>"10"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `user_id' for #<User:0x007fb9182d15d0>):
+  
+app/controllers/games_controller.rb:6:in `new'
+Started PUT "/__web_console/repl_sessions/bf5964312fe81de517ed08a5cd3b06f6" for 127.0.0.1 at 2018-09-29 20:51:58 -0700
+Started PUT "/__web_console/repl_sessions/bf5964312fe81de517ed08a5cd3b06f6" for 127.0.0.1 at 2018-09-29 20:52:00 -0700
+Started PUT "/__web_console/repl_sessions/bf5964312fe81de517ed08a5cd3b06f6" for 127.0.0.1 at 2018-09-29 20:52:11 -0700
+Started PUT "/__web_console/repl_sessions/bf5964312fe81de517ed08a5cd3b06f6" for 127.0.0.1 at 2018-09-29 20:52:39 -0700
+Started PUT "/__web_console/repl_sessions/bf5964312fe81de517ed08a5cd3b06f6" for 127.0.0.1 at 2018-09-29 20:52:41 -0700
+Started PUT "/__web_console/repl_sessions/bf5964312fe81de517ed08a5cd3b06f6" for 127.0.0.1 at 2018-09-29 20:52:46 -0700
+Started PUT "/__web_console/repl_sessions/bf5964312fe81de517ed08a5cd3b06f6" for 127.0.0.1 at 2018-09-29 20:52:51 -0700
+Started PUT "/__web_console/repl_sessions/bf5964312fe81de517ed08a5cd3b06f6" for 127.0.0.1 at 2018-09-29 20:52:51 -0700
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 20:53:34 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 86ms (Views: 65.4ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:53:36 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"9DxdMunExdEl9WW03NQGhxBE/gZjoBScFYFoNebvY/B7S2bvS3/Oa4w51yS1stQkv++MajI/8IYwsA43lniAfw==", "quiz_id"=>"8"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `user_id=' for #<Class:0x007fb91a6b41a0>):
+  
+app/controllers/games_controller.rb:6:in `new'
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 20:55:48 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 71ms (Views: 51.1ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:55:50 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"dCggtdWhtdR5V04R9MWIWonlXME4rZY69Q5raMxfPc/7Xxtodxq+btCb/IGdo1r5Jk4urWkyciDQPw1qvMjeQA==", "quiz_id"=>"8"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `quiz_id' for nil:NilClass):
+  
+app/controllers/games_controller.rb:7:in `new'
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:56:40 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"dCggtdWhtdR5V04R9MWIWonlXME4rZY69Q5raMxfPc/7Xxtodxq+btCb/IGdo1r5Jk4urWkyciDQPw1qvMjeQA==", "quiz_id"=>"8"}
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 2.6ms)
+
+
+  
+NoMethodError (undefined method `quiz_id' for #<Quiz:0x007fb91a9f1a70>):
+  
+app/controllers/games_controller.rb:7:in `new'
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:57:14 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"dCggtdWhtdR5V04R9MWIWonlXME4rZY69Q5raMxfPc/7Xxtodxq+btCb/IGdo1r5Jk4urWkyciDQPw1qvMjeQA==", "quiz_id"=>"8"}
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.6ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["quiz_id", 8], ["created_at", "2018-09-30 03:57:14.641253"], ["updated_at", "2018-09-30 03:57:14.641253"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:9
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 5.3ms)
+
+
+  
+NoMethodError (undefined method `guess' for nil:NilClass):
+  
+app/models/game.rb:6:in `play_game'
+app/controllers/games_controller.rb:10:in `new'
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:58:48 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"dCggtdWhtdR5V04R9MWIWonlXME4rZY69Q5raMxfPc/7Xxtodxq+btCb/IGdo1r5Jk4urWkyciDQPw1qvMjeQA==", "quiz_id"=>"8"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (2.3ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["quiz_id", 8], ["created_at", "2018-09-30 03:58:48.575712"], ["updated_at", "2018-09-30 03:58:48.575712"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:9
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 7.3ms)
+
+
+  
+NoMethodError (undefined method `play_game' for #<Class:0x007fb9198ee778>):
+  
+app/controllers/games_controller.rb:10:in `new'
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 20:59:21 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 105ms (Views: 79.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:59:23 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"IBgFzs/8vr9nUqQC6/pPxsJJVmA/Wc9szY0oQApbkEWvbz4TbUe1Bc6eFpKCnJ1lbeIkDG7GK3bovE5Cesxzyg==", "quiz_id"=>"8"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["quiz_id", 8], ["created_at", "2018-09-30 03:59:24.028384"], ["updated_at", "2018-09-30 03:59:24.028384"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:9
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 4.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/models/game.rb:5:in `play_game'
+app/controllers/games_controller.rb:10:in `new'
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 20:59:42 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 90ms (Views: 61.5ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 20:59:43 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"QlZpr3p74RYfBHWkl3gUjsUNVEx4OAE9XzSZGwTVOfzNIVJy2MDqrLbIxzT+HsYtaqYmICmn5Sd6Bf8ZdELacw==", "quiz_id"=>"8"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/models/game.rb:5: formal argument cannot be an instance variable
+  def self.play_game(@game)
+                          ^):
+  
+app/models/game.rb:5: formal argument cannot be an instance variable
+app/controllers/games_controller.rb:4:in `new'
+Started GET "/quizzes/8" for 127.0.0.1 at 2018-09-29 21:00:18 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:14
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:1
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."quiz_id" = ?[0m  [["quiz_id", 8]]
+  ↳ app/views/quizzes/show.html.erb:5
+  Rendered quizzes/show.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 62ms (Views: 44.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/games/new?quiz_id=8" for 127.0.0.1 at 2018-09-29 21:00:19 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"authenticity_token"=>"qRc34vYMvPvZwJKsYhgSwWOapEQzDeFa1R8VH7+MAycmYAw/VLe3QXAMIDwLfsBizDHWKGKSBUDwLnMdzxvgqA==", "quiz_id"=>"8"}
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[36mGame Create (0.6ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["quiz_id", 8], ["created_at", "2018-09-30 04:00:19.503902"], ["updated_at", "2018-09-30 04:00:19.503902"]]
+  ↳ app/controllers/games_controller.rb:9
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:9
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 4.6ms)
+
+
+  
+NoMethodError (undefined method `answer' for #<Quiz:0x007fb912e06708>
+Did you mean?  answers
+               answers=):
+  
+app/models/game.rb:6:in `play_game'
+app/controllers/games_controller.rb:10:in `new'
