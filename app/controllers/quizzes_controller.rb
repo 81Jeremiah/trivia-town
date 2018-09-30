@@ -5,24 +5,26 @@ class QuizzesController < ApplicationController
 
   def new
   	@quiz = Quiz.new
+    @quiz.questions.build
+    @quiz.answers.build
+
   end
+
+  def show
+    @quiz = Quiz.find_by(id: params[:id])
+  end
+
 
   def create
-  	quiz = Quiz.new(quiz_params)
-    if quiz.save
- 
-      redirect_to quizzes_path
-    else
-      render :new
-    end
+  	quiz = Quiz.create(quiz_params)
+
+      redirect_to quiz_path(quiz)
+  
   end
-
-
-
 
   private
 
   def quiz_params
-    params.require(:user).permit(:questions, :answers)
+    params.require(:quiz).permit(:name , questions_attributes: [:question], answers_attributes: [:answer])
   end
 end
