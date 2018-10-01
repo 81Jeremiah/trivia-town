@@ -1,6 +1,7 @@
 class Quiz < ApplicationRecord
 	has_many :questions
 	has_many :answers   #, through: :questions
+	has_many :games
 	accepts_nested_attributes_for :answers
 	accepts_nested_attributes_for :questions
 
