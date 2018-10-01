@@ -12,6 +12,7 @@ class QuizzesController < ApplicationController
 
   def show
     @quiz = Quiz.find_by(id: params[:id])
+    @game = Game.new
   end
 
 
@@ -19,7 +20,7 @@ class QuizzesController < ApplicationController
   	quiz = Quiz.create(quiz_params)
 
       redirect_to quiz_path(quiz)
-  
+
   end
 
   private
