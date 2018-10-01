@@ -1,6 +1,10 @@
 class QuizzesController < ApplicationController
   def index
-  	@quizzes = Quiz.all
+  	
+    if params[:user_id]
+      @quizzes = User.find(pamas[:user_id]).quizzes
+    else
+    @quizzes = Quiz.all
   end
 
   def new
