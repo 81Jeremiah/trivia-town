@@ -1,23 +1,29 @@
+<h5><%= params[:message]  %></h5>
+
+
 <% @quiz.questions.each do |q| %>
  <%= q.question %>
 <% end %>
-<% if @quiz.user_id == current_user.id %>
-<% @quiz.answers.each do |a| %>
-<%= a.answer %>
+
+
+  <% if @quiz.user_id == current_user.id %>
+      <% @quiz.answers.each do |a| %>
+        <%= a.answer %>
+       <% end %>
+
+   <% else %>
+     Take the <%= @quiz.name %> Quiz!!
+
+     answer <%= form_tag games_new_path do %>
+
+            <%= text_field_tag :guess %>
+            <%=  hidden_field_tag "quiz_id", "#{@quiz.id}" %>
+             <%= submit_tag "Submit" %>
+
+           <% end %>
+       <% end %>
+
+Leader Board <% Game.top_5quiz_scores.each do |game| %>
+<%= game.score %>
+<%= game.user.username %>
 <% end %>
-
-<% else %>
-Take the <%= @quiz.name %> Quiz!!
-
-    answer <% form_for do |f| %>
-
-            <% f.text_field :guess %>
-
- <% end %>
-  <% end %>
-      <% f.submit %>
-<% end %>
-
-
-<%= button_to "take quiz", games_new_path(quiz_id: @quiz.id)  %>
-<h5><%= params[:message]  %></h5>
