@@ -3,9 +3,19 @@ class Game < ApplicationRecord
   belongs_to :quiz
 
   def self.play_game(game)
-    if game.guess == game.quiz.answer
+    #binding.pry
+
+    if game.guess == game.quiz.answers[0].answer
+      game.score += 1
+      game.save
+      binding.pry
       "congratulaions"
+    else "sorry chump"
     end
+  end
+
+  def self.top_5quiz_scores
+    order(score: :desc).limit(5)
   end
   # def play_game
   #    user.answer_array.each do |answer|
