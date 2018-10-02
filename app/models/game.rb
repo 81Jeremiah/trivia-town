@@ -1,10 +1,18 @@
 class Game < ApplicationRecord
   belongs_to :user
   belongs_to :quiz
+  accepts_nested_attributes_for :guesses
+  
 
   def self.play_game(game)
     #binding.pry
-
+    answers = game.quiz.answers.collect{a.answer}
+    answer_guesses = games.guess
+    correct_answers = answers & answer_guesses
+    game_score = correct_answers.count
+    game.score += correct_answers.count
+    game score = game.quiz.answers.count do |answer|
+      answer = game
     if game.guess == game.quiz.answers[0].answer
       game.score += 1
       game.save

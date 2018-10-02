@@ -13,7 +13,42 @@
         <%= a.label :answer %>
         <%= a.text_field :answer %><br>
     <% end %>
+     <%= f.fields_for :questions do |q| %>
+        <%= q.label :question %>
+        <%= q.text_field :question %><br>
+    <% end %>
 
+    <%= f.fields_for :answers do |a| %>
+        <%= a.label :answer %>
+        <%= a.text_field :answer %><br>
+    <% end %>
+     <%= f.fields_for :questions do |q| %>
+        <%= q.label :question %>
+        <%= q.text_field :question %><br>
+    <% end %>
+
+    <%= f.fields_for :answers do |a| %>
+        <%= a.label :answer %>
+        <%= a.text_field :answer %><br>
+    <% end %>
+     <%= f.fields_for :questions do |q| %>
+        <%= q.label :question %>
+        <%= q.text_field :question %><br>
+    <% end %>
+
+    <%= f.fields_for :answers do |a| %>
+        <%= a.label :answer %>
+        <%= a.text_field :answer %><br>
+    <% end %>
+     <%= f.fields_for :questions do |q| %>
+        <%= q.label :question %>
+        <%= q.text_field :question %><br>
+    <% end %>
+
+    <%= f.fields_for :answers do |a| %>
+        <%= a.label :answer %>
+        <%= a.text_field :answer %><br>
+    <% end %>
 
     <%= f.submit %>
 <% end %>
