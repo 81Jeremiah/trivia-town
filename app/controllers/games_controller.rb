@@ -4,7 +4,7 @@ class GamesController < ApplicationController
       @game = Game.new
       @quiz = Quiz.find_by(id: params[:quiz_id])
       #binding.pry
-      @game.update(user_id:current_user.id, quiz_id: @quiz.id, guess: params[:guess])
+      @game.update(user_id:current_user.id, quiz_id: @quiz.id, guess: params[][:guess])
       # @game.user_id = current_user.id
       # @game.quiz_id = @quiz.id
       # @game.guess = params[:guess]
