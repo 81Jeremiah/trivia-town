@@ -14,4 +14,8 @@ class Quiz < ApplicationRecord
 	# def answer=(answer)
 	#   self.answer = Answer.create(answer: answer)
 	# end
+
+  def correct_answers
+  	self.question_and_answers.collect{|qa| qa.answer}
+  end
 end
