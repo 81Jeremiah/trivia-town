@@ -6,24 +6,17 @@ class Game < ApplicationRecord
 
   def self.play_game(game)
     #binding.pry
-    answers = game.quiz.answers.collect{a.answer}
-    answer_guesses = games.guess
-    correct_answers = answers & answer_guesses
-    game_score = correct_answers.count
-    game.score += correct_answers.count
-    game score = game.quiz.answers.count do |answer|
-      answer = game
-    if game.guess == game.quiz.answers[0].answer
-      game.score += 1
-      game.save
-      binding.pry
-      "congratulaions"
-    else "sorry chump"
-    end
+    game_score = (quiz.correct_answers & user_guesses).count
+    game.score = game_score
+    game.save
   end
-end
+  
   def self.top_5quiz_scores
     order(score: :desc).limit(5)
+  end
+
+  def user_guesses
+    self.guesses.collect{|g| g.guess}
   end
   # def play_game
   #    user.answer_array.each do |answer|
