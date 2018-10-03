@@ -1,21 +1,36 @@
 <h5><%= params[:message]  %></h5>
 
-
+<% if @quiz.id == current_user.id %>
 <% @quiz.question_and_answers.each do |qa| %>
   <ol>
     <li>Question: <%= qa.question %>
         <br>
-      <% if @quiz.id == current_user.id %>
         Answer: <%= qa.answer %></li>
     </ol>
+    <% end %>
+      
       <% else %>
        <%= form_tag games_new_path do %>
+
        <ol>
+        <% @quiz.question_and_answers.each do |qa| %>
          <li>Question: <%= qa.question %>
              <br>
+          <%= fields_for :guesses , @game.guess do |guess| %>
          <%= label_tag :guess %>
          <%= text_area_tag :guess %>
-         <%=  hidden_field_tag "quiz_id", "#{@quiz.id}" %>
+           <% end %>
+        <% end %>
+      <% submit_tag "Play" %>
+        <!--  <%=  #hidden_field_tag "quiz_id", "#{@quiz.id}" %> -->
+
+
+   <!--  <%= f.fields_for :question_and_answers do |q| %>
+        <%= q.label :question %>
+        <%= q.text_field :question %><br>
+        <%= q.label :answer %>
+        <%= q.text_field :answer %><br>
+    <% end %>
 
           <% end %>
 
@@ -23,7 +38,7 @@
 
 <% end %>
 
-<%= submit_tag "Play Game!" %>
+<%= #submit_tag "Play Game!" %> -->
 
 
 
