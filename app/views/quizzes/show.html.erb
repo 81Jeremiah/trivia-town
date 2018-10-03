@@ -1,27 +1,32 @@
 <h5><%= params[:message]  %></h5>
 
 
-<% @quiz.questions.each do |q| %>
- <%= q.question %>
+<% @quiz.question_and_answers.each do |qa| %>
+  <ol>
+    <li>Question: <%= qa.question %>
+        <br>
+      <% if @quiz.id == current_user.id %>
+        Answer: <%= qa.answer %></li>
+    </ol>
+      <% else %>
+       <%= form_tag games_new_path do %>
+       <ol>
+         <li>Question: <%= qa.question %>
+             <br>
+         <%= label_tag :guess %>
+         <%= text_area_tag :guess %>
+         <%=  hidden_field_tag "quiz_id", "#{@quiz.id}" %>
+
+          <% end %>
+
+      <% end %>
+
 <% end %>
 
+<%= submit_tag "Play Game!" %>
 
-  <% if @quiz.user_id == current_user.id %>
-      <% @quiz.answers.each do |a| %>
-        <%= a.answer %>
-       <% end %>
 
-   <% else %>
-     Take the <%= @quiz.name %> Quiz!!
 
-     answer <%= form_tag games_new_path do %>
-
-            <%= text_field_tag :guess %>
-            <%=  hidden_field_tag "quiz_id", "#{@quiz.id}" %>
-             <%= submit_tag "Submit" %>
-
-           <% end %>
-       <% end %>
 
 Leader Board <% Game.top_5quiz_scores.each do |game| %>
 <%= game.score %>
