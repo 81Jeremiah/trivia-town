@@ -1,8 +1,8 @@
 class Game < ApplicationRecord
   belongs_to :user
   belongs_to :quiz
-  accepts_nested_attributes_for :guesses
-  
+  #accepts_nested_attributes_for :guesses
+
 
   def self.play_game(game)
     #binding.pry
@@ -21,7 +21,7 @@ class Game < ApplicationRecord
     else "sorry chump"
     end
   end
-
+end
   def self.top_5quiz_scores
     order(score: :desc).limit(5)
   end
