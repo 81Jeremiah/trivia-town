@@ -1,16 +1,15 @@
 class QuizzesController < ApplicationController
   def index
-  	
+
     if params[:user_id]
       @quizzes = User.find(pamas[:user_id]).quizzes
     else
     @quizzes = Quiz.all
   end
-
+end
   def new
   	@quiz = Quiz.new
-    5.times{@quiz.questions.build}
-    5.times{@quiz.answers.build}
+    5.times{@quiz.question_and_answers.build}
 
   end
 
@@ -30,6 +29,6 @@ class QuizzesController < ApplicationController
   private
 
   def quiz_params
-    params.require(:quiz).permit(:name , questions_attributes: [:question], answers_attributes: [:answer])
+    params.require(:quiz).permit(:name, question_and_answers_attributes: [:question, :answer])
   end
 end
