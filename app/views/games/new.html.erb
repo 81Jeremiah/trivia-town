@@ -1,0 +1,11 @@
+<%= form_for @game do |f| %>
+
+         <%= f.fields_for :guesses do |g| %>
+           <%= g.label :guess %>
+           <%= g.text_field :guess %>
+        <% end %>
+
+
+
+<%= f.submit  %>
+<% end %>
