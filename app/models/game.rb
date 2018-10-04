@@ -1,7 +1,8 @@
 class Game < ApplicationRecord
   belongs_to :user
   belongs_to :quiz
-  #accepts_nested_attributes_for :guesses
+  has_many :guesses
+  accepts_nested_attributes_for :guesses
 
 
   def self.play_game(game)
@@ -10,7 +11,7 @@ class Game < ApplicationRecord
     game.score = game_score
     game.save
   end
-  
+
   def self.top_5quiz_scores
     order(score: :desc).limit(5)
   end
