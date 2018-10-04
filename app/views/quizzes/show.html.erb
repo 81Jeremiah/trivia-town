@@ -8,39 +8,21 @@
         Answer: <%= qa.answer %></li>
     </ol>
     <% end %>
-      
-      <% else %>
-       <%= form_tag games_new_path do %>
 
-       <ol>
-        <% @quiz.question_and_answers.each do |qa| %>
-         <li>Question: <%= qa.question %>
-             <br>
-          <%= fields_for :guesses , @game.guess do |guess| %>
-         <%= label_tag :guess %>
-         <%= text_area_tag :guess %>
-           <% end %>
-        <% end %>
-      <% submit_tag "Play" %>
-        <!--  <%=  #hidden_field_tag "quiz_id", "#{@quiz.id}" %> -->
+  <% else %>
+      <%= form_for @game do |f| %>
+
+               <%= f.fields_for :guesses do |g| %>
+                 <%= g.label :guess %>
+                 <%= g.text_field :guess %>
+              <% end %>
 
 
-   <!--  <%= f.fields_for :question_and_answers do |q| %>
-        <%= q.label :question %>
-        <%= q.text_field :question %><br>
-        <%= q.label :answer %>
-        <%= q.text_field :answer %><br>
-    <% end %>
+        <%=  hidden_field_tag "quiz_id", "#{@quiz.id}" %>
 
-          <% end %>
-
+      <%= f.submit  %>
       <% end %>
-
-<% end %>
-
-<%= #submit_tag "Play Game!" %> -->
-
-
+   <% end %>
 
 
 Leader Board <% Game.top_5quiz_scores.each do |game| %>
