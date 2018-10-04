@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/signin", to: 'sessions#new'
   post "/signin",  to:'sessions#create'
   delete "logout",  to: 'sessions#destroy'
-  post "/games/new" => 'games#new'
+  #post "/games/new" => 'games#new'
 
   resources :users, only: [:show] do
     # nested resource for quizes
