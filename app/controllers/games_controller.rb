@@ -2,6 +2,7 @@ class GamesController < ApplicationController
 
     def new
       @game = Game.new
+      @quiz = Quiz.find_by(id: params[:id])
       #@quiz = Quiz.find_by(id: params[:quiz_id])
       5.times{@game.guesses.build}
       #binding.pry

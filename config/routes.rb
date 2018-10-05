@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :index]
   resources :quizzes
   resources :games
-
+  resources :quizzes, only: [:new] do 
+  	reources :game, only: [:new]
+  end
   get "/signin", to: 'sessions#new'
   post "/signin",  to:'sessions#create'
   delete "logout",  to: 'sessions#destroy'
