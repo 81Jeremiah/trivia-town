@@ -1,10 +1,13 @@
+Take the <%= @quiz.name %> Quiz!!
+
 <% questions = ["1?", "2?", "3", "4?", "5?"] %>
 
 
 
 <%= form_for @game do |f| %>
-<% questions.each do |question| %>
-<%= question %>
+<%= f.hidden_field :quiz_id %>
+<% @quiz.question_and_answers.each do |qa| %>
+Question: <%= qa.question %>
          <%= f.fields_for :guesses do |g| %>
            <%= g.label :guess, "Answer" %>
            <%= g.text_field :guess %>
