@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :index]
   resources :quizzes
   resources :games
-  resources :quizzes, only: [:new] do 
+  resources :quizzes, only: [:show] do 
   	reources :game, only: [:new]
   end
   get "/signin", to: 'sessions#new'
