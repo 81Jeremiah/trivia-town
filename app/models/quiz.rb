@@ -18,4 +18,6 @@ class Quiz < ApplicationRecord
   def correct_answers
   	self.question_and_answers.collect{|qa| qa.answer}
   end
+
+  
 end
