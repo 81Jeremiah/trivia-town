@@ -5723,3 +5723,74 @@ Processing by GamesController#new as HTML
 Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/games/new" for 127.0.0.1 at 2018-10-04 20:55:30 -0700
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1199.4ms)
+Completed 500 Internal Server Error in 1371ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fb4658132d0>:0x007fb45e9ebaa0>):
+    12: 
+    13: 
+    14: <% end %>
+    15: <%= f.submit  %>
+    16: <% end %>
+  
+app/views/games/new.html.erb:15:in `block in _app_views_games_new_html_erb___4530974591673885247_70206334386940'
+app/views/games/new.html.erb:4:in `each'
+app/views/games/new.html.erb:4:in `_app_views_games_new_html_erb___4530974591673885247_70206334386940'
+Started GET "/games/new" for 127.0.0.1 at 2018-10-04 20:56:49 -0700
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 108ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/games/new" for 127.0.0.1 at 2018-10-04 20:57:47 -0700
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 96ms (Views: 60.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/games/new" for 127.0.0.1 at 2018-10-04 20:59:10 -0700
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 150ms (Views: 130.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2018-10-04 21:00:21 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A50gVkAT+AG5/IncUTVc3mCwo1pxnTRTMVO5VKmo5OWM6huL4qjzuxAwO0w4U459zxvRNiAC0EkUYt9W2T8Hag==", "game"=>{"guesses_attributes"=>{"0"=>{"guess"=>"oh"}, "1"=>{"guess"=>"boy"}, "2"=>{"guess"=>"this"}, "3"=>{"guess"=>"might"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+No template found for GamesController#create, rendering head :no_content
+Completed 204 No Content in 188ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/games/new" for 127.0.0.1 at 2018-10-04 21:01:52 -0700
+Processing by GamesController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"games", "action"=>"new"} permitted: false>):
+  
+app/controllers/games_controller.rb:4:in `new'
+Started GET "/games/new" for 127.0.0.1 at 2018-10-04 21:02:10 -0700
+Processing by GamesController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"controller"=>"games", "action"=>"new"} permitted: false>):
+  
+app/controllers/games_controller.rb:4:in `new'
+Started GET "/games/new" for 127.0.0.1 at 2018-10-04 21:02:26 -0700
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 143ms (Views: 50.9ms | ActiveRecord: 4.1ms)
+
+
