@@ -1,8 +1,8 @@
 class GamesController < ApplicationController
 
     def new
-      @game = Game.new
-      @quiz = Quiz.find_by(id: params[:id])
+      @game = Game.new(quiz_id: params[:quiz_id])
+      @quiz = Quiz.find_by(id: params[:quiz_id])
       #@quiz = Quiz.find_by(id: params[:quiz_id])
       @game.guesses.build
       #binding.pry
@@ -19,7 +19,7 @@ class GamesController < ApplicationController
     end
 
     def create
-      #game = Game.create
+      game = Game.create(quiz_id: params[question_and_answers_attributes: [:guess])
     end
 end
 #    private
