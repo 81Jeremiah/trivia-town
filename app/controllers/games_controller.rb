@@ -3,7 +3,7 @@ class GamesController < ApplicationController
     def new
       @game = Game.new
       #@quiz = Quiz.find_by(id: params[:quiz_id])
-      5.times{@game.guesses.build}
+      @game.guesses.build
       #binding.pry
       #@game.update(user_id: current_user.id, quiz_id: @quiz.id, guess: params[][:guess])
       # @game.user_id = current_user.id

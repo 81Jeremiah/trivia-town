@@ -1,11 +1,15 @@
-<%= form_for @game do |f| %>
+<% questions = ["1?", "2?", "3", "4?", "5?"] %>
 
+
+
+<%= form_for @game do |f| %>
+<% questions.each do |question| %>
+<%= question %>
          <%= f.fields_for :guesses do |g| %>
-           <%= g.label :guess %>
+           <%= g.label :guess, "Answer" %>
            <%= g.text_field :guess %>
         <% end %>
 
-
-
-<%= f.submit  %>
+<% end %>
+<%= f.submit %>
 <% end %>
