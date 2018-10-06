@@ -5794,3 +5794,480 @@ Processing by GamesController#new as HTML
 Completed 200 OK in 143ms (Views: 50.9ms | ActiveRecord: 4.1ms)
 
 
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 09:44:32 -0700
+  
+NoMethodError (undefined method `reources' for #<ActionDispatch::Routing::Mapper:0x007fb465f1c1f8>
+Did you mean?  resources
+               resource):
+  
+config/routes.rb:6:in `block (2 levels) in <main>'
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 09:45:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/quizzes/11/games/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 09:45:44 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/games_controller.rb:22: syntax error, unexpected ')', expecting ']'):
+  
+app/controllers/games_controller.rb:22: syntax error, unexpected ')', expecting ']'
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 09:46:56 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/games_controller.rb:22: syntax error, unexpected ')', expecting ']'):
+  
+app/controllers/games_controller.rb:22: syntax error, unexpected ')', expecting ']'
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 09:47:30 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"quiz_id"=>"11"}
+  [1m[36mQuiz Load (1.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  Rendering games/new.html.erb within layouts/application
+  [1m[36mQuestionAndAnswer Load (1.4ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/views/games/new.html.erb:9
+  Rendered games/new.html.erb within layouts/application (76.5ms)
+Completed 200 OK in 345ms (Views: 134.3ms | ActiveRecord: 11.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2018-10-06 09:49:45 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHkgp6iAI0F7c9UTe6xEndbsOS6W1OTE42481VdaVGm3Dht6Cjso+9K/Z4MSypY+eUdLQsdLAN7GX1rXJ8235g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"apples"}, "2"=>{"guess"=>"bannasa"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 5.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'question_and_answers_attributes' for Game.):
+  
+app/controllers/games_controller.rb:22:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 09:50:27 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHkgp6iAI0F7c9UTe6xEndbsOS6W1OTE42481VdaVGm3Dht6Cjso+9K/Z4MSypY+eUdLQsdLAN7GX1rXJ8235g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"apples"}, "2"=>{"guess"=>"bannasa"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.1ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'quesses_attributes' for Game.):
+  
+app/controllers/games_controller.rb:22:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 09:51:50 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHkgp6iAI0F7c9UTe6xEndbsOS6W1OTE42481VdaVGm3Dht6Cjso+9K/Z4MSypY+eUdLQsdLAN7GX1rXJ8235g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"apples"}, "2"=>{"guess"=>"bannasa"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 4.9ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'quesses_attribute' for Game.):
+  
+app/controllers/games_controller.rb:22:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 09:52:19 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHkgp6iAI0F7c9UTe6xEndbsOS6W1OTE42481VdaVGm3Dht6Cjso+9K/Z4MSypY+eUdLQsdLAN7GX1rXJ8235g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"apples"}, "2"=>{"guess"=>"bannasa"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 230318ms (ActiveRecord: 2.9ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'quesses_attributes' for Game.):
+  
+app/controllers/games_controller.rb:24:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 09:57:20 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHkgp6iAI0F7c9UTe6xEndbsOS6W1OTE42481VdaVGm3Dht6Cjso+9K/Z4MSypY+eUdLQsdLAN7GX1rXJ8235g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"apples"}, "2"=>{"guess"=>"bannasa"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.7ms)
+
+
+  
+ArgumentError (Hash or Array expected for attribute `guesses`, got NilClass (nil)):
+  
+app/controllers/games_controller.rb:23:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 09:58:23 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHkgp6iAI0F7c9UTe6xEndbsOS6W1OTE42481VdaVGm3Dht6Cjso+9K/Z4MSypY+eUdLQsdLAN7GX1rXJ8235g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"apples"}, "2"=>{"guess"=>"bannasa"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 81233ms (ActiveRecord: 1.5ms)
+
+
+  
+ArgumentError (Hash or Array expected for attribute `guesses`, got NilClass (nil)):
+  
+app/controllers/games_controller.rb:24:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 09:59:53 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHkgp6iAI0F7c9UTe6xEndbsOS6W1OTE42481VdaVGm3Dht6Cjso+9K/Z4MSypY+eUdLQsdLAN7GX1rXJ8235g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"apples"}, "2"=>{"guess"=>"bannasa"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 11220ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionController::UnfilteredParameters (unable to convert unpermitted parameters to hash):
+  
+app/controllers/games_controller.rb:24:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 10:00:10 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHkgp6iAI0F7c9UTe6xEndbsOS6W1OTE42481VdaVGm3Dht6Cjso+9K/Z4MSypY+eUdLQsdLAN7GX1rXJ8235g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"apples"}, "2"=>{"guess"=>"bannasa"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionController::UnfilteredParameters (unable to convert unpermitted parameters to hash):
+  
+app/controllers/games_controller.rb:24:in `create'
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 10:05:01 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"quiz_id"=>"11"}
+  [1m[36mQuiz Load (1.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  Rendering games/new.html.erb within layouts/application
+  [1m[36mQuestionAndAnswer Load (1.4ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/views/games/new.html.erb:9
+  Rendered games/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 122ms (Views: 67.8ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2018-10-06 10:05:12 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hqZFeHrKtjIfUZ7pdby4gdORApUPx7QuFUlGzPPKJXUJ0X6l2HG9iLadLHkc2moifDpw+V5YUDQweCDOg13G+g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"oh"}, "1"=>{"guess"=>"boy"}, "2"=>{"guess"=>"this"}, "3"=>{"guess"=>"might"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+Completed 500 Internal Server Error in 603ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `game_params' for #<GamesController:0x007fb463f300b0>
+Did you mean?  game_path):
+  
+app/controllers/games_controller.rb:24:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 10:05:41 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hqZFeHrKtjIfUZ7pdby4gdORApUPx7QuFUlGzPPKJXUJ0X6l2HG9iLadLHkc2moifDpw+V5YUDQweCDOg13G+g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"oh"}, "1"=>{"guess"=>"boy"}, "2"=>{"guess"=>"this"}, "3"=>{"guess"=>"might"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.9ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/games_controller.rb:24:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 10:06:04 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hqZFeHrKtjIfUZ7pdby4gdORApUPx7QuFUlGzPPKJXUJ0X6l2HG9iLadLHkc2moifDpw+V5YUDQweCDOg13G+g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"oh"}, "1"=>{"guess"=>"boy"}, "2"=>{"guess"=>"this"}, "3"=>{"guess"=>"might"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[35m (1.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/games_controller.rb:24
+No template found for GamesController#create, rendering head :no_content
+Completed 204 No Content in 89888ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 10:08:40 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by GamesController#new as HTML
+  Parameters: {"quiz_id"=>"11"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  Rendering games/new.html.erb within layouts/application
+  [1m[36mQuestionAndAnswer Load (0.2ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/views/games/new.html.erb:9
+  Rendered games/new.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 420ms (Views: 311.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2018-10-06 10:08:51 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QFOaDQ7G42gC8orZTWOOc7k+KC3Ad7mvdeQpsyWmdZPPJKHQrH3o0qs+OEkkBVzQFpVaQZHoXbVQ1U+xVTGWHA==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"oh"}, "1"=>{"guess"=>"boy"}, "2"=>{"guess"=>"this"}, "3"=>{"guess"=>"might"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGame Create (2.5ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["quiz_id", 11], ["created_at", "2018-10-06 17:08:51.141477"], ["updated_at", "2018-10-06 17:08:51.141477"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (1.0ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "oh"], ["game_id", 21], ["created_at", "2018-10-06 17:08:51.146510"], ["updated_at", "2018-10-06 17:08:51.146510"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "boy"], ["game_id", 21], ["created_at", "2018-10-06 17:08:51.149240"], ["updated_at", "2018-10-06 17:08:51.149240"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "this"], ["game_id", 21], ["created_at", "2018-10-06 17:08:51.150963"], ["updated_at", "2018-10-06 17:08:51.150963"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "might"], ["game_id", 21], ["created_at", "2018-10-06 17:08:51.152802"], ["updated_at", "2018-10-06 17:08:51.152802"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "work"], ["game_id", 21], ["created_at", "2018-10-06 17:08:51.154878"], ["updated_at", "2018-10-06 17:08:51.154878"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Load (0.6ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 21]]
+  ↳ app/controllers/games_controller.rb:27
+  [1m[36mQuestionAndAnswer Load (6.2ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/models/quiz.rb:19
+No template found for GamesController#create, rendering head :no_content
+Completed 204 No Content in 911152ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 10:24:47 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"quiz_id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  Rendering games/new.html.erb within layouts/application
+  [1m[36mQuestionAndAnswer Load (0.6ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/views/games/new.html.erb:9
+  Rendered games/new.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 186ms (Views: 112.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2018-10-06 10:25:14 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYKNHc3CYpo79meoS6pIHmhM73heMRthShmGE2N3wtwu9bbAb3lpIJI61TgizJq9x+edFA+u/3tvKOARE+AhUw==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"good"}, "2"=>{"guess"=>"bannana"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"pies"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mCACHE User Load (44.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGame Create (2.2ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["quiz_id", 11], ["created_at", "2018-10-06 17:25:14.883832"], ["updated_at", "2018-10-06 17:25:14.883832"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "red"], ["game_id", 22], ["created_at", "2018-10-06 17:25:14.888404"], ["updated_at", "2018-10-06 17:25:14.888404"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "good"], ["game_id", 22], ["created_at", "2018-10-06 17:25:14.890348"], ["updated_at", "2018-10-06 17:25:14.890348"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "bannana"], ["game_id", 22], ["created_at", "2018-10-06 17:25:14.891833"], ["updated_at", "2018-10-06 17:25:14.891833"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "johnny"], ["game_id", 22], ["created_at", "2018-10-06 17:25:14.893310"], ["updated_at", "2018-10-06 17:25:14.893310"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "pies"], ["game_id", 22], ["created_at", "2018-10-06 17:25:14.894586"], ["updated_at", "2018-10-06 17:25:14.894586"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuestionAndAnswer Load (0.2ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/models/quiz.rb:19
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 22]]
+  ↳ app/models/game.rb:20
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 51.4ms)
+
+
+  
+NameError (undefined local variable or method `game' for #<Game:0x007fc2d14aaee8>):
+  
+app/models/game.rb:11:in `play_game'
+app/controllers/games_controller.rb:27:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 10:25:59 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYKNHc3CYpo79meoS6pIHmhM73heMRthShmGE2N3wtwu9bbAb3lpIJI61TgizJq9x+edFA+u/3tvKOARE+AhUw==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"good"}, "2"=>{"guess"=>"bannana"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"pies"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["quiz_id", 11], ["created_at", "2018-10-06 17:26:00.038996"], ["updated_at", "2018-10-06 17:26:00.038996"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.3ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "red"], ["game_id", 23], ["created_at", "2018-10-06 17:26:00.041080"], ["updated_at", "2018-10-06 17:26:00.041080"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "good"], ["game_id", 23], ["created_at", "2018-10-06 17:26:00.049839"], ["updated_at", "2018-10-06 17:26:00.049839"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.4ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "bannana"], ["game_id", 23], ["created_at", "2018-10-06 17:26:00.058554"], ["updated_at", "2018-10-06 17:26:00.058554"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "johnny"], ["game_id", 23], ["created_at", "2018-10-06 17:26:00.066025"], ["updated_at", "2018-10-06 17:26:00.066025"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "pies"], ["game_id", 23], ["created_at", "2018-10-06 17:26:00.071848"], ["updated_at", "2018-10-06 17:26:00.071848"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuestionAndAnswer Load (0.3ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/models/quiz.rb:19
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 23]]
+  ↳ app/models/game.rb:20
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 8.4ms)
+
+
+  
+NameError (undefined local variable or method `game' for #<Game:0x007fc2d7d44b48>):
+  
+app/models/game.rb:12:in `play_game'
+app/controllers/games_controller.rb:27:in `create'
+Started POST "/games" for 127.0.0.1 at 2018-10-06 10:26:29 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYKNHc3CYpo79meoS6pIHmhM73heMRthShmGE2N3wtwu9bbAb3lpIJI61TgizJq9x+edFA+u/3tvKOARE+AhUw==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"good"}, "2"=>{"guess"=>"bannana"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"pies"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["quiz_id", 11], ["created_at", "2018-10-06 17:26:29.712314"], ["updated_at", "2018-10-06 17:26:29.712314"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.4ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "red"], ["game_id", 24], ["created_at", "2018-10-06 17:26:29.728217"], ["updated_at", "2018-10-06 17:26:29.728217"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "good"], ["game_id", 24], ["created_at", "2018-10-06 17:26:29.731746"], ["updated_at", "2018-10-06 17:26:29.731746"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "bannana"], ["game_id", 24], ["created_at", "2018-10-06 17:26:29.734152"], ["updated_at", "2018-10-06 17:26:29.734152"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "johnny"], ["game_id", 24], ["created_at", "2018-10-06 17:26:29.736174"], ["updated_at", "2018-10-06 17:26:29.736174"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.3ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "pies"], ["game_id", 24], ["created_at", "2018-10-06 17:26:29.738195"], ["updated_at", "2018-10-06 17:26:29.738195"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuestionAndAnswer Load (0.2ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/models/quiz.rb:19
+  [1m[36mGuess Load (1.3ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 24]]
+  ↳ app/models/game.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/game.rb:12
+  [1m[36mGame Update (6.3ms)[0m  [1m[33mUPDATE "games" SET "updated_at" = ?, "score" = ? WHERE "games"."id" = ?[0m  [["updated_at", "2018-10-06 17:26:29.793830"], ["score", 3], ["id", 24]]
+  ↳ app/models/game.rb:12
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/game.rb:12
+No template found for GamesController#create, rendering head :no_content
+Completed 204 No Content in 2962732ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 11:16:56 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"quiz_id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  Rendering games/new.html.erb within layouts/application
+  [1m[36mQuestionAndAnswer Load (0.2ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/views/games/new.html.erb:9
+  Rendered games/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 185ms (Views: 81.8ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2018-10-06 11:17:29 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QVKaNFUNO6NHzeOdgc8be8pOKPVkMELuWIauW7GNKnXOJaHp97YwGe4BUQ3oqcnYZeVamTWvpvR9t8hZwRrJ+g==", "game"=>{"quiz_id"=>"11", "guesses_attributes"=>{"0"=>{"guess"=>"red"}, "1"=>{"guess"=>"good"}, "2"=>{"guess"=>"bananas"}, "3"=>{"guess"=>"johnny"}, "4"=>{"guess"=>"pies"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["quiz_id", 11], ["created_at", "2018-10-06 18:17:29.828614"], ["updated_at", "2018-10-06 18:17:29.828614"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.3ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "red"], ["game_id", 25], ["created_at", "2018-10-06 18:17:29.831480"], ["updated_at", "2018-10-06 18:17:29.831480"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "good"], ["game_id", 25], ["created_at", "2018-10-06 18:17:29.833894"], ["updated_at", "2018-10-06 18:17:29.833894"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "bananas"], ["game_id", 25], ["created_at", "2018-10-06 18:17:29.835403"], ["updated_at", "2018-10-06 18:17:29.835403"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "johnny"], ["game_id", 25], ["created_at", "2018-10-06 18:17:29.838237"], ["updated_at", "2018-10-06 18:17:29.838237"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "pies"], ["game_id", 25], ["created_at", "2018-10-06 18:17:29.840017"], ["updated_at", "2018-10-06 18:17:29.840017"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuestionAndAnswer Load (0.3ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/models/quiz.rb:19
+  [1m[36mGuess Load (0.7ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 25]]
+  ↳ app/models/game.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/game.rb:12
+  [1m[36mGame Update (1.7ms)[0m  [1m[33mUPDATE "games" SET "updated_at" = ?, "score" = ? WHERE "games"."id" = ?[0m  [["updated_at", "2018-10-06 18:17:29.885573"], ["score", 3], ["id", 25]]
+  ↳ app/models/game.rb:12
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/game.rb:12
+Redirected to http://localhost:3000/games/25
+Completed 302 Found in 167ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/games/25" for 127.0.0.1 at 2018-10-06 11:17:29 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:33
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 75ms (Views: 62.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/25" for 127.0.0.1 at 2018-10-06 11:29:49 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:33
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"games", :id=>"25"}, missing required keys: [:quiz_id]):
+    1: Congratulations you scored <%= @game.score %>
+    2: Would you like to play this quiz <%= link_to "again", new_quiz_game_path %>
+  
+app/views/games/show.html.erb:2:in `_app_views_games_show_html_erb___3121346082320624678_70237411900440'
+Started GET "/games/25" for 127.0.0.1 at 2018-10-06 11:30:24 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:33
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 62ms (Views: 56.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 11:30:29 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"quiz_id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  Rendering games/new.html.erb within layouts/application
+  [1m[36mQuestionAndAnswer Load (1.3ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/views/games/new.html.erb:9
+  Rendered games/new.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 65ms (Views: 53.5ms | ActiveRecord: 1.5ms)
+
+
