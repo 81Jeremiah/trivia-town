@@ -5,11 +5,11 @@ class Game < ApplicationRecord
   accepts_nested_attributes_for :guesses
 
 
-  def self.play_game(game)
+  def play_game
     #binding.pry
     game_score = (quiz.correct_answers & user_guesses).count
-    game.score = game_score
-    game.save
+    self.score = game_score
+    self.save
   end
 
   def self.top_5quiz_scores

@@ -19,9 +19,20 @@ class GamesController < ApplicationController
     end
 
     def create
-      game = Game.create(quiz_id: params[question_and_answers_attributes: [:guess])
+    #  binding.pry
+
+      @game = Game.new(game_params)
+      @game.user_id = current_user.id
+      @game.save
+      @game.play_game
+      redirect_to @game
+      #binding.pry
     end
-end
+
+    def show
+      @game = Game.find_by(id: params[:id])
+    end
+
 #    private
 #
 #    def game_params
@@ -39,7 +50,7 @@ end
 # end
 #
 # private
-#
-# def quiz_params
-#   params.require(:game).permit(:name, question_and_answers_attributes: [:question, :answer])
-# end
+def game_params
+  params.require(:game).permit(:quiz_id, guesses_attributes: [:guess])
+end
+end
