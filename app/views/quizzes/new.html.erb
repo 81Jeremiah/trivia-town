@@ -1,18 +1,3 @@
-<%= form_for @quiz do |f| %>
+<h1>Create a new Quiz!</h1>
 
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <br>
-
-
-    <%= f.fields_for :question_and_answers do |q| %>
-        <%= q.label :question %>
-        <%= q.text_field :question %><br>
-        <%= q.label :answer %>
-        <%= q.text_field :answer %><br>
-    <% end %>
-
-
-
-    <%= f.submit %>
-<% end %>
+<%= render 'form' %>
