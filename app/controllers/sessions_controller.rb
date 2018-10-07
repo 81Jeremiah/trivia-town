@@ -8,10 +8,10 @@ class SessionsController < ApplicationController
         u.username = auth_hash['info']['name']
         u.email = auth_hash['info']['email']
         u.image = auth_hash['info']['image']
+        u.password = SecureRandom.hex
       end
-      binding.pry
     session[:user_id] = @user.id
-    redirect_to root_path
+    redirect_to @user
   else
     @user = User.find_by(username: params[:user][:username])
 
