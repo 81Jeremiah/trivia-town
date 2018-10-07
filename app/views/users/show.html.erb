@@ -1,0 +1,9 @@
+Welcome <%= @user.username %>
+Would you like to <%= link_to "Create a new quiz", new_quiz_path %>
+or would you like to <%= link_to "Take a quiz", quizzes_path %>
+Game scores
+<% user = @user %>
+<% Game.user_scores(user).each do |game| %>
+<%= game.quiz.name %>
+<%= game.score %>
+<% end %>
