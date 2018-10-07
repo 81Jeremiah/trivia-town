@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_04_040204) do
+ActiveRecord::Schema.define(version: 2018_10_07_003750) do
 
   create_table "answers", force: :cascade do |t|
     t.text "answer"
@@ -18,6 +18,12 @@ ActiveRecord::Schema.define(version: 2018_10_04_040204) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quiz_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "games", force: :cascade do |t|
@@ -51,6 +57,15 @@ ActiveRecord::Schema.define(version: 2018_10_04_040204) do
     t.integer "quiz_id"
   end
 
+  create_table "quiz_categories", force: :cascade do |t|
+    t.integer "quiz_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_quiz_categories_on_category_id"
+    t.index ["quiz_id"], name: "index_quiz_categories_on_quiz_id"
+  end
+
   create_table "quiz_scores", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -73,6 +88,8 @@ ActiveRecord::Schema.define(version: 2018_10_04_040204) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "uid"
+    t.string "image"
   end
 
 end
