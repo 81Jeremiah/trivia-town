@@ -1,6 +1,5 @@
-<h5><%= params[:message]  %></h5>
 
-<% if @quiz.id == current_user.id %>
+<% if @quiz.user_id == current_user.id %>
 <% @quiz.question_and_answers.each do |qa| %>
   <ol>
     <li>Question: <%= qa.question %>
@@ -8,24 +7,24 @@
         Answer: <%= qa.answer %></li>
     </ol>
     <% end %>
-
-  <% else %>
-      <%= form_for @game do |f| %>
-
-               <%= f.fields_for :guesses do |g| %>
-                 <%= g.label :guess %>
-                 <%= g.text_field :guess %>
-              <% end %>
+  <%= link_to "Edit Quiz", edit_quiz_path %>
+ <% end %>
 
 
-        <%=  hidden_field_tag "quiz_id", "#{@quiz.id}" %>
-
-      <%= f.submit  %>
-      <% end %>
-   <% end %>
+ <%= @quiz.name %>
+  Would you like to <%=link_to "take this quiz", new_quiz_game_path(@quiz.id) %>
 
 
-Leader Board <% Game.top_5quiz_scores.each do |game| %>
-<%= game.score %>
-<%= game.user.username %>
+
+<% quiz = @quiz %>
+Top Scores:
+<ol>
+<% Game.top_5_scores(quiz).each do |game| %>
+
+<li>Score: <%= game.score %>
+User: <%= game.user.username %></li>
+
 <% end %>
+</ol>
+
+Comments
