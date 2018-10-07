@@ -22,8 +22,9 @@ class QuizzesController < ApplicationController
 
 
   def create
-  	quiz = Quiz.create(quiz_params)
-
+  	quiz = Quiz.new(quiz_params)
+    quiz.user_id = current_user.id
+    quiz.save
       redirect_to quiz_path(quiz)
 
   end
