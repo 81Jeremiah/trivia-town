@@ -18,4 +18,8 @@ Rails.application.routes.draw do
 
   root 'quizzes#index'
 
+  resources :quizzes, :only => [:index] do
+    resources :categories, :path => "/", :only => [:index, :show]
+  end
+
 end
