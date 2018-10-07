@@ -6271,3 +6271,2642 @@ Processing by GamesController#new as HTML
 Completed 200 OK in 65ms (Views: 53.5ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 13:06:03 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (4.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:17
+  Rendering quizzes/show.html.erb within layouts/application
+  Rendered quizzes/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 4.3ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/show.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/show.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 13:07:59 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered quizzes/show.html.erb within layouts/application (419.7ms)
+Completed 500 Internal Server Error in 454ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `quiz_id' for #<#<Class:0x007fc2d6aa16a8>:0x007fc2d6a99570>
+Did you mean?  quiz_url):
+     9:     </ol>
+    10:     <% end %>
+    11:  <% end %>
+    12:   Would you like to <%=link_to "take this quiz", new_quiz_game_path(quiz_id) %>
+    13: 
+    14: 
+    15: Leader Board <% Game.top_5quiz_scores.each do |game| %>
+  
+app/views/quizzes/show.html.erb:12:in `_app_views_quizzes_show_html_erb__3562914937011718958_70237400929660'
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 13:08:39 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:19
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (8.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  Rendered quizzes/show.html.erb within layouts/application (142.2ms)
+Completed 200 OK in 291ms (Views: 266.0ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/quizzes/11/games/new" for 127.0.0.1 at 2018-10-06 13:08:44 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"quiz_id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  Rendering games/new.html.erb within layouts/application
+  [1m[36mQuestionAndAnswer Load (1.2ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 11]]
+  ↳ app/views/games/new.html.erb:9
+  Rendered games/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 89ms (Views: 49.0ms | ActiveRecord: 4.2ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateQuizCategories (20181006201118)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181006201118_create_quiz_categories.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "quiz_categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "quiz_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_41c4ae6f7f"
+FOREIGN KEY ("quiz_id")
+  REFERENCES "quizzes" ("id")
+, CONSTRAINT "fk_rails_d1b7aa68ba"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  ↳ db/migrate/20181006201118_create_quiz_categories.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_quiz_categories_on_quiz_id" ON "quiz_categories" ("quiz_id")[0m
+  ↳ db/migrate/20181006201118_create_quiz_categories.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_quiz_categories_on_category_id" ON "quiz_categories" ("category_id")[0m
+  ↳ db/migrate/20181006201118_create_quiz_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181006201118"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to CreateCategories (20181006201152)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181006201152_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181006201152"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:24:31 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered quizzes/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 192ms (Views: 139.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:24:50 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:6
+  Rendered quizzes/new.html.erb within layouts/application (700.1ms)
+Completed 500 Internal Server Error in 754ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fc2d95d0310>:0x007fc2d9c14bb8>):
+    4:     <%= f.text_field :name %>
+    5:     <br>
+    6:     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+    7:     <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
+    8:    <%= categories_fields.text_field :name %>
+    9:  <% end %>
+   10: 
+  
+app/views/quizzes/new.html.erb:7:in `block in _app_views_quizzes_new_html_erb__1716876075872610580_70237426854600'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1716876075872610580_70237426854600'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:25:10 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:6
+  Rendered quizzes/new.html.erb within layouts/application (358.2ms)
+Completed 500 Internal Server Error in 379ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `quiz' for #<#<Class:0x007fc2d95d0310>:0x007fc2d6e34630>
+Did you mean?  @quiz):
+    4:     <%= f.text_field :name %>
+    5:     <br>
+    6:     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+    7:     <%= f.fields_for :categories, quiz.categories.build do |categories_fields| %>
+    8:    <%= categories_fields.text_field :name %>
+    9:  <% end %>
+   10: 
+  
+app/views/quizzes/new.html.erb:7:in `block in _app_views_quizzes_new_html_erb__1716876075872610580_70237402802320'
+app/views/quizzes/new.html.erb:1:in `_app_views_quizzes_new_html_erb__1716876075872610580_70237402802320'
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:25:37 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:6
+  Rendered quizzes/new.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:27:29 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:6
+  Rendered quizzes/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCategory Create (1.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sports"], ["created_at", "2018-10-06 20:29:47.785767"], ["updated_at", "2018-10-06 20:29:47.785767"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Movies"], ["created_at", "2018-10-06 20:29:47.791891"], ["updated_at", "2018-10-06 20:29:47.791891"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "History"], ["created_at", "2018-10-06 20:29:47.795815"], ["updated_at", "2018-10-06 20:29:47.795815"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:29:51 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:6
+  Rendered quizzes/new.html.erb within layouts/application (136.2ms)
+Completed 200 OK in 164ms (Views: 156.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:32:32 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:7
+  Rendered quizzes/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 41ms (Views: 35.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:33:00 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:7
+  Rendered quizzes/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 80ms (Views: 61.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:33:28 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:7
+  Rendered quizzes/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 40ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2018-10-06 13:52:58 -0700
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/controllers/quizzes_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/quizzes_controller.rb:35: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes" for 127.0.0.1 at 2018-10-06 13:53:30 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (1.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 128ms (Views: 98.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 13:53:38 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 50ms (Views: 43.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=2&commit=Filter" for 127.0.0.1 at 2018-10-06 13:53:44 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"2", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 44ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 13:55:09 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 13:57:23 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:7
+  Rendered quizzes/new.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 144ms (Views: 71.2ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/quizzes" for 127.0.0.1 at 2018-10-06 13:59:03 -0700
+Processing by QuizzesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CE3xL6cNbdAcMAjs642Qxs+ziuJKbObBYF5G/uO/00mHOsryBbZmarX8unyC60JlYBj4jhvzAttFbyD8kygwxg==", "quiz"=>{"name"=>"Sports Quiz", "category_ids"=>["", "1"], "categories_attributes"=>{"0"=>{"name"=>""}}, "question_and_answers_attributes"=>{"0"=>{"question"=>"what is a sport", "answer"=>"something you play"}, "1"=>{"question"=>"is it fun", "answer"=>"to some people"}, "2"=>{"question"=>"what is the best sport", "answer"=>"the one with the ball"}, "3"=>{"question"=>"can you eat before", "answer"=>"just not swimming"}, "4"=>{"question"=>"is basketball one", "answer"=>"maybe"}}}, "commit"=>"Create Quiz"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/models/quiz.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/quiz.rb:25
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2018-10-06 20:59:03.270552"], ["updated_at", "2018-10-06 20:59:03.270552"]]
+  ↳ app/models/quiz.rb:25
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/quiz.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[36mQuiz Create (0.7ms)[0m  [1m[32mINSERT INTO "quizzes" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sports Quiz"], ["created_at", "2018-10-06 20:59:03.290968"], ["updated_at", "2018-10-06 20:59:03.290968"]]
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[36mQuestionAndAnswer Create (1.1ms)[0m  [1m[32mINSERT INTO "question_and_answers" ("question", "answer", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["question", "what is a sport"], ["answer", "something you play"], ["quiz_id", 12], ["created_at", "2018-10-06 20:59:03.297495"], ["updated_at", "2018-10-06 20:59:03.297495"]]
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[36mQuestionAndAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "question_and_answers" ("question", "answer", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["question", "is it fun"], ["answer", "to some people"], ["quiz_id", 12], ["created_at", "2018-10-06 20:59:03.300943"], ["updated_at", "2018-10-06 20:59:03.300943"]]
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[36mQuestionAndAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "question_and_answers" ("question", "answer", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["question", "what is the best sport"], ["answer", "the one with the ball"], ["quiz_id", 12], ["created_at", "2018-10-06 20:59:03.304093"], ["updated_at", "2018-10-06 20:59:03.304093"]]
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[36mQuestionAndAnswer Create (0.5ms)[0m  [1m[32mINSERT INTO "question_and_answers" ("question", "answer", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["question", "can you eat before"], ["answer", "just not swimming"], ["quiz_id", 12], ["created_at", "2018-10-06 20:59:03.309004"], ["updated_at", "2018-10-06 20:59:03.309004"]]
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[36mQuestionAndAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "question_and_answers" ("question", "answer", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["question", "is basketball one"], ["answer", "maybe"], ["quiz_id", 12], ["created_at", "2018-10-06 20:59:03.312649"], ["updated_at", "2018-10-06 20:59:03.312649"]]
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[36mQuizCategory Create (2.0ms)[0m  [1m[32mINSERT INTO "quiz_categories" ("quiz_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quiz_id", 12], ["category_id", 1], ["created_at", "2018-10-06 20:59:03.316278"], ["updated_at", "2018-10-06 20:59:03.316278"]]
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[36mQuizCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "quiz_categories" ("quiz_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quiz_id", 12], ["category_id", 4], ["created_at", "2018-10-06 20:59:03.322690"], ["updated_at", "2018-10-06 20:59:03.322690"]]
+  ↳ app/controllers/quizzes_controller.rb:25
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/quizzes_controller.rb:25
+Redirected to http://localhost:3000/quizzes/12
+Completed 302 Found in 88ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 13:59:03 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  Rendered quizzes/show.html.erb within layouts/application (128.9ms)
+Completed 200 OK in 179ms (Views: 161.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2018-10-06 13:59:22 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 13:59:28 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:00:31 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.8ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."category" = ?[0m  [["category", "1"]]
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (22.7ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 10.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: quizzes.category: SELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."category" = ?):
+    3:     <%= submit_tag "Filter" %>
+    4:   <% end %>
+    5: 
+    6: <% @quizzes.each do |quiz| %>
+    7:   <%= link_to quiz.name, quiz_path(quiz) %>
+    8: <% end %>
+  
+app/views/quizzes/index.html.erb:6:in `_app_views_quizzes_index_html_erb__2101516997020517921_70237410134140'
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:04:01 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `quiz_category_id' for #<Class:0x007fc2d6c056c0>):
+  
+app/models/quiz.rb:13:in `by_category'
+app/controllers/quizzes_controller.rb:7:in `index'
+Started GET "/quizzes?utf8=%E2%9C%93&category=2&commit=Filter" for 127.0.0.1 at 2018-10-06 14:05:12 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"2", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.8ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."category" = ?[0m  [["category", "2"]]
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (22.9ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: quizzes.category: SELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."category" = ?):
+    3:     <%= submit_tag "Filter" %>
+    4:   <% end %>
+    5: 
+    6: <% @quizzes.each do |quiz| %>
+    7:   <%= link_to quiz.name, quiz_path(quiz) %>
+    8: <% end %>
+  
+app/views/quizzes/index.html.erb:6:in `_app_views_quizzes_index_html_erb__2101516997020517921_70237426643480'
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:05:53 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 60ms (Views: 41.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:05:59 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 34ms (Views: 27.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=2&commit=Filter" for 127.0.0.1 at 2018-10-06 14:06:03 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"2", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=3&commit=Filter" for 127.0.0.1 at 2018-10-06 14:06:08 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"3", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ?[0m  [["id", 3]]
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 32ms (Views: 25.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=&commit=Filter" for 127.0.0.1 at 2018-10-06 14:06:18 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 14:06:22 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  Rendered quizzes/show.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 76ms (Views: 67.0ms | ActiveRecord: 4.3ms)
+
+
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" INNER JOIN "quiz_categories" ON "categories"."id" = "quiz_categories"."category_id" WHERE "quiz_categories"."quiz_id" = ? LIMIT ?[0m  [["quiz_id", 12], ["LIMIT", 11]]
+Started GET "/quizzes" for 127.0.0.1 at 2018-10-06 14:11:24 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 85ms (Views: 68.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:11:28 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter", "controller"=>"quizzes", "action"=>"index"} permitted: false>):
+  
+app/controllers/quizzes_controller.rb:7:in `index'
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:14:24 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter", "controller"=>"quizzes", "action"=>"index"} permitted: false>):
+  
+app/controllers/quizzes_controller.rb:7:in `index'
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:14:38 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 105ms (Views: 80.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=&commit=Filter" for 127.0.0.1 at 2018-10-06 14:14:53 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 66ms (Views: 49.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:14:57 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 51ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 11]]
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:51:35 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 156ms (Views: 136.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=1&commit=Filter" for 127.0.0.1 at 2018-10-06 14:52:07 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"1", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" INNER JOIN "quiz_categories" ON "quiz_categories"."quiz_id" = "quizzes"."id" INNER JOIN "categories" ON "categories"."id" = "quiz_categories"."category_id" WHERE (categories.id='1')[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (104.4ms)
+Completed 200 OK in 174ms (Views: 144.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=4&commit=Filter" for 127.0.0.1 at 2018-10-06 14:52:18 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"4", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.8ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" INNER JOIN "quiz_categories" ON "quiz_categories"."quiz_id" = "quizzes"."id" INNER JOIN "categories" ON "categories"."id" = "quiz_categories"."category_id" WHERE (categories.id='4')[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=&commit=Filter" for 127.0.0.1 at 2018-10-06 14:52:24 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 46ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quizzes?utf8=%E2%9C%93&category=2&commit=Filter" for 127.0.0.1 at 2018-10-06 14:52:28 -0700
+Processing by QuizzesController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"2", "commit"=>"Filter"}
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes" INNER JOIN "quiz_categories" ON "quiz_categories"."quiz_id" = "quizzes"."id" INNER JOIN "categories" ON "categories"."id" = "quiz_categories"."category_id" WHERE (categories.id='2')[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (11) LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/quizzes/new" for 127.0.0.1 at 2018-10-06 15:17:58 -0700
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/new.html.erb:7
+  Rendered quizzes/new.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 211ms (Views: 134.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:18:00 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (4.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  Rendered quizzes/show.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 159ms (Views: 143.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:19:19 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  Rendered quizzes/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/views/quizzes/show.html.erb:26: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/quizzes/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/quizzes/show.html.erb:26: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:19:34 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (11)[0m
+  ↳ app/views/quizzes/show.html.erb:20
+  Rendered quizzes/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 39ms (Views: 33.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:19:56 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (11)[0m
+  ↳ app/views/quizzes/show.html.erb:20
+  Rendered quizzes/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 42ms (Views: 36.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:20:57 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (11)[0m
+  ↳ app/views/quizzes/show.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  Rendered quizzes/show.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 68ms (Views: 61.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:21:01 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (11)[0m
+  ↳ app/views/quizzes/show.html.erb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  Rendered quizzes/show.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 86ms (Views: 76.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:25:17 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered quizzes/show.html.erb within layouts/application (17.4ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.5ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/models/game.rb:20: syntax error, unexpected '='
+  	  where(quiz_id: = "?", quiz.id)
+  	                  ^
+/Users/jeremiahlutes/Development/code/trivia-town/app/models/game.rb:20: syntax error, unexpected ',', expecting keyword_end
+  	  where(quiz_id: = "?", quiz.id)
+  	                       ^
+/Users/jeremiahlutes/Development/code/trivia-town/app/models/game.rb:20: syntax error, unexpected ')', expecting keyword_end
+/Users/jeremiahlutes/Development/code/trivia-town/app/models/game.rb:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/game.rb:20: syntax error, unexpected '='
+app/models/game.rb:20: syntax error, unexpected ',', expecting keyword_end
+app/models/game.rb:20: syntax error, unexpected ')', expecting keyword_end
+app/models/game.rb:36: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/quizzes/show.html.erb:15:in `_app_views_quizzes_show_html_erb__3562914937011718958_70237356616380'
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:27:32 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (quiz_id = 11)[0m
+  ↳ app/views/quizzes/show.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  Rendered quizzes/show.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 128ms (Views: 106.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:28:21 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (quiz_id = 11)[0m
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  Rendered quizzes/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 57ms (Views: 50.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:29:17 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (quiz_id = 11)[0m
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  Rendered quizzes/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:29:39 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (quiz_id = 11)[0m
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  Rendered quizzes/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 43ms (Views: 38.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:30:47 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered quizzes/show.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 3.4ms)
+
+
+  
+SyntaxError (/Users/jeremiahlutes/Development/code/trivia-town/app/models/game.rb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  	  order(score: :desc).limit(5)where("quiz_id = ?", quiz.id)
+  	                                   ^):
+  
+app/models/game.rb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/quizzes/show.html.erb:17:in `_app_views_quizzes_show_html_erb__3562914937011718958_70237421707640'
+Started GET "/quizzes/11" for 127.0.0.1 at 2018-10-06 15:31:11 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (quiz_id = 11) ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:19
+  Rendered quizzes/show.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 121ms (Views: 96.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-06 15:37:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (user_id = 1)[0m
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (93.4ms)
+Completed 200 OK in 166ms (Views: 138.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-10-06 15:37:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (user_id = 2)[0m
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Quiz Load (0.0ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-10-06 15:38:03 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <%= @user.username %>
+    2: Game scores
+    3: <% user = @user %>
+    4: <% Game.user_scores(user).each do |game| %>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___4292991922067890611_70237356960300'
+Started GET "/users/1" for 127.0.0.1 at 2018-10-06 15:38:19 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (user_id = 1)[0m
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (user_id = 1) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (user_id = 1) ORDER BY "games"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/1" for 127.0.0.1 at 2018-10-06 15:42:32 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (user_id = 1)[0m
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 62ms (Views: 52.0ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (user_id = 1) ORDER BY "games"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started GET "/users/1" for 127.0.0.1 at 2018-10-06 15:49:36 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (user_id = 1)[0m
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 518ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `logged_in?' for #<#<Class:0x007fc2d1657bd8>:0x007fc2d981aff8>
+Did you mean?  logger?):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <% if logged_in? %>
+    14:     <%= link_to "Log Out", logout_path, method: :delete %>
+    15:     <% end %>
+    16:     <%= yield %>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___4262595051360770675_70237421499920'
+Started GET "/users/1" for 127.0.0.1 at 2018-10-06 15:50:13 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (user_id = 1)[0m
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 256ms (Views: 184.5ms | ActiveRecord: 11.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-10-06 15:50:20 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WR3Rc1rEj5gaxfEl8Hk+iDNtLD0BH2IYdUtOohoPVjTWauqu+H+EIrMJQ7WZH+wrnMZeUVCAhgJQeiigapi1uw=="}
+Completed 500 Internal Server Error in 513ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<SessionsController:0x007fc2d16a44b0>
+Did you mean?  logout_path):
+  
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started DELETE "/logout" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WR3Rc1rEj5gaxfEl8Hk+iDNtLD0BH2IYdUtOohoPVjTWauqu+H+EIrMJQ7WZH+wrnMZeUVCAhgJQeiigapi1uw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:53:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:00 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:01 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:01 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:01 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:01 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:01 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:01 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:01 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:54:26 -0700
+Processing by QuizzesController#index as HTML
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `login_path' for #<QuizzesController:0x007fc2d0d01c00>):
+  
+app/controllers/application_controller.rb:19:in `require_login'
+Started GET "/" for 127.0.0.1 at 2018-10-06 15:55:40 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 15:55:40 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (422.8ms)
+Completed 500 Internal Server Error in 446ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `signin_path' for #<#<Class:0x007fc2d98ca9a8>:0x007fc2d98c8fe0>):
+    1: <h3> Please login!</h3>
+    2: 
+    3: <%= form_tag(signin_path) do %>
+    4: <%= collection_select :user, :name, User.all, :name, :name, :include_blank => "select"   %>
+    5:    <br>
+    6:    <%= label_tag :password %>
+  
+app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb___3792392800761028673_70237425129760'
+Started GET "/" for 127.0.0.1 at 2018-10-06 16:02:07 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 16:02:07 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/new.html.erb:4
+  Rendered sessions/new.html.erb within layouts/application (182.6ms)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x007fc2d16974b8>):
+    1: <h3> Please login!</h3>
+    2: 
+    3: <%= form_tag(login_path) do %>
+    4: <%= collection_select :user, :name, User.all, :name, :name, :include_blank => "select"   %>
+    5:    <br>
+    6:    <%= label_tag :password %>
+    7:    <%= password_field_tag :password %>
+  
+app/views/sessions/new.html.erb:4:in `block in _app_views_sessions_new_html_erb___3792392800761028673_70237423420440'
+app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb___3792392800761028673_70237423420440'
+Started GET "/login" for 127.0.0.1 at 2018-10-06 16:03:15 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/new.html.erb:6
+  Rendered sessions/new.html.erb within layouts/application (83.1ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x007fc2d6a8ab10>):
+    3: <%= form_tag(login_path) do %>
+    4:    <%= label_tag :username %>
+    5:    <%= text_field_tag :username %>
+    6: <%= collection_select :user, :name, User.all, :name, :name, :include_blank => "select"   %>
+    7:    <br>
+    8:    <%= label_tag :password %>
+    9:    <%= password_field_tag :password %>
+  
+app/views/sessions/new.html.erb:6:in `block in _app_views_sessions_new_html_erb___3792392800761028673_70237351563460'
+app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb___3792392800761028673_70237351563460'
+Started GET "/login" for 127.0.0.1 at 2018-10-06 16:03:28 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 78ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-10-06 16:03:36 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 72ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-06 16:04:05 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/7SJ4c+vy8TKDWTXaZAqhb3TSN7IwRjB40WmzY3Q0DTAVQ69sU6O7i9hUIB9c0hpNWxxR3vPs0FQo4Do19pw5A==", "user"=>{"username"=>"new_user", "email"=>"new@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `name' for #<User:0x007fc2da81ad18>):
+  
+app/controllers/users_controller.rb:18:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-10-06 16:05:44 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mC0Gvy/2WyLXWjYsG5OrhGiFhdJAPLNXbCMuKpGIENVBzQYnuEr6+J0E87a6XKSsczKIvhZdpTSqXHVllzEm+w==", "user"=>{"username"=>"new_user", "email"=>"new@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `name' for #<User:0x007fc2d1f7b1d8>):
+  
+app/controllers/users_controller.rb:18:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2018-10-06 16:08:50 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 23.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-06 16:09:32 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BMXQQFEG5m42D+9GiAS/XvSJcy7LxOJKnOc77zXpcUDdJdDYxrpHtHxRKtwpy7B27z5+Qp2l9ClamGCgM1BHbg==", "user"=>{"username"=>"new_user", "email"=>"new@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "new@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "new_user"], ["email", "new@gmail.com"], ["password_digest", "$2a$10$4Hfax4qHtJGth5Xn2S1SVu4GBth/nln17eD/ran9qO/Dx1sfQMmU."], ["created_at", "2018-10-06 23:09:32.686731"], ["updated_at", "2018-10-06 23:09:32.686731"]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 126ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-10-06 16:09:32 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (user_id = 3)[0m
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 115ms (Views: 103.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-10-06 16:12:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE (user_id = 3)[0m
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2018-10-06 16:12:41 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 77ms (Views: 41.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 16:12:44 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (quiz_id = 12) ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:17
+  Rendered quizzes/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 55ms (Views: 48.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 16:14:10 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (quiz_id = 12) ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:19
+  Rendered quizzes/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/quizzes/12/games/new" for 127.0.0.1 at 2018-10-06 16:14:21 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"quiz_id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  Rendering games/new.html.erb within layouts/application
+  [1m[36mQuestionAndAnswer Load (1.5ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 12]]
+  ↳ app/views/games/new.html.erb:9
+  Rendered games/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 92ms (Views: 48.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2018-10-06 16:14:33 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9GMgOw6WtimtXcTXDiygH0uI8iO7j4L7eAw2R98Bri/0AAo/y8iUn33A6k1BAk+ecEr1TdOIDcWDv37hD5Mjuw==", "game"=>{"quiz_id"=>"12", "guesses_attributes"=>{"0"=>{"guess"=>"oh"}, "1"=>{"guess"=>"boy"}, "2"=>{"guess"=>"this"}, "3"=>{"guess"=>"might"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["quiz_id", 12], ["created_at", "2018-10-06 23:14:33.691922"], ["updated_at", "2018-10-06 23:14:33.691922"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (1.6ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "oh"], ["game_id", 26], ["created_at", "2018-10-06 23:14:33.695842"], ["updated_at", "2018-10-06 23:14:33.695842"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "boy"], ["game_id", 26], ["created_at", "2018-10-06 23:14:33.700050"], ["updated_at", "2018-10-06 23:14:33.700050"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "this"], ["game_id", 26], ["created_at", "2018-10-06 23:14:33.701712"], ["updated_at", "2018-10-06 23:14:33.701712"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "might"], ["game_id", 26], ["created_at", "2018-10-06 23:14:33.703390"], ["updated_at", "2018-10-06 23:14:33.703390"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.1ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "work"], ["game_id", 26], ["created_at", "2018-10-06 23:14:33.705316"], ["updated_at", "2018-10-06 23:14:33.705316"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuestionAndAnswer Load (0.4ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 12]]
+  ↳ app/models/quiz.rb:31
+  [1m[36mGuess Load (0.5ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 26]]
+  ↳ app/models/game.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/game.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/game.rb:12
+Redirected to http://localhost:3000/games/26
+Completed 302 Found in 63ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/games/26" for 127.0.0.1 at 2018-10-06 16:14:33 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:33
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 61ms (Views: 39.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quizzes/12/games/new" for 127.0.0.1 at 2018-10-06 16:14:38 -0700
+Processing by GamesController#new as HTML
+  Parameters: {"quiz_id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5
+  Rendering games/new.html.erb within layouts/application
+  [1m[36mQuestionAndAnswer Load (0.1ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 12]]
+  ↳ app/views/games/new.html.erb:9
+  Rendered games/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 49ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/games" for 127.0.0.1 at 2018-10-06 16:14:50 -0700
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PALrgDb7/4964XmUznKmU2dTD/YyL0oOovv9NXRhUPQ8YcGE86XdOap8Vw6BXEnSXJEImFooxTBZSLWTpPPdYA==", "game"=>{"quiz_id"=>"12", "guesses_attributes"=>{"0"=>{"guess"=>"oh"}, "1"=>{"guess"=>"boy"}, "2"=>{"guess"=>"this"}, "3"=>{"guess"=>"might"}, "4"=>{"guess"=>"work"}}}, "commit"=>"Create Game"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "quiz_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["quiz_id", 12], ["created_at", "2018-10-06 23:14:50.213429"], ["updated_at", "2018-10-06 23:14:50.213429"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.3ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "oh"], ["game_id", 27], ["created_at", "2018-10-06 23:14:50.215282"], ["updated_at", "2018-10-06 23:14:50.215282"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "boy"], ["game_id", 27], ["created_at", "2018-10-06 23:14:50.217249"], ["updated_at", "2018-10-06 23:14:50.217249"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "this"], ["game_id", 27], ["created_at", "2018-10-06 23:14:50.219070"], ["updated_at", "2018-10-06 23:14:50.219070"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "might"], ["game_id", 27], ["created_at", "2018-10-06 23:14:50.220699"], ["updated_at", "2018-10-06 23:14:50.220699"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mGuess Create (0.2ms)[0m  [1m[32mINSERT INTO "guesses" ("guess", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["guess", "work"], ["game_id", 27], ["created_at", "2018-10-06 23:14:50.222451"], ["updated_at", "2018-10-06 23:14:50.222451"]]
+  ↳ app/controllers/games_controller.rb:26
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:26
+  [1m[36mQuestionAndAnswer Load (0.4ms)[0m  [1m[34mSELECT "question_and_answers".* FROM "question_and_answers" WHERE "question_and_answers"."quiz_id" = ?[0m  [["quiz_id", 12]]
+  ↳ app/models/quiz.rb:31
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."game_id" = ?[0m  [["game_id", 27]]
+  ↳ app/models/game.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/game.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/game.rb:12
+Redirected to http://localhost:3000/games/27
+Completed 302 Found in 45ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/games/27" for 127.0.0.1 at 2018-10-06 16:14:50 -0700
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:33
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 45ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2018-10-06 16:15:08 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 16:15:11 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (quiz_id = 12) ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:21
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:21
+  Rendered quizzes/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 51ms (Views: 43.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 16:21:13 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (quiz_id = 12) ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  Rendered quizzes/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 97ms (Views: 81.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 16:21:38 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (3.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (quiz_id = 12) ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  Rendered quizzes/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 49ms (Views: 40.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 16:21:48 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (quiz_id = 12) ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:22
+  Rendered quizzes/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 16:22:28 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (quiz_id = 12) ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:23
+  Rendered quizzes/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/quizzes/12" for 127.0.0.1 at 2018-10-06 16:27:05 -0700
+Processing by QuizzesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/quizzes_controller.rb:20
+  Rendering quizzes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (1.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE (quiz_id = 12) ORDER BY "games"."score" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/quizzes/show.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/quizzes/show.html.erb:25
+  Rendered quizzes/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 59ms (Views: 52.1ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-10-06 17:19:37 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xw+MV+JF6Ig+Bsq3Rm5nxVjTyFa2XeZDh3IUWSCKfkIe74zPdflJUnRYDy3noWjtQ2TFOuA88CBBDU8WJjNIbA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 17:19:38 -0700
+Processing by QuizzesController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:19:38 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 92ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:19:43 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-06 17:27:18 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/thin:23
+Processing by QuizzesController#index as HTML
+Redirected to https://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:27:18 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 297ms (Views: 294.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:27:22 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:27:22 -0700
+Started GET "/auth/facebook/callback?code=AQCBYfoSWvs6p5NbguP0UVJirEvPNIqcCZqHJMUAluF6rb9pYNZEEC7ihIrJweZ-hFmup0BND0UGWvortBDkgwsxx6Kjgf119FZzhpYWWhQ6mKhnSeIJ48yPqE10sOakoiksqvJsGqruek-ILi4gIUGg5lgaLOfL-btRphK8OJ961VAq0gavtxZSrfoYBvxx3EVtsNn6cIfMpVT37yE5U5-12EoaDNP4LKaWGm-641bdmzvgvO_MMb-fZU044G1cNbkx3kLMmHUAsOLHSNIdVTSBH8EZF_GSXesC_XgGsUc6qIyD9a1g4jvjqJVY9STqXhJCtK2vnHhwhRD7Iw9Q7bfK&state=2466a9a79291100b2afb35973afbbc03fec49812ac1ea583" for 127.0.0.1 at 2018-10-06 17:27:30 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCBYfoSWvs6p5NbguP0UVJirEvPNIqcCZqHJMUAluF6rb9pYNZEEC7ihIrJweZ-hFmup0BND0UGWvortBDkgwsxx6Kjgf119FZzhpYWWhQ6mKhnSeIJ48yPqE10sOakoiksqvJsGqruek-ILi4gIUGg5lgaLOfL-btRphK8OJ961VAq0gavtxZSrfoYBvxx3EVtsNn6cIfMpVT37yE5U5-12EoaDNP4LKaWGm-641bdmzvgvO_MMb-fZU044G1cNbkx3kLMmHUAsOLHSNIdVTSBH8EZF_GSXesC_XgGsUc6qIyD9a1g4jvjqJVY9STqXhJCtK2vnHhwhRD7Iw9Q7bfK", "state"=>"2466a9a79291100b2afb35973afbbc03fec49812ac1ea583"}
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `auth' for #<SessionsController:0x007fb07d6755b8>):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:29:51 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook/callback?code=AQC-_o2CJbTPZuxm8pCSxYjsRBdCZlOxUSj9Gx9Sd5t_ktXaGRL1UK5pzlUyQLkZyPDeJT88FuzAN-hFgBuwmlI163MLCJfbsow3DoFM7FSOdxrKPzfNMy2hiFI0dkgC65f_z8MiIOFZXy8TT_dlcVXOTmXOeUcOPtY0CuupL3-Q-vOgobwO9yyClo4Quu3NzNNUkv9mwDH0hFH4jbP-qH9daRf1QjPtZrUOlX9yaIa2qb4dyO8BcCKPclhoqkC3mTZjF3HyYo3hw0JYUGFHYgkapitDuWRQ_gVMjJVUk733UCNYBcydPj9nWMWghpvsQ9fX22c-K3fLmxTSVV-iKZ1J&state=2466a9a79291100b2afb35973afbbc03fec49812ac1ea583" for 127.0.0.1 at 2018-10-06 17:29:51 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQC-_o2CJbTPZuxm8pCSxYjsRBdCZlOxUSj9Gx9Sd5t_ktXaGRL1UK5pzlUyQLkZyPDeJT88FuzAN-hFgBuwmlI163MLCJfbsow3DoFM7FSOdxrKPzfNMy2hiFI0dkgC65f_z8MiIOFZXy8TT_dlcVXOTmXOeUcOPtY0CuupL3-Q-vOgobwO9yyClo4Quu3NzNNUkv9mwDH0hFH4jbP-qH9daRf1QjPtZrUOlX9yaIa2qb4dyO8BcCKPclhoqkC3mTZjF3HyYo3hw0JYUGFHYgkapitDuWRQ_gVMjJVUk733UCNYBcydPj9nWMWghpvsQ9fX22c-K3fLmxTSVV-iKZ1J", "state"=>"2466a9a79291100b2afb35973afbbc03fec49812ac1ea583"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10205273890324678"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.uid: SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:29:58 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:30:02 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:30:03 -0700
+Started GET "/auth/facebook/callback?code=AQB7V9zalUL4-Alw0KBi0Arcw-QJSzz3UlBn_zUKuMIjTbgkmabdfsWumZ6xEwrKI45RtWKK-VOMsQ338F1pVSndq93w_PhDP_S-MdNhbSUU_WNR8_6lyj9_wC9aXcHKbg8g376xQewr0yQicpWCny5jMbXmBYRg-iofd1W4aqsFR00fAU8LiDT-lsVkQuo4Zf7NFm-8f9FbwO2C6lKNh_8hdoFYWbcBI6XDl1siEKPBozQ8qldmWop-yKDMXeoVE8P917ODF4_myzwjB7N3R5RlJyJ42hmEickl0hMj0hq1Jb61Lj4_dfjUX8rzumOyvQVqhVAxvKWuMeF3dPQQ2_XY&state=89acaf22258f059649ef933ba4e6250533de49b119410001" for 127.0.0.1 at 2018-10-06 17:30:03 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQB7V9zalUL4-Alw0KBi0Arcw-QJSzz3UlBn_zUKuMIjTbgkmabdfsWumZ6xEwrKI45RtWKK-VOMsQ338F1pVSndq93w_PhDP_S-MdNhbSUU_WNR8_6lyj9_wC9aXcHKbg8g376xQewr0yQicpWCny5jMbXmBYRg-iofd1W4aqsFR00fAU8LiDT-lsVkQuo4Zf7NFm-8f9FbwO2C6lKNh_8hdoFYWbcBI6XDl1siEKPBozQ8qldmWop-yKDMXeoVE8P917ODF4_myzwjB7N3R5RlJyJ42hmEickl0hMj0hq1Jb61Lj4_dfjUX8rzumOyvQVqhVAxvKWuMeF3dPQQ2_XY", "state"=>"89acaf22258f059649ef933ba4e6250533de49b119410001"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10205273890324678"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.uid: SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?):
+  
+app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/" for 127.0.0.1 at 2018-10-06 17:31:56 -0700
+Processing by QuizzesController#index as HTML
+Redirected to https://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:31:56 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:31:59 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:31:59 -0700
+Started GET "/auth/facebook/callback?code=AQBJXGi6xX-ZDNyMizvoiC9lBB1rE54bIyCFRNl9wbb_gvWh-UfmYbqO8L7-cidQ9WoN20xir2HV3ysUSt4_VtuJrieNSeiTetwKOz8kAl_x_3duyeamGqVzljgtEcM-ndiXCoAmveaX2MVcYYsovuHlwX3Vc4d6KyT82-kD3jLyqYtB-gm1rlLoBNQo35xtv4_PNTzS9k1yFyhTBj0Ln1dgT3i0qnLV6PxZPFy-HXRyxO3xYjuWA_IbHB3e5CPen-CNP7TZebWlWVVN3VwIc7M98eu9RqLuhGEehkAGrZnYfpFY-zGCC3qLUiQEM-IV4sWOj-7dk0AFvTFvICaeJvRf&state=d5a1b075ace32433a647cfaa5649c9b7429145be88f9e721" for 127.0.0.1 at 2018-10-06 17:32:00 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBJXGi6xX-ZDNyMizvoiC9lBB1rE54bIyCFRNl9wbb_gvWh-UfmYbqO8L7-cidQ9WoN20xir2HV3ysUSt4_VtuJrieNSeiTetwKOz8kAl_x_3duyeamGqVzljgtEcM-ndiXCoAmveaX2MVcYYsovuHlwX3Vc4d6KyT82-kD3jLyqYtB-gm1rlLoBNQo35xtv4_PNTzS9k1yFyhTBj0Ln1dgT3i0qnLV6PxZPFy-HXRyxO3xYjuWA_IbHB3e5CPen-CNP7TZebWlWVVN3VwIc7M98eu9RqLuhGEehkAGrZnYfpFY-zGCC3qLUiQEM-IV4sWOj-7dk0AFvTFvICaeJvRf", "state"=>"d5a1b075ace32433a647cfaa5649c9b7429145be88f9e721"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10205273890324678], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.8ms)
+
+
+  
+NoMethodError (undefined method `name=' for #<User:0x007fb084fe6528>):
+  
+app/controllers/sessions_controller.rb:8:in `block in create'
+app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/" for 127.0.0.1 at 2018-10-06 17:32:34 -0700
+Processing by QuizzesController#index as HTML
+Redirected to https://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:32:34 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:32:37 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:32:37 -0700
+Started GET "/auth/facebook/callback?code=AQCR1OQ3QowHMPPIfzhGSiubqzWizhICrKs4VXKAwV-wCe4-6_Fkt_qhr39XJWnTxlfgxBuuI_j1vTfcEsW-O0cmiMaQFo9ivuZtNEB_oG0T_P4pQV60t2hxRvbLTeHx2vBAQ0bQmfekuwfuHEr6KgjsAkxa77Qr2ckz2GIuh8NJuVPUxKAv_W4B-1mZFqhUiD56x18ET4KvtHdRPm6pAzl1WmW7XKPzyg3TFwcKYE80jpVuSLLVkGzsCDiA9lOeNfoDUt3jJ81ABQfLUkjhcDYlcqVd1ujpLB0zHMVTQ_ZlDg50TXt1L7MSvKzTWPQQZiFfOMIwECcjQgx6NxWv9XDf&state=a4a9e6ed070848e4471d3152be1eab13f7bed0bddb5c769b" for 127.0.0.1 at 2018-10-06 17:32:37 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCR1OQ3QowHMPPIfzhGSiubqzWizhICrKs4VXKAwV-wCe4-6_Fkt_qhr39XJWnTxlfgxBuuI_j1vTfcEsW-O0cmiMaQFo9ivuZtNEB_oG0T_P4pQV60t2hxRvbLTeHx2vBAQ0bQmfekuwfuHEr6KgjsAkxa77Qr2ckz2GIuh8NJuVPUxKAv_W4B-1mZFqhUiD56x18ET4KvtHdRPm6pAzl1WmW7XKPzyg3TFwcKYE80jpVuSLLVkGzsCDiA9lOeNfoDUt3jJ81ABQfLUkjhcDYlcqVd1ujpLB0zHMVTQ_ZlDg50TXt1L7MSvKzTWPQQZiFfOMIwECcjQgx6NxWv9XDf", "state"=>"a4a9e6ed070848e4471d3152be1eab13f7bed0bddb5c769b"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10205273890324678], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeremiahlutes@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to https://localhost:3000/users
+Completed 302 Found in 35ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-06 17:32:37 -0700
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/thin:23:in `load'
+/Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/thin:23:in `<main>'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Migrating to AddUidAndImageToUsers (20181007003750)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" varchar[0m
+  ↳ db/migrate/20181007003750_add_uid_and_image_to_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "image" varchar[0m
+  ↳ db/migrate/20181007003750_add_uid_and_image_to_users.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181007003750"]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:40:22 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/thin:23
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 43ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:40:27 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:40:30 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:40:30 -0700
+Started GET "/auth/facebook/callback?code=AQC4RNeSrZ4b4y2nP-RLB2a1p8-_Pke5sQATHDa_hpoK27HGCmS93IYQqHe_Ik0JjiQbMDipZKCsLaSZlT6PD1GByTryomsy88BP-ko7mTIQXZU03sUDNe-ZwjFtCiqxMb63utafv97MNVPXahV3EaEbhfQaNYB3njQml4pIdgSYw2TKlkortni55XtzX3q29L8PgikwTNV6QZE8R9486pAEAhEKPGYMYqpbu26y2py8pdYmP99rjJfdaI-Ms3WRf7ucWP0GF1Nxz--sgIejCf9hkfqf5FZmP72OOnsvVEqoOnj6cjRmXDsRKCUsjC_dBe3ENE-d5ebDSaZjmUJ0w5ES&state=fff011426f5f9169a0c89bb8fcc177e9d9ec71f87ba2565f" for 127.0.0.1 at 2018-10-06 17:40:31 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQC4RNeSrZ4b4y2nP-RLB2a1p8-_Pke5sQATHDa_hpoK27HGCmS93IYQqHe_Ik0JjiQbMDipZKCsLaSZlT6PD1GByTryomsy88BP-ko7mTIQXZU03sUDNe-ZwjFtCiqxMb63utafv97MNVPXahV3EaEbhfQaNYB3njQml4pIdgSYw2TKlkortni55XtzX3q29L8PgikwTNV6QZE8R9486pAEAhEKPGYMYqpbu26y2py8pdYmP99rjJfdaI-Ms3WRf7ucWP0GF1Nxz--sgIejCf9hkfqf5FZmP72OOnsvVEqoOnj6cjRmXDsRKCUsjC_dBe3ENE-d5ebDSaZjmUJ0w5ES", "state"=>"fff011426f5f9169a0c89bb8fcc177e9d9ec71f87ba2565f"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10205273890324678"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 3.0ms)
+
+
+  
+NameError (undefined local variable or method `auth' for #<SessionsController:0x007fb081d24a68>):
+  
+app/controllers/sessions_controller.rb:10:in `block in create'
+app/controllers/sessions_controller.rb:7:in `create'
+Started GET "/" for 127.0.0.1 at 2018-10-06 17:41:01 -0700
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quizzes/index.html.erb:2
+  [1m[36mQuiz Load (1.7ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/views/quizzes/index.html.erb:6
+  Rendered quizzes/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 63ms (Views: 41.6ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-10-06 17:41:20 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yFosoSbLLUjj7FDnSPMmSeUxsQmS9GMnzDFFmldpqPtQo7AoGTLExckMJ68ehBZiQS85tvX9kW0vHSTPtIAong=="}
+Redirected to https://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 17:41:20 -0700
+Processing by QuizzesController#index as HTML
+Redirected to https://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:41:20 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:41:22 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:41:22 -0700
+Started GET "/auth/facebook/callback?code=AQCPLCrAGguhAeNGKnpf_zjv6VJJTNVOUM6Fk_tjvasO46nbn2CMn-D9ZZ2oQPIFpg5e8W81dAYSu9uqsrntnRIP_md_KH_tNRq19A7FNNAEcSNHS9swBQ9gi5aBzGx-CksQxQTZTIOR2S4f1gDIEyHAQgFARPRxMYgnwgI3lAbKvE1zNiS6VLH9mZ1ki3FqaMCncDBrXQtPjBz1UgIFBnTsMX-XdwB7--bgDvwNW5URA5muLoAU4HHNcLtOyDrT62w10ZX1XhzdwxyTkCLU-faa2DOUYulrQn361tDbMaZu3faWIJnOIxYbqYRCzmmuyIadrg7UMJ-njOXK9nQBdw94&state=378df4258d8d63aad1d1aeb0e925056773c535dfa307cf28" for 127.0.0.1 at 2018-10-06 17:41:22 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCPLCrAGguhAeNGKnpf_zjv6VJJTNVOUM6Fk_tjvasO46nbn2CMn-D9ZZ2oQPIFpg5e8W81dAYSu9uqsrntnRIP_md_KH_tNRq19A7FNNAEcSNHS9swBQ9gi5aBzGx-CksQxQTZTIOR2S4f1gDIEyHAQgFARPRxMYgnwgI3lAbKvE1zNiS6VLH9mZ1ki3FqaMCncDBrXQtPjBz1UgIFBnTsMX-XdwB7--bgDvwNW5URA5muLoAU4HHNcLtOyDrT62w10ZX1XhzdwxyTkCLU-faa2DOUYulrQn361tDbMaZu3faWIJnOIxYbqYRCzmmuyIadrg7UMJ-njOXK9nQBdw94", "state"=>"378df4258d8d63aad1d1aeb0e925056773c535dfa307cf28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10205273890324678"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeremiahlutes@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to https://localhost:3000/users
+Completed 302 Found in 18ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-06 17:41:23 -0700
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 116ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/thin:23:in `load'
+/Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/thin:23:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-10-06 17:41:56 -0700
+Processing by QuizzesController#index as HTML
+Redirected to https://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:41:56 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:42:00 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:42:00 -0700
+Started GET "/auth/facebook/callback?code=AQB3xZJOGpzD5C7tJaBwNteK8vUJkpIJR3gY_Hyg7fjksXlOfrZ1KaiDXgMhda_tjePTyJem8FhTk3bvGCKmuuGAQrP2IYMjn_PH2J_GmIuAFil1YmeCaVXQCpMd26Hs26s4u9v3GxdStewFl6y9ixHO4YtFewBJKRE0XH-cb8lm-o3VkXZvhvgyvvDhVvjtua6sVSOCjhEiY1mFXWJ7gpPKftVm5U85citM1Yf3BCIQzKmQzy6Ft2yT1ryxlA-WvgcxL84ghNtyLE3ZukMbLZfZv__AjGkbXuB20LaO9KtcyUSeifkbpA2GqCdLz9ah7NQuASeZTmm5pS0jt3sAaZvK&state=43ad836261b1ebb85d77189e85971081e7c1aa117919f581" for 127.0.0.1 at 2018-10-06 17:42:00 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQB3xZJOGpzD5C7tJaBwNteK8vUJkpIJR3gY_Hyg7fjksXlOfrZ1KaiDXgMhda_tjePTyJem8FhTk3bvGCKmuuGAQrP2IYMjn_PH2J_GmIuAFil1YmeCaVXQCpMd26Hs26s4u9v3GxdStewFl6y9ixHO4YtFewBJKRE0XH-cb8lm-o3VkXZvhvgyvvDhVvjtua6sVSOCjhEiY1mFXWJ7gpPKftVm5U85citM1Yf3BCIQzKmQzy6Ft2yT1ryxlA-WvgcxL84ghNtyLE3ZukMbLZfZv__AjGkbXuB20LaO9KtcyUSeifkbpA2GqCdLz9ah7NQuASeZTmm5pS0jt3sAaZvK", "state"=>"43ad836261b1ebb85d77189e85971081e7c1aa117919f581"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10205273890324678"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeremiahlutes@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to https://localhost:3000/users
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-06 17:42:00 -0700
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 126ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run_machine'
+eventmachine (1.2.7) lib/eventmachine.rb:195:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+thin (1.7.2) lib/thin/controllers/controller.rb:87:in `start'
+thin (1.7.2) lib/thin/runner.rb:203:in `run_command'
+thin (1.7.2) lib/thin/runner.rb:159:in `run!'
+thin (1.7.2) bin/thin:6:in `<top (required)>'
+/Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/thin:23:in `load'
+/Users/jeremiahlutes/.rvm/gems/ruby-2.3.3/bin/thin:23:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-10-06 17:42:36 -0700
+Processing by QuizzesController#index as HTML
+Redirected to https://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:42:36 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:42:38 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:42:38 -0700
+Started GET "/auth/facebook/callback?code=AQCVr3G2TDhAjVtqvoPRmFwRNKveSm8qyeSvJfDYUummadcz03bGR-Vi68LkAx0pkry4UspwUELVltikrtKidE-hmxz9qxsz3N5BdrH-Qd-ChrS6K487RgDykdi3geJbgyfqxY9wc4zsQB36r_1loVejGkQASMyQpdx9uJohpzZEbzZ0TiWOZTHz2NCQpZdE92amKo7-oejC-od0CdYntP6J2W8KC6FooAAcTRT9qLhLPRyQlgDb7VPgtg6lxDGYA5RzTQMUSPfmebKMKgHdX2tpSNiyiXahiAKT6dN_Yg1a08Nchfvo-Byxtes_pbL6-VlTnqA16daQZ6IjZiMf5qY0&state=c535def10a517cb7abe1acfe724e10f5105f9fb3b3dd3c2d" for 127.0.0.1 at 2018-10-06 17:42:39 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCVr3G2TDhAjVtqvoPRmFwRNKveSm8qyeSvJfDYUummadcz03bGR-Vi68LkAx0pkry4UspwUELVltikrtKidE-hmxz9qxsz3N5BdrH-Qd-ChrS6K487RgDykdi3geJbgyfqxY9wc4zsQB36r_1loVejGkQASMyQpdx9uJohpzZEbzZ0TiWOZTHz2NCQpZdE92amKo7-oejC-od0CdYntP6J2W8KC6FooAAcTRT9qLhLPRyQlgDb7VPgtg6lxDGYA5RzTQMUSPfmebKMKgHdX2tpSNiyiXahiAKT6dN_Yg1a08Nchfvo-Byxtes_pbL6-VlTnqA16daQZ6IjZiMf5qY0", "state"=>"c535def10a517cb7abe1acfe724e10f5105f9fb3b3dd3c2d"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10205273890324678"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeremiahlutes@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to https://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 17:42:39 -0700
+Processing by QuizzesController#index as HTML
+Redirected to https://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:42:39 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2018-10-06 17:42:59 -0700
+Processing by QuizzesController#index as HTML
+Redirected to https://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-06 17:42:59 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:43:37 -0700
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-10-06 17:43:37 -0700
+Started GET "/auth/facebook/callback?code=AQDCkSfZNwpAlGx37D1QIvnJeIW92Y4AV4cVvKEsQ9dDqJTe_1D7CQNXjynqZoCL1UnzKF6pNLFc_At3mdhBRkghG4kW2O60O4vED9TkepKiC0kMZ-GoYjrOPN8UlrqUAybPywRJIVRpEYt7fXSVeM_AYq9mAEKCSzdOtbIWLlqUbSMc7GNya3UP1DgyrXQP1XKbYIEx10v10tafwlkb_7uYRrvQCyzBjV1ljPWt7b01HxricLGYnAhx4WMgBpqe8GhIBi1YfTUKtiUNXUEvXu-RLahwVimkuSamwkLpirc4L6rExNel-epIXPbwtl-EUJZTAHOPrMzsdCvFFEqZVw4x&state=089a898f192709b2d2024956992170bf79c2ffb7d9147850" for 127.0.0.1 at 2018-10-06 17:43:38 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDCkSfZNwpAlGx37D1QIvnJeIW92Y4AV4cVvKEsQ9dDqJTe_1D7CQNXjynqZoCL1UnzKF6pNLFc_At3mdhBRkghG4kW2O60O4vED9TkepKiC0kMZ-GoYjrOPN8UlrqUAybPywRJIVRpEYt7fXSVeM_AYq9mAEKCSzdOtbIWLlqUbSMc7GNya3UP1DgyrXQP1XKbYIEx10v10tafwlkb_7uYRrvQCyzBjV1ljPWt7b01HxricLGYnAhx4WMgBpqe8GhIBi1YfTUKtiUNXUEvXu-RLahwVimkuSamwkLpirc4L6rExNel-epIXPbwtl-EUJZTAHOPrMzsdCvFFEqZVw4x", "state"=>"089a898f192709b2d2024956992170bf79c2ffb7d9147850"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "10205273890324678"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jeremiahlutes@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:7
