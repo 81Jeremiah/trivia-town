@@ -1,3 +1,8 @@
+<%= form_tag("/quizzes", method: "get") do %>
+    <%= select_tag "category", options_from_collection_for_select(@categories, "id", "name"), include_blank: true %>
+    <%= submit_tag "Filter" %>
+  <% end %>
+
 <% @quizzes.each do |quiz| %>
   <%= link_to quiz.name, quiz_path(quiz) %>
 <% end %>
