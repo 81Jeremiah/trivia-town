@@ -12,13 +12,18 @@ class Game < ApplicationRecord
     self.save
   end
 
-  def self.top_5quiz_scores
-    order(score: :desc).limit(5)
+
+  def self.top_5_scores(quiz)
+  	  order(score: :desc).limit(5).where("quiz_id = ?", quiz.id)
   end
 
   def user_guesses
     self.guesses.collect{|g| g.guess}
   end
+
+   def self.user_scores(user)
+     where("user_id = ?", user.id)
+   end
   # def play_game
   #    user.answer_array.each do |answer|
   #      if answer == quiz_anwer
