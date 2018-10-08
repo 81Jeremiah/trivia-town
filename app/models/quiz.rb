@@ -5,8 +5,8 @@ class Quiz < ApplicationRecord
 	# accepts_nested_attributes_for :answers
 	# accepts_nested_attributes_for :questions
   has_many :question_and_answers
-	accepts_nested_attributes_for :question_and_answers
-	has_many :quiz_categories
+  accepts_nested_attributes_for :question_and_answers, reject_if :all_blank
+  has_many :quiz_categories
   has_many :categories, through: :quiz_categories
   belongs_to :user
 	def self.by_category(category_id)
@@ -34,4 +34,6 @@ class Quiz < ApplicationRecord
 def self.top_5_scores(quiz)
 	  joins(:games).where quiz_id = "?", quiz.id
 end
+
+
 end
