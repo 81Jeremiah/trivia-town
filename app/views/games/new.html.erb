@@ -1,18 +1,16 @@
-Take the <%= @quiz.name %> Quiz!!
+<h1>Take the <%= @quiz.name %> Quiz!!</h1>
 
-<% questions = ["1?", "2?", "3", "4?", "5?"] %>
-
-
-
+<div class="form-group">
 <%= form_for @game do |f| %>
 <%= f.hidden_field :quiz_id %>
 <% @quiz.question_and_answers.each do |qa| %>
-Question: <%= qa.question %>
+Question: <%= qa.question, class: "form-control" %>
          <%= f.fields_for :guesses do |g| %>
            <%= g.label :guess, "Answer" %>
-           <%= g.text_field :guess %>
+           <%= g.text_field :guess, class: "form-control" %>
         <% end %>
 
 <% end %>
+</div>
 <%= f.submit %>
 <% end %>
