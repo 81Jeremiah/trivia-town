@@ -10,21 +10,40 @@
   <%= link_to "Edit Quiz", edit_quiz_path %>
  <% end %>
 
+ <div class="center">
 
- <%= @quiz.name %>
-  Would you like to <%=link_to "take this quiz", new_quiz_game_path(@quiz.id) %>
+ <h1> <%= @quiz.name %> </h1>
+ <p>Categories: <% @quiz.categories.each do|category| %>
+    <%= category.name %>
+    <% end %></p>
+  <h3><strong> Would you like to <%=link_to "take this quiz", new_quiz_game_path(@quiz.id) %> <h3>
+</div>
 
+ <% quiz = @quiz %>
+<h2>Top Scores:</h2>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
 
-<% quiz = @quiz %>
-Top Scores:
-<ol>
-<% Game.top_5_scores(quiz).each do |game| %>
+  <tbody>
+    <tr>
+      <td><strong>User Name</strong></td>
+      <td><strong>Score</strong></td>
+    </tr>
+    <ol>
+    <% Game.top_5_scores(quiz).each do |game| %>
 
-<li>Score: <%= game.score %>
-User: <%= game.user.username %></li>
+    <li>User: <%= game.user.username %>
+    Score: <%= game.score %></li>
+    <% end %>
+    </ol>
+      <tr>
 
-<% end %>
-</ol>
-
+  </tbody>
+</table>
+<br>
 Comments

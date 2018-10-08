@@ -8,7 +8,7 @@ class Quiz < ApplicationRecord
 	accepts_nested_attributes_for :question_and_answers
 	has_many :quiz_categories
   has_many :categories, through: :quiz_categories
-
+  belongs_to :user
 	def self.by_category(category_id)
 		joins(:categories).where("categories.id=?", category_id)
 	end
