@@ -4,7 +4,7 @@
 <%= form_for @game do |f| %>
 <%= f.hidden_field :quiz_id %>
 <% @quiz.question_and_answers.each do |qa| %>
-Question: <%= qa.question, class: "form-control" %>
+Question: <%= qa.question %>
          <%= f.fields_for :guesses do |g| %>
            <%= g.label :guess, "Answer" %>
            <%= g.text_field :guess, class: "form-control" %>

@@ -22,7 +22,11 @@
                <% else %>
                 no name
                <% end  %></td>
-          <td> 0 for now </td>
+              <% if  Game.top_score(quiz).first %>
+              <td> <%= Game.top_score(quiz).first.score %></td>
+               <% else %>
+               <td>This Game Hasn't Been Played </td>
+               <% end %>
 
         </tr>
       <% end %>

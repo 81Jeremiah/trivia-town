@@ -1,9 +1,34 @@
-Welcome <%= @user.username %>
-Would you like to <%= link_to "Create a new quiz", new_quiz_path %>
-or would you like to <%= link_to "Take a quiz", quizzes_path %>
-Game scores
-<% user = @user %>
-<% Game.user_scores(user).each do |game| %>
-<%= game.quiz.name %>
-<%= game.score %>
-<% end %>
+<h1>Welcome <%= @user.username %></h1>
+<div class="center">
+
+<h3> Would you like to?</h3>
+  <%= link_to "Create a new quiz", new_quiz_path , class: "btn btn-primary btn-light"%>
+  <%= link_to "Take a quiz", quizzes_path, class: "btn btn-primary btn-light" %>
+
+
+<h2>Game Scores</h2>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Quiz Name</strong></td>
+      <td><strong>Score</strong></td>
+    </tr>
+    <ol>
+    <% user = @user %>
+    <% Game.user_scores(user).each do |game| %>
+      <td><li><%= link_to game.quiz.name, game_path(game) %></td>
+      <td><%= game.score %></li></td>
+    <% end %>
+    </ol>
+  <tr>
+
+  </tbody>
+</table>

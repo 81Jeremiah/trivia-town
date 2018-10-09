@@ -1,5 +1,13 @@
 <h3> Please login!</h3>
 
+<div class="row">
+    <div class="flash_message">
+        <% if flash[:message]%>
+            <div class="btn btn-danger circle-sm">!</div>
+            <div><%= flash[:message]%></div>
+        <%end%>
+    </div>
+
 <%= form_tag(login_path) do %>
    <%= label_tag :username %>
    <%= text_field_tag :username %>
