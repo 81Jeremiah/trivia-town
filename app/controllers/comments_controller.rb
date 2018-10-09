@@ -1,11 +1,13 @@
-class GamesController < ApplicationController
+class CommentsController < ApplicationController
 
 def create
+  if params[:quiz_id]
    @quiz = Quiz.find(params[:quiz_id])
    @comment = @quiz.comments.build(comment_params)
    @comment.user = current_user
    @comment.save
-   redirect_to @post
+   redirect_to @quiz
+ end
 end
 
 private

@@ -13,9 +13,11 @@
  <div class="center">
 
  <h1> <%= @quiz.name %> </h1>
+ <% if @quiz.categories %>
  <p>Categories: <% @quiz.categories.each do|category| %>
     <%= category.name %>
     <% end %></p>
+  <% end %>
   <h3><strong> Would you like to <%=link_to "take this quiz", new_quiz_game_path(@quiz.id) %> <h3>
 </div>
 
@@ -49,12 +51,11 @@
 <p>Comments: </p>
 
 <p><% @quiz.comments.each do |comment| %>
-    <%= link_to comment.user.username, user_path(comment.user) %> said
-    <%= comment.content %>
+    <p><%= link_to comment.user.username, user_path(comment.user) %> said
+    <%= comment.content %></p>
   <% end %></p>
 
-<<%= simple_form_for [@quiz, @quiz.comments.build] do |f| %>
-  <%= f.input :content %>
+<%= form_for [@quiz, @quiz.comments.build] do |f| %>
+  <%= f.text_area :content %>
   <%= f.button :submit %>
 <% end %>
-

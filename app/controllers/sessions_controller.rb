@@ -13,12 +13,14 @@ class SessionsController < ApplicationController
     session[:user_id] = @user.id
     redirect_to @user
   else
-    @user = User.find_by(username: params[:user][:username])
+    @user = User.find_by(username: params[:username])
 
      if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect_to @user
       else
+        flash[:message]="Incorrect email or password. Please try again."
+
        render :new
     end
   end
