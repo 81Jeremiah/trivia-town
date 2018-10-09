@@ -24,6 +24,10 @@ class Game < ApplicationRecord
    def self.user_scores(user)
      where("user_id = ?", user.id)
    end
+
+   def self.top_score(quiz)
+      order(score: :desc).limit(1).where("quiz_id = ?", quiz.id)
+   end
   # def play_game
   #    user.answer_array.each do |answer|
   #      if answer == quiz_anwer
