@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :index]
   resources :quizzes
   resources :games
+
   resources :quizzes, only: [:show] do
   	resources :games, only: [:new]
   end
+  
   get "/login", to: 'sessions#new'
   post "/login",  to:'sessions#create'
   delete "logout",  to: 'sessions#destroy'
@@ -22,4 +24,7 @@ Rails.application.routes.draw do
     resources :categories, :path => "/", :only => [:index, :show]
   end
 
+  resources :quizzes, only: :show do
+    resources :comments, only: :create
+  end
 end
