@@ -1,5 +1,7 @@
 class QuizzesController < ApplicationController
   before_action :require_login
+  before_action  :set_quiz, only:[:show, :edit, :update]
+
   def index
     @categories = Category.all
 
@@ -29,9 +31,23 @@ class QuizzesController < ApplicationController
 
   end
 
+  def edit
+
+  end
+
+  def update
+    @quiz.update(quiz_params)
+    redirect_to @quiz
+  end
+
+
   private
 
   def quiz_params
     params.require(:quiz).permit(:name, category_ids:[], categories_attributes: [:name], question_and_answers_attributes: [:question, :answer])
+  end
+
+  def set_quiz
+    @quiz = Quiz.find_by(id: params[:id])
   end
 end
