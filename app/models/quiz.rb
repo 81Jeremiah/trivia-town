@@ -6,12 +6,12 @@ class Quiz < ApplicationRecord
 	# accepts_nested_attributes_for :questions
   has_many :question_and_answers
   accepts_nested_attributes_for :question_and_answers, reject_if: :all_blank
-  has_many :quiz_categories
+  #has_many :quiz_categories
   has_many :categories, through: :quiz_categories
   belongs_to :user
   has_many :comments
   has_many :users, through: :comments
-
+  has_many :users, through: :games
 	def self.by_category(category_id)
 		joins(:categories).where("categories.id=?", category_id)
 	end
