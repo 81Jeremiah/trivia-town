@@ -4,6 +4,7 @@
 <%= form_for @game do |f| %>
 <%= f.hidden_field :quiz_id %>
 <% @quiz.question_and_answers.each do |qa| %>
+
 Question: <%= qa.question %>
          <%= f.fields_for :guesses do |g| %>
            <%= g.label :guess, "Answer" %>
@@ -12,5 +13,5 @@ Question: <%= qa.question %>
 
 <% end %>
 </div>
-<%= f.submit %>
+<%= f.submit "Submit Answers" %>
 <% end %>

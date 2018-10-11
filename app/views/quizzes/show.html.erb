@@ -1,15 +1,16 @@
+<div class="center">
 
 <% if @quiz.user_id == current_user.id %>
-<% @quiz.question_and_answers.each do |qa| %>
   <ol>
-    <li>Question: <%= qa.question %>
-        <br>
-        Answer: <%= qa.answer %></li>
+  <% @quiz.question_and_answers.each do |qa| %>
+      <li>Question: <%= qa.question %>
+          <br>
+          Answer: <%= qa.answer %></li>
+      <% end %>
     </ol>
-    <% end %>
-  <%= link_to "Edit Quiz", edit_quiz_path %>
- <% end %>
+    <%= link_to "Edit Quiz", edit_quiz_path %>
 
+<% else %>
  <div class="center">
 
  <h1> <%= @quiz.name %> </h1>
@@ -58,4 +59,5 @@
 <%= form_for [@quiz, @quiz.comments.build] do |f| %>
   <%= f.text_area :content %>
   <%= f.button :submit %>
+<% end %>
 <% end %>
