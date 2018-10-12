@@ -1,17 +1,17 @@
 <h1>Take the <%= @quiz.name %> Quiz!!</h1>
 
-<div class="form-group">
+
 <%= form_for @game do |f| %>
 <%= f.hidden_field :quiz_id %>
 <% @quiz.question_and_answers.each do |qa| %>
-
+<div class="form-group">
 Question: <%= qa.question %>
          <%= f.fields_for :guesses do |g| %>
-           <%= g.label :guess, "Answer" %>
+           <br><%= g.label :guess, "Answer" %>
            <%= g.text_field :guess, class: "form-control" %>
         <% end %>
-
-<% end %>
 </div>
-<%= f.submit "Submit Answers" %>
+<% end %>
+
+<%= f.submit  %>
 <% end %>

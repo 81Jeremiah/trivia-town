@@ -2,7 +2,7 @@ class Game < ApplicationRecord
   belongs_to :user
   belongs_to :quiz
   has_many :guesses
-  accepts_nested_attributes_for :guesses
+  accepts_nested_attributes_for :guesses, reject_if: :all_blank
 
 
   def play_game

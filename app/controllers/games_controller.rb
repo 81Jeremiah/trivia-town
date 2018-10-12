@@ -19,13 +19,12 @@ class GamesController < ApplicationController
     end
 
     def create
-    #  binding.pry
 
       @game = Game.new(game_params)
       @game.user_id = current_user.id
       @game.save
       @game.play_game
-      redirect_to @game
+      redirect_to game_path(@game)
       #binding.pry
     end
 
