@@ -1,12 +1,13 @@
+<% if params[:id] == current_user.id %>
 <h1>Welcome <%= @user.username %></h1>
 <div class="center">
 
 <h3> Would you like to?</h3>
   <%= link_to "Create a new quiz", new_quiz_path , class: "btn btn-primary btn-light"%>
   <%= link_to "Take a quiz", quizzes_path, class: "btn btn-primary btn-light" %>
+<% end %>
 
-
-<h2>Game Scores</h2>
+<h2><%= @user.username %> has played these games! </h2>
 </div>
 
 <table class="table">
@@ -22,11 +23,36 @@
       <td><strong>Score</strong></td>
     </tr>
     <ol>
-    <% user = @user %>
-    <% Game.user_scores(user).each do |game| %>
-      <td><li><%= link_to game.quiz.name, game_path(game) %></td>
-      <td><%= game.score %></li></td>
-    <% end %>
+      <% @user.games.each do |game| %>
+      <%= game.quiz.name %>
+      <%= game.score %>
+      <% end %>
+    </ol>
+  <tr>
+
+  </tbody>
+</table>
+
+<h2><%= @user.username %> has created these games! </h2>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Quiz Name</strong></td>
+      <td><strong>High Score</strong></td>
+    </tr>
+    <ol>
+      <% @user.quizzes.each do |quiz| %>
+      <%= link_to quiz.name, quiz_path(quiz) %>
+      <%= Game.top_score(quiz).first.score %>
+      <% end %>
     </ol>
   <tr>
 
