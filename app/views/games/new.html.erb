@@ -1,5 +1,5 @@
 <h1>Take the <%= @quiz.name %> Quiz!!</h1>
-
+<h2> Quiz created by <%= @quiz.user.username %></h2>
 
 <%= form_for @game do |f| %>
 <%= f.hidden_field :quiz_id %>
