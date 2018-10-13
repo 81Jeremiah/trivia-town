@@ -2,6 +2,9 @@
 
 <% if @quiz.user_id == current_user.id %>
   <ol>
+ <p>Categories: <% @quiz.categories.each do|category| %>
+       <%= category.name %>
+       <% end %></p>
   <% @quiz.question_and_answers.each do |qa| %>
       <li>Question: <%= qa.question %>
           <br>
@@ -39,14 +42,14 @@
       <td><strong>User Name</strong></td>
       <td><strong>Score</strong></td>
     </tr>
-    <ol>
-    <% Game.top_5_scores(quiz).each do |game| %>
 
-    <li>User: <%= game.user.username %>
-    Score: <%= game.score %></li>
+    <% Game.top_5_scores(quiz).each do |game| %>
+    <tr>
+    <td>User: <%= link_to game.user.username, user_path(game.user) %></td>
+    <td>Score: <%= game.score %></td>
     <% end %>
-    </ol>
-      <tr>
+
+    </tr>
 
   </tbody>
 </table>

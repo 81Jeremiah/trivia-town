@@ -3,7 +3,7 @@
     <% if @quiz.errors.any? %>
       <div id="error_explanation">
         <h2>
-          <%= pluralize(@quiz.errors.count, "error") %> prohibited this user from being saved:
+          <%= pluralize(@quiz.errors.count, "error") %> prohibited this quiz from being saved:
         </h2>
 
         <ul>
@@ -30,14 +30,25 @@
  <% end %>
    <br>
     <div class="form-group">
+      <% if :question_and_answers == nil %>
       <ol>
-    <%= f.fields_for :question_and_answers do |q| %>
+    <%= f.fields_for :question_and_answers, 5.times{@quiz.question_and_answers.build} do |q| %>
         <li><%= q.label :question %>
         <%= q.text_field :question, class: "form-control" %><br>
         <%= q.label :answer %>
         <%= q.text_field :answer, class: "form-control" %><br></li>
     <% end %>
   </ol>
+   <% else %>
+   <ol>
+ <%= f.fields_for :question_and_answers do |q| %>
+     <li><%= q.label :question %>
+     <%= q.text_field :question, class: "form-control" %><br>
+     <%= q.label :answer %>
+     <%= q.text_field :answer, class: "form-control" %><br></li>
+ <% end %>
+</ol>
+   <% end %>
   </div>
 
 
