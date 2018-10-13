@@ -24,15 +24,14 @@
     </tr>
     <ol>
       <% @user.games.each do |game| %>
-      <%= game.quiz.name %>
-      <%= game.score %>
+      <td><%= game.quiz.name %></td>
+      <td><%= game.score %></td>
       <% end %>
     </ol>
-  <tr>
 
   </tbody>
 </table>
-
+<div class="center">
 <h2><%= @user.username %> has created these games! </h2>
 </div>
 
@@ -50,11 +49,16 @@
     </tr>
     <ol>
       <% @user.quizzes.each do |quiz| %>
-      <%= link_to quiz.name, quiz_path(quiz) %>
-      <%= Game.top_score(quiz).first.score %>
+    <tr>
+    <td><%= link_to quiz.name, quiz_path(quiz) %></td>
+      <% if Game.top_score(quiz).first  %>
+      <td><%= Game.top_score(quiz).first.score %></td>
+      <% else %>
+      <td>Quiz Hasn't Been Played Yet</td>
+      <% end %>
       <% end %>
     </ol>
-  <tr>
-
+</tr>
   </tbody>
 </table>
+</div>
