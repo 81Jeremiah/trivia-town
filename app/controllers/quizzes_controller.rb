@@ -24,11 +24,14 @@ class QuizzesController < ApplicationController
 
 
   def create
-  	quiz = Quiz.new(quiz_params)
-    quiz.user_id = current_user.id
-    quiz.save
+  	@quiz = Quiz.new(quiz_params)
+    @quiz.user_id = current_user.id
+    if
+    @quiz.save
       redirect_to quiz_path(quiz)
-
+    else
+      render :new
+    end
   end
 
   def edit
