@@ -81,6 +81,7 @@ GEM
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     daemons (1.2.6)
+    database_cleaner (1.7.0)
     dotenv (2.5.0)
     dotenv-rails (2.5.0)
       dotenv (= 2.5.0)
@@ -243,6 +244,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  database_cleaner
   dotenv-rails
   jbuilder (~> 2.5)
   jquery-rails
