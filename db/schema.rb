@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_09_032010) do
-
-  create_table "answers", force: :cascade do |t|
-    t.text "answer"
-    t.integer "question_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "quiz_id"
-  end
+ActiveRecord::Schema.define(version: 2018_10_13_181932) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -60,13 +52,6 @@ ActiveRecord::Schema.define(version: 2018_10_09_032010) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "questions", force: :cascade do |t|
-    t.text "question"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "quiz_id"
-  end
-
   create_table "quiz_categories", force: :cascade do |t|
     t.integer "quiz_id"
     t.integer "category_id"
@@ -74,14 +59,6 @@ ActiveRecord::Schema.define(version: 2018_10_09_032010) do
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_quiz_categories_on_category_id"
     t.index ["quiz_id"], name: "index_quiz_categories_on_quiz_id"
-  end
-
-  create_table "quiz_scores", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "quiz_id"
-    t.integer "score"
   end
 
   create_table "quizzes", force: :cascade do |t|
