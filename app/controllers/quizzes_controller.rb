@@ -14,7 +14,7 @@ class QuizzesController < ApplicationController
 
   def new
   	@quiz = Quiz.new
-    5.times{@quiz.question_and_answers.build}
+    #5.times{@quiz.question_and_answers.build}
 
   end
 
@@ -28,7 +28,7 @@ class QuizzesController < ApplicationController
     @quiz.user_id = current_user.id
     if
     @quiz.save
-      redirect_to quiz_path(quiz)
+      redirect_to quiz_path(@quiz)
     else
       render :new
     end

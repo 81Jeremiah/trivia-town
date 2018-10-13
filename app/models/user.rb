@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   has_many :quizzes, through: :games
   has_many :quizzes
+	
 end
