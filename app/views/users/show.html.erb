@@ -24,11 +24,12 @@
     </tr>
     <ol>
       <% @user.games.each do |game| %>
-      <td><%= game.quiz.name %></td>
-      <td><%= game.score %></td>
+      <tr>
+      <p><td><%= link_to game.quiz.name, quiz_path(game.quiz) %></td>
+      <td><%= game.score %></td></p>
       <% end %>
     </ol>
-
+  </tr>
   </tbody>
 </table>
 <div class="center">

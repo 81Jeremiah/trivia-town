@@ -1,0 +1,7 @@
+<div class="center">
+<h1> Top 5 Most Popular Quizes </h1>
+
+<% @top5played.each do |quiz| %>
+<p><%= link_to quiz.name, quiz_path(quiz) %></p>
+<% end %>
+</div>

@@ -1,5 +1,5 @@
 <h1>Take the <%= @quiz.name %> Quiz!!</h1>
-<h2> Quiz created by <%= @quiz.user.username %></h2>
+<h2> Quiz created by <%= link_to @quiz.user.username, user_path(@quiz.user) %></h2>
 
 <%= form_for @game do |f| %>
 <%= f.hidden_field :quiz_id %>
@@ -13,5 +13,5 @@ Question: <%= qa.question %>
 </div>
 <% end %>
 
-<%= f.submit  %>
+<%= f.submit "Take Quiz",class: "btn btn-primary btn-light" %>
 <% end %>
