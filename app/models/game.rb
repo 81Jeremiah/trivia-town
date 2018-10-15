@@ -3,6 +3,7 @@ class Game < ApplicationRecord
   belongs_to :quiz
   has_many :guesses
   accepts_nested_attributes_for :guesses, reject_if: :all_blank
+  #validates :guesses, presence: true
 
 
   def play_game
@@ -24,6 +25,8 @@ class Game < ApplicationRecord
    def self.user_scores(user)
      where("user_id = ?", user.id)
    end
+
+
 
    def self.top_score(quiz)
       order(score: :desc).limit(1).where("quiz_id = ?", quiz.id)
