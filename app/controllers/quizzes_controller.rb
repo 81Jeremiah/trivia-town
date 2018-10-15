@@ -14,12 +14,21 @@ class QuizzesController < ApplicationController
 
   def new
   	@quiz = Quiz.new
-    #5.times{@quiz.question_and_answers.build}
+    #@question_and_answer = 5.times{@quiz.question_and_answers.build}
 
   end
 
+  def top_quizzes
+    @top5played = Quiz.most_games
+    #@top5creators =
+  end
+
   def show
-    @quiz = Quiz.find_by(id: params[:id])
+    if
+      @quiz = Quiz.find_by(id: params[:id])
+    else
+      top_quizzes
+    end
   end
 
 
@@ -39,7 +48,9 @@ class QuizzesController < ApplicationController
   end
 
   def update
-    @quiz.update(quiz_params)
+  @quiz.update(quiz_params)
+
+    #binding.pry
     redirect_to @quiz
   end
 
@@ -47,10 +58,12 @@ class QuizzesController < ApplicationController
   private
 
   def quiz_params
-    params.require(:quiz).permit(:name, category_ids:[], categories_attributes: [:name], question_and_answers_attributes: [:question, :answer])
+    params.require(:quiz).permit(:name, category_ids:[], categories_attributes: [:name], question_and_answers_attributes: [:question, :answer, :id])
   end
 
   def set_quiz
     @quiz = Quiz.find_by(id: params[:id])
   end
+
+
 end
