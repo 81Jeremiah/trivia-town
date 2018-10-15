@@ -24,7 +24,8 @@ class GamesController < ApplicationController
       @game.user_id = current_user.id
       @game.save
       @game.play_game
-      redirect_to game_path(@game)
+      #binding.pry
+      redirect_to quiz_game_path(@game.quiz, @game)
       #binding.pry
     end
 
