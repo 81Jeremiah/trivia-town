@@ -1,13 +1,13 @@
 class Quiz < ApplicationRecord
 	# has_many :questions
 	# has_many :answers   #, through: :questions
-	# has_many :games
+	has_many :games
 	# accepts_nested_attributes_for :answers
 	# accepts_nested_attributes_for :questions
   has_many :question_and_answers
   accepts_nested_attributes_for :question_and_answers, reject_if: :all_blank
   has_many :quiz_categories
-  #validates :quiz_categories, presence: true
+  validates :name, presence: true
 
   has_many :categories, through: :quiz_categories
   validates :categories, presence: true
@@ -18,6 +18,9 @@ class Quiz < ApplicationRecord
   has_many :users, through: :comments
   has_many :users, through: :games
   #before_save :erase_empty_category
+  scope :most_games, ->{joins(:games).group(:id).order("COUNT(games.id) DESC").limit(5)}
+
+
 
 	def self.by_category(category_id)
 		joins(:categories).where("categories.id=?", category_id)
