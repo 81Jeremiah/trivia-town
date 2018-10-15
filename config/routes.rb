@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
+  get "quizzes/top_quizzes", to: 'quizzes#top_quizzes'
   resources :users, only: [:new, :create, :index]
   resources :quizzes
   resources :games
 
   resources :quizzes, only: [:show] do
-  	resources :games, only: [:new]
+  	resources :games, only: [:new, :show]
   end
-  
+
   get "/login", to: 'sessions#new'
   post "/login",  to:'sessions#create'
   delete "logout",  to: 'sessions#destroy'
+
+
+
   #post "/games/new" => 'games#new'
   get '/auth/facebook/callback' => 'sessions#create'
 
@@ -27,4 +31,6 @@ Rails.application.routes.draw do
   resources :quizzes, only: :show do
     resources :comments, only: :create
   end
+
+
 end
