@@ -22,11 +22,7 @@ class QuizzesController < ApplicationController
   end
 
   def show
-    if
-      @quiz = Quiz.find_by(id: params[:id])
-    else
-      top_quizzes
-    end
+  
   end
 
 

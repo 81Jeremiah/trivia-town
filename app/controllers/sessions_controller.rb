@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
         end
      end
   end
-  
+
   def destroy
     session.destroy
     redirect_to root_path
@@ -36,4 +36,5 @@ class SessionsController < ApplicationController
       u.image = auth_hash['info']['image']
       u.password = SecureRandom.hex
     end
+  end
 end
