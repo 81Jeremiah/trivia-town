@@ -14,8 +14,6 @@ class QuizzesController < ApplicationController
 
   def new
   	@quiz = Quiz.new
-    #@question_and_answer = 5.times{@quiz.question_and_answers.build}
-
   end
 
   def top_quizzes
@@ -48,9 +46,7 @@ class QuizzesController < ApplicationController
   end
 
   def update
-  @quiz.update(quiz_params)
-
-    #binding.pry
+    @quiz.update(quiz_params)
     redirect_to @quiz
   end
 
