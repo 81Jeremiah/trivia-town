@@ -18,17 +18,12 @@
         <tr>
 
           <td><%= link_to quiz.name, quiz_path(quiz) %></td>
-          <td><%  if quiz.user %>
-               <%= quiz.user.username %>
-               <% else %>
-                no name
-               <% end  %></td>
+          <td><%= quiz.user.username %></td>
               <% if  Game.top_score(quiz).first %>
-              <td> <%= Game.top_score(quiz).first.score %></td>
-               <% else %>
-               <td>This Game Hasn't Been Played </td>
+                <td> <%= Game.top_score(quiz).first.score %></td>
+              <% else %>
+                 <td>This Game Hasn't Been Played </td>
                <% end %>
-
         </tr>
       <% end %>
     </tbody>

@@ -1,57 +1,16 @@
 <%= form_for @quiz do |f| %>
 
-    <% if @quiz.errors.any? %>
-      <div id="error_explanation">
-        <h2>
-          <%= pluralize(@quiz.errors.count, "error") %> prohibited this quiz from being saved:
-        </h2>
-
-        <ul>
-        <% @quiz.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
+    <%= f.error_messages %>
 
     <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class: "form-control" %></div>
     <br>
 
-    <div class="form-group">
-    Categories
-    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "form-control" %></div>
-    <br>
-    <div class="form-group">
-    New Category
-    <%= f.fields_for :categories, @quiz.categories.build do |categories_fields| %>
-   <%= categories_fields.text_field :name, class: "form-control" %></div>
- <% end %>
+    <%= render 'categories', f: f %>
    <br>
-    <div class="form-group">
-      <% if @quiz.question_and_answers.count != 5 %>
-      <ol>
-        <% current_quiz_count = @quiz.question_and_answers.count %>
-     <%= f.fields_for :question_and_answers, (5 - current_quiz_count).times{@quiz.question_and_answers.build} do |q| %>
-        <li><%= q.label :question %>
-        <%= q.text_field :question, class: "form-control" %><br>
-        <%= q.label :answer %>
-        <%= q.text_field :answer, class: "form-control" %><br></li>
-     <% end %>
-     </ol>
-     <% else %>
-
-   <ol>
- <%= f.fields_for :question_and_answers do |q| %>
-     <li><%= q.label :question %>
-     <%= q.text_field :question, class: "form-control" %><br>
-     <%= q.label :answer %>
-     <%= q.text_field :answer, class: "form-control" %><br></li>
- <% end %>
-</ol>
+    <%= render 'questions_and_answers', f: f %>
   </div>
-  <% end %>
 
     <%= f.submit %>
 <% end %>

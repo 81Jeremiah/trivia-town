@@ -46,6 +46,7 @@ gem 'dotenv-rails'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'database_cleaner'
+gem 'dynamic_form' 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
