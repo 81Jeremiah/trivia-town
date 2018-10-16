@@ -21,11 +21,11 @@ Challenge friends, make new friends and learn some things along the way.
 * If using facebook login, please use `thin start --ssl` instead of `rails s` for your local host.
 
 ## Built with
-* 'rails', '~> 5.2.1'
-* bcrypt
+* Rails '~> 5.2.1'
+* Bcrypt
 * Bootstrap-sass - theme heavily inspired by Flatiron School's Amusement Park lesson
-* omniauth
-* ruby '2.3.3'
+* Omniauth
+* Ruby '2.3.3'
 
 
 ## Contributing
