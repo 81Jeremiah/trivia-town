@@ -1,22 +1,13 @@
 <div class="form-group">
-  <% if @quiz.question_and_answers.count != 5 %>
-  <ol>
-    <% current_quiz_count = @quiz.question_and_answers.count %>
- <%= f.fields_for :question_and_answers, (5 - current_quiz_count).times{@quiz.question_and_answers.build} do |q| %>
-    <li><%= q.label :question %>
-    <%= q.text_field :question, class: "form-control" %><br>
-    <%= q.label :answer %>
-    <%= q.text_field :answer, class: "form-control" %><br></li>
- <% end %>
- </ol>
- <% else %>
 
 <ol>
-<%= f.fields_for :question_and_answers do |q| %>
- <li><%= q.label :question %>
- <%= q.text_field :question, class: "form-control" %><br>
- <%= q.label :answer %>
- <%= q.text_field :answer, class: "form-control" %><br></li>
-<% end %>
-</ol>
-<% end %>
+  <% f.build_nested_records(:question_and_answers, minimum: 5, maximum: 5) %>
+    <%= f.fields_for :question_and_answers do |q_and_a| %>
+
+      <li><%= q_and_a.label :question %>
+      <%= q_and_a.text_field :question, class: "form-control" %><br>
+      <%= q_and_a.label :answer %>
+      <%= q_and_a.text_field :answer, class: "form-control" %><br></li>
+     <% end %>
+     </ol>
+</div>
