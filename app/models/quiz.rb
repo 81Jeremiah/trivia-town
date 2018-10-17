@@ -13,9 +13,8 @@ class Quiz < ApplicationRecord
   has_many :comments
   has_many :users, through: :comments
   has_many :users, through: :games
-  scope :most_games, ->{joins(:games).group(:id).order("COUNT(games.id) DESC").limit(5)}
-  scope :by_category, -> {joins(:categories).where("categories.id=?", category_id)}
-
+  scope :most_games, -> {joins(:games).group(:id).order("COUNT(games.id) DESC").limit(5)}
+  scope :by_category, -> (category_id){joins(:categories).where("categories.id=?", category_id)}
 
 	def categories_attributes=(category_attributes)
     category_attributes.values.each do |category_attribute|
