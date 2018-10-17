@@ -11,47 +11,8 @@
 
   <body>
 
-<!-- move navbar to a helper -->
-   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
- <div class="container">
-   <div class="navbar-header">
-     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-       <span class="sr-only">Toggle navigation</span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-     </button>
-   <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
- </div>
-     <div class="navbar-collapse collapse">
-       <ul class="nav navbar-nav">
-         <% if current_user %>
-                <li><%= link_to "Hello, #{current_user.username}!", user_path(current_user) %></li>
-                <li><%= link_to "Create Quiz", new_quiz_path %></li>
-                <li><%= link_to "Log Out", logout_path, method: :delete %></li>
-
-                <div class="category-filter">
-                 <%= form_tag("/quizzes/categories/:id", method: "get") do %>
-                   <%= select_tag "category", options_from_collection_for_select(Category.all, "name", "name"), include_blank: "Find Quiz by Category" %>
-                <%= submit_tag "Go" %>
-                 <% end %>
-               </div>
-              <% else %>
-                <li><%= link_to "Sign Up", new_user_path %></li>
-                <li><%= link_to "Log In", login_path %></li>
-              <% end %>
-            </ul>
-
-
-
-   </div>
-   <div class="navbar-collapse collapse">
-     <ul class="nav navbar-nav">
-
-     </ul>
-   </div><!--/.nav-collapse -->
- </div>
-</div>
+<!-- load navbar partial-->
+<%= render "layouts/navbar" %>
 
 <!-- content -->
 <div class="container"  role="main">
