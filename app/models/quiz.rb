@@ -8,7 +8,7 @@ class Quiz < ApplicationRecord
 
   has_many :categories, through: :quiz_categories
   validates :categories, presence: true
-  #validate :must_have_question_and_answer
+  validate :must_have_question_and_answer
   belongs_to :user
   has_many :comments
   has_many :users, through: :comments
@@ -38,9 +38,9 @@ end
 
 private
 
-  # def must_have_question_and_answer
-  #   return errors.add :base, "Must Have 5 Questions and Answers" unless question_and_answers.length == 5
-  # end
+  def must_have_question_and_answer
+    return errors.add :base, "Must Have 5 Questions and Answers" unless question_and_answers.length == 5
+  end
 
 
 end
