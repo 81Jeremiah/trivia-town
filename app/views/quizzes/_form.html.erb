@@ -9,8 +9,10 @@
 
     <%= render 'categories', f: f %>
    <br>
-    <%= render 'questions_and_answers', f: f %>
-  </div>
 
-    <%= f.submit %>
+    <%= render 'questions_and_answers', f: f %>
+
+
+    <%= f.submit "Create Quiz",class: "btn btn-primary btn-light" %>
 <% end %>
+</div>
