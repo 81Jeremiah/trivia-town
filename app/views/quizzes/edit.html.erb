@@ -1,3 +1,9 @@
+<%= form_tag quiz_path(@quiz.id), method: "delete" do %>
+  <%= submit_tag "DELETE #{@quiz.name} Quiz",class: "btn btn-primary btn-light" %>
+<% end %>
+
+
 <h1>Edit Quiz</h1>
+
 
 <%= render 'form' %>

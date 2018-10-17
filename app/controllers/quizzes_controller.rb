@@ -1,15 +1,10 @@
 class QuizzesController < ApplicationController
-  before_action :require_login
-  before_action  :set_quiz, only:[:show, :edit, :update]
+  before_action :require_login, only:[:index,:new,:top_quizzes, :show]
+  before_action  :set_quiz, only:[:show, :edit, :update, :destroy, :quiz_owner]
+  before_action :quiz_owner, only:[:edit, :update, :destroy]
 
   def index
-    @categories = Category.all
-
-    if !params[:category].blank?
-      @quizzes = Quiz.by_category(params[:category])
-    else
-      @quizzes = Quiz.all
-    end
+    @quizzes = Quiz.all
   end
 
   def new
@@ -22,7 +17,7 @@ class QuizzesController < ApplicationController
   end
 
   def show
-  
+
   end
 
 
@@ -43,8 +38,16 @@ class QuizzesController < ApplicationController
 
   def update
     @quiz.update(quiz_params)
+    flash[:message]="Quiz updated!"
     redirect_to @quiz
   end
+
+  def destroy
+    @quiz.destroy
+    flash[:message]="Quiz deleted!"
+    redirect_to user_path(User.find(session[:user_id]))
+  end
+
 
 
   private
@@ -57,5 +60,10 @@ class QuizzesController < ApplicationController
     @quiz = Quiz.find_by(id: params[:id])
   end
 
+  def quiz_owner
+    if @quiz.user_id != current_user.id
+      redirect_to quiz_path(@quiz)
+    end
+  end
 
 end
