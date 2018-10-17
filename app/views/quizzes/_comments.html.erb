@@ -1,0 +1,9 @@
+<p><% @quiz.comments.each do |comment| %>
+    <p><%= link_to comment.user.username, user_path(comment.user) %> said
+    <%= comment.content %></p>
+  <% end %></p>
+
+<%= form_for [@quiz, @quiz.comments.build] do |f| %>
+  <%= f.text_area :content %>
+  <%= f.button :submit,class: "btn btn-primary btn-light" %>
+<% end %>
