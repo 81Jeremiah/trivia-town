@@ -1,18 +1,21 @@
 class Quiz < ApplicationRecord
+  belongs_to :user
 
 	has_many :games
   has_many :question_and_answers
   accepts_nested_attributes_for :question_and_answers, reject_if: :all_blank
+	validate :must_have_question_and_answer
+
   has_many :quiz_categories
   validates :name, presence: true
 
   has_many :categories, through: :quiz_categories
   validates :categories, presence: true
-  validate :must_have_question_and_answer
-  belongs_to :user
+
   has_many :comments
   has_many :users, through: :comments
   has_many :users, through: :games
+	
   scope :most_games, -> {joins(:games).group(:id).order("COUNT(games.id) DESC").limit(5)}
   scope :by_category, -> (category_id){joins(:categories).where("categories.id=?", category_id)}
 
