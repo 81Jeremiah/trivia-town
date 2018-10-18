@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   def new
   end
 
+#create new session by login or facebook
   def create
     if auth_hash
       @user = facebook_login
@@ -28,7 +29,7 @@ class SessionsController < ApplicationController
   def auth_hash
     request.env['omniauth.auth']
   end
-
+#authenticate user using facebook
   def facebook_login
       User.find_or_create_by(uid: auth_hash['uid']) do |u|
       u.username = auth_hash['info']['name']

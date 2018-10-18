@@ -10,7 +10,7 @@ class QuizzesController < ApplicationController
   def new
   	@quiz = Quiz.new
   end
-
+#shows page top 5 quizzes by times played
   def top_quizzes
     @quizzes = Quiz.most_games
     #@top5creators =
@@ -55,11 +55,11 @@ class QuizzesController < ApplicationController
   def quiz_params
     params.require(:quiz).permit(:name, category_ids:[], categories_attributes: [:name], question_and_answers_attributes: [:question, :answer, :id])
   end
-
+#finds correct quiz by params
   def set_quiz
     @quiz = Quiz.find_by(id: params[:id])
   end
-
+#verifies quiz owner to allow edit
   def quiz_owner
     if @quiz.user_id != current_user.id
       redirect_to quiz_path(@quiz)
