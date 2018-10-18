@@ -1,10 +1,12 @@
-<h3> Please login!</h3>
+<div class="center">
+<h3> Please login</h3>
 
 <div class="row">
     <div class="flash_message">
         <% if flash[:message]%>
-            <div class="btn btn-danger circle-sm">!</div>
-            <div><%= flash[:message]%></div>
+            <div class="alert alert-danger" role="alert">
+              <%= flash[:message]%>
+           </div>
         <%end%>
     </div>
 
@@ -15,7 +17,8 @@
    <%= label_tag :password %>
    <%= password_field_tag :password %>
    <br>
-   <%= submit_tag "Sign In" %>
+   <%= submit_tag "Sign In", class: "btn btn-info" %>
 <% end %>
 <%= link_to('Log in with Facebook!', '/auth/facebook') %>
-<%= link_to "Sign Up", new_user_path %> <!-- add to nav bar -->
+<%= link_to "Sign Up", new_user_path %>
+</div>

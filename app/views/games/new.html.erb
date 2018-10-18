@@ -1,6 +1,7 @@
+<div class= "center">
 <h1>Take the <%= @quiz.name %> Quiz!!</h1>
 <h2> Quiz created by <%= link_to @quiz.user.username, user_path(@quiz.user) %></h2>
-
+</div>
 <%= form_for @game do |f| %>
 <%= f.hidden_field :quiz_id %>
 <% @quiz.question_and_answers.each do |qa| %>

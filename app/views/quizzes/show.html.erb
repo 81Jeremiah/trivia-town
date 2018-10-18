@@ -1,7 +1,14 @@
-<%= flash_message %>
+
+<div class="alert alert-success" role="alert">
+  <%= flash_message %>
+</div>
+
 <div class="center">
-<% if user_created_quiz? %>
-<%= render 'answer_show_page', quiz: @quiz %>
+  <% if user_created_quiz? %>
+    <%= render 'answer_show_page', quiz: @quiz %>
+    <%= form_tag quiz_path(@quiz.id), method: "delete" do %>
+       <%= submit_tag "DELETE #{@quiz.name} Quiz",class: "btn btn-danger btn-light" %>
+  <% end %>
 
 <% else %>
  <div class="center">
