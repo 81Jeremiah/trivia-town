@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>User Name</strong></td>
+      <td><strong>Score</strong></td>
+    </tr>
+
+    <% Game.top_5_scores(@quiz).each do |game| %>
+    <tr>
+    <td>User: <%= link_to game.user.username, user_path(game.user) %></td>
+    <td>Score: <%= game.score %></td>
+    <% end %>
+
+    </tr>
+
+  </tbody>
+</table>

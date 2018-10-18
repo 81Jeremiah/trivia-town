@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Quiz Name</strong></td>
+      <td><strong>High Score</strong></td>
+    </tr>
+    <ol>
+      <% @user.quizzes.each do |quiz| %>
+    <tr>
+    <td><%= link_to quiz.name, quiz_path(quiz) %></td>
+      <% if Game.top_score(quiz).first  %>
+      <td><%= Game.top_score(quiz).first.score %></td>
+      <% else %>
+      <td>Quiz Hasn't Been Played Yet</td>
+      <% end %>
+      <% end %>
+    </ol>
+</tr>
+  </tbody>
+</table>

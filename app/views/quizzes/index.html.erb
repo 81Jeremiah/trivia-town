@@ -1,31 +1,8 @@
-<h1> All Current Quizzes! </h1>
-<h2> <%= link_to "Top Quizzes" ,  quizzes_top_quizzes_path %> </h2>
+<div class="center" >
+<h1> Check Out The Most Popular Quizzes!! </h1>
+<h2> <%= link_to "Top Quizzes",  quizzes_top_quizzes_path, class: "btn btn-primary btn-lg btn-block" %> </h2>
+</div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+<h1> All Quizzes Available! </h1>
 
-    <tbody>
-      <tr>
-        <td><strong>Quiz Name</strong></td>
-        <td><strong>Quiz Created By:</strong></td>
-        <td><strong>Top Score</strong></td>
-      </tr>
-      <% @quizzes.each do |quiz| %>
-        <tr>
-
-          <td><%= link_to quiz.name, quiz_path(quiz) %></td>
-          <td><%= quiz.user.username %></td>
-              <% if  Game.top_score(quiz).first %>
-                <td> <%= Game.top_score(quiz).first.score %></td>
-              <% else %>
-                 <td>This Game Hasn't Been Played </td>
-               <% end %>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
+<%= render 'quiz_table' %>

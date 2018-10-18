@@ -1,19 +1,7 @@
 <%= flash_message %>
 <div class="center">
-
-<% if @quiz.user_id == current_user.id %>
-  <ol>
-    <p>Categories: <% @quiz.categories.each do|category| %>
-       <%= category.name %>
-    <% end %></p>
-
-  <% @quiz.question_and_answers.each do |qa| %>
-      <li>Question: <%= qa.question %>
-          <br>
-          Answer: <%= qa.answer %></li>
-      <% end %>
-    </ol>
-    <%= link_to "Edit Quiz", edit_quiz_path %>
+<% if user_created_quiz? %>
+<%= render 'answer_show_page', quiz: @quiz %>
 
 <% else %>
  <div class="center">
@@ -27,35 +15,11 @@
 
   <h3><strong> Would you like to <%=link_to "take this quiz", new_quiz_game_path(@quiz.id) %> <h3>
 </div>
+<% end %>
 
- <% quiz = @quiz %>
 <h2>Top Scores:</h2>
+<%= render 'top_score_table' %>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><strong>User Name</strong></td>
-      <td><strong>Score</strong></td>
-    </tr>
-
-    <% Game.top_5_scores(quiz).each do |game| %>
-    <tr>
-    <td>User: <%= link_to game.user.username, user_path(game.user) %></td>
-    <td>Score: <%= game.score %></td>
-    <% end %>
-
-    </tr>
-
-  </tbody>
-</table>
 <br>
 <p>Comments: </p>
 <%= render 'comments' %>
-
-<% end %>

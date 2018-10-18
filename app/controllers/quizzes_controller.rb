@@ -12,7 +12,7 @@ class QuizzesController < ApplicationController
   end
 
   def top_quizzes
-    @top5played = Quiz.most_games
+    @quizzes = Quiz.most_games
     #@top5creators =
   end
 

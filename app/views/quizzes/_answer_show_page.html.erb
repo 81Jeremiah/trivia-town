@@ -1,0 +1,12 @@
+<ol>
+  <p>Categories: <% @quiz.categories.each do|category| %>
+     <%= category.name %>
+  <% end %></p>
+
+<% @quiz.question_and_answers.each do |qa| %>
+    <li>Question: <%= qa.question %>
+        <br>
+        Answer: <%= qa.answer %></li>
+    <% end %>
+  </ol>
+  <%= link_to "Edit Quiz", edit_quiz_path %>
