@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :index, :show]
 
+  get "quizzes/top_quizzes", to: 'quizzes#top_quizzes'
+
   resources :quizzes
 
   resources :quizzes, only: [:show] do
@@ -17,7 +19,6 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
 
-  get "quizzes/top_quizzes", to: 'quizzes#top_quizzes'
 
   resources :games, only:[:create]
 
