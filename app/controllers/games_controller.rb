@@ -21,6 +21,10 @@ class GamesController < ApplicationController
     @game = Game.find_by(id: params[:id])
   end
 
+  def games_score
+    @games = Game.order_by_score
+  end
+
  private
   def game_params
     params.require(:game).permit(:quiz_id, guesses_attributes: [:guess])

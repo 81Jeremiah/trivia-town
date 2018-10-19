@@ -8,6 +8,7 @@ class Game < ApplicationRecord
   scope :top_5_scores, ->(quiz){order(score: :desc).limit(5).where("quiz_id = ?", quiz.id)}
   scope :top_score, ->(quiz){order(score: :desc).limit(1).where("quiz_id = ?", quiz.id)}
 
+  scope :order_by_score, -> {order(score: :desc)}
   def play_game #compares answers and updates score for game
     game_score = (quiz.correct_answers & user_guesses).count
     self.score = game_score
