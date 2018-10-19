@@ -1,23 +1,24 @@
 
-<div class="center">
-  <h1> Create a free account! </h1>
-
+<div class="text-center">
+  <form class="form-signin">
+  <h2> Create a free account! </h2>
+</div>
   <%= form_for @user do |f| %>
 
     <%= f.error_messages %>
+  <div class="center">
 
-    <%= f.label :username %>
-    <%= f.text_field :username, class: "form-control" %>
-    <br>
-    <%= f.label :email %>
-    <%= f.text_field :email, class: "form-control" %>
-    <br>
-    <%= f.label :password %>
-    <%= f.password_field :password, class: "form-control" %>
-    <br>
+      <%= f.text_field :username, placeholder: "username", class: "col-auto" %>
+      <br>
+
+      <%= f.text_field :email, placeholder: "email" %>
+      <br>
+
+      <%= f.password_field :password,  placeholder: "password" %>
+      <br>
     <%= f.submit "Create Account", class: "btn btn-primary" %>
-
   <% end %>
-
+</div>
+<div class="center">
   <%= link_to('Log in with Facebook!', '/auth/facebook') %>
 </div>

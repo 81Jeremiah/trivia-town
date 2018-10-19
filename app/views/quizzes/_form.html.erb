@@ -1,9 +1,10 @@
 <%= form_for @quiz do |f| %>
+<% if @quiz.errors.any? %>
 
     <div class="alert alert-info" role="alert">
       <%= f.error_messages %>
     </div>
-
+<% end %>
     <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class: "form-control" %></div>

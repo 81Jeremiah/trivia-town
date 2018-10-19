@@ -1,13 +1,14 @@
-
+<%   if flash[:message] %>
 <div class="alert alert-success" role="alert">
   <%= flash_message %>
 </div>
+<% end %>
 
 <div class="center">
   <% if user_created_quiz? %>
     <%= render 'answer_show_page', quiz: @quiz %>
     <%= form_tag quiz_path(@quiz.id), method: "delete" do %>
-       <%= submit_tag "DELETE #{@quiz.name} Quiz",class: "btn btn-danger btn-light" %>
+       <%= submit_tag "DELETE Quiz",class: "btn btn-danger btn-light" %>
   <% end %>
 
 <% else %>
@@ -20,7 +21,8 @@
     <%= category.name %>
     <% end %></p>
 
-  <h3><strong> Would you like to <%=link_to "take this quiz", new_quiz_game_path(@quiz.id) %> <h3>
+  <h3><strong> Would you like to<br>
+    <%=link_to "TAKE THIS QUIZ?",  new_quiz_game_path(@quiz.id), class: "btn btn-success btn-lg" %> <h3>
 </div>
 <% end %>
 
