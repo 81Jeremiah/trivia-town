@@ -7,13 +7,13 @@
 
     <%= f.error_messages %>
   <div class="center">
-
+      <% f.label :username %>
       <%= f.text_field :username, placeholder: "username", class: "col-auto" %>
       <br>
-
+      <% f.label :email %>
       <%= f.text_field :email, placeholder: "email" %>
       <br>
-
+       <% f.label :password %>
       <%= f.password_field :password,  placeholder: "password" %>
       <br>
     <%= f.submit "Create Account", class: "btn btn-primary" %>
