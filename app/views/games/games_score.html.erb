@@ -1,0 +1,32 @@
+<div class="center">
+
+<h1> All Games Played By Score </h1>
+
+
+</div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Quiz Name</strong></td>
+      <td><strong>Game Score:</strong></td>
+      <td><strong>User </strong></td>
+    </tr>
+    <% @games.each do |game| %>
+      <tr>
+
+        <td><%= link_to game.quiz.name, quiz_path(game.quiz) %></td>
+        <td> <%= game.score %></td>
+        <td><%= link_to game.user.username, user_path(game.user) %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
