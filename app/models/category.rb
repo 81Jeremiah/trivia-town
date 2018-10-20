@@ -7,7 +7,5 @@ class Category < ApplicationRecord
       self.name.downcase!
    end
 
-  def to_param
-    name
-  end
+
 end
