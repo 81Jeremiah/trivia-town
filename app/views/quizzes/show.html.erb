@@ -9,8 +9,9 @@
     <%= render 'answer_show_page', quiz: @quiz %>
     <%= form_tag quiz_path(@quiz.id), method: "delete" do %>
        <%= submit_tag "DELETE Quiz",class: "btn btn-danger btn-light" %>
-  <% end %>
-
+    <% end %>
+    <br>
+     <%= link_to "All Quizzes", quizzes_path,class: "btn btn-primary" %>
 <% else %>
  <div class="center">
 
