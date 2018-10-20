@@ -10,10 +10,10 @@ class QuizzesController < ApplicationController
   def new
   	@quiz = Quiz.new
   end
+
 #shows page top 5 quizzes by times played
   def top_quizzes
     @quizzes = Quiz.most_games
-    #@top5creators =
   end
 
   def show
@@ -24,13 +24,13 @@ class QuizzesController < ApplicationController
   def create
   	@quiz = Quiz.new(quiz_params)
     @quiz.user_id = current_user.id
-    if
-    @quiz.save
-      redirect_to quiz_path(@quiz)
-    else
-      render :new
-    end
-  end
+     if
+       @quiz.save
+       redirect_to quiz_path(@quiz)
+     else
+       render :new
+     end
+   end
 
   def edit
 
