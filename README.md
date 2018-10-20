@@ -41,7 +41,7 @@ email, or any other method with the owners of this repository before making a ch
 3. For now, I'll perform the merge after I review any pull requests.
 
 ## Author
-* [Jeremiah Lutes] (https://github.com/81Jeremiah)
+*[Jeremiah Lutes](https://github.com/81Jeremiah)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
