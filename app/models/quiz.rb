@@ -1,21 +1,18 @@
 class Quiz < ApplicationRecord
   belongs_to :user
-
-	has_many :games
+  has_many :games
   has_many :question_and_answers
-  accepts_nested_attributes_for :question_and_answers, reject_if: :all_blank
-	validate :must_have_question_and_answer
-
   has_many :quiz_categories
-
-	validates :name, presence: true
-
   has_many :categories, through: :quiz_categories
-  validates :categories, presence: true
-
   has_many :comments
   has_many :users, through: :comments
   has_many :users, through: :games
+
+  validate :must_have_question_and_answer
+  validates :name, presence: true
+  validates :categories, presence: true
+
+  accepts_nested_attributes_for :question_and_answers, reject_if: :all_blank
 
 	#class method to see what quizzes have been played the most
   scope :most_games, -> {joins(:games).group(:id).order("COUNT(games.id) DESC").limit(5)}
@@ -42,7 +39,7 @@ class Quiz < ApplicationRecord
 
 
 private
-  #custom validator for 5 questions and answers when creating quiz 
+  #custom validator for 5 questions and answers when creating quiz
   def must_have_question_and_answer
     return errors.add :base, "Must Have 5 Questions and Answers" unless question_and_answers.length == 5
   end
