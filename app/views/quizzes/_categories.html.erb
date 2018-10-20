@@ -1,9 +1,13 @@
+
 <div class="form-group">
-Categories
-<%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "form-control" %></div>
-<br>
+  Categories
+  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "form-control" %>
+  <br>
+</div>
+
 <div class="form-group">
 New Category
-<%= f.fields_for :categories, @quiz.categories.build do |categories_fields| %>
-<%= categories_fields.text_field :name, class: "form-control" %></div>
-<% end %>
+  <%= f.fields_for :categories, @quiz.categories.build do |categories_fields| %>
+  <%= categories_fields.text_field :name, class: "form-control" %>
+</div>
+  <% end %>

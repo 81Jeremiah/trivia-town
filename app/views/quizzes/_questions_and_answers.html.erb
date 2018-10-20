@@ -1,6 +1,7 @@
 <div class="form-group">
 
 <ol>
+  <!-- uses helper to conrol field numbers to only be 5 -->
   <% f.build_nested_records(:question_and_answers, minimum: 5, maximum: 5) %>
     <%= f.fields_for :question_and_answers do |q_and_a| %>
 
