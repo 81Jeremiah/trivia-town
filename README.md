@@ -47,4 +47,4 @@ email, or any other method with the owners of this repository before making a ch
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-This app was built as part of a portfolio requirement for Flatiron School(https://flatironschool.com/). Specific features and the flow of the app are inspired by their direction and guidance.
+This app was built as part of a portfolio requirement for {[Flatiron School](https://flatironschool.com/). Specific features and the flow of the app are inspired by their direction and guidance.
