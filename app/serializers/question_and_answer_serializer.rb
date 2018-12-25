@@ -1,4 +1,6 @@
 class QuestionAndAnswerSerializer < ActiveModel::Serializer
-  belongs_to :quiz
+  attributes :question,:answer, :id
+  belongs_to :quiz, serializer: QuizQuestionAndAnswerSerializer
+
 
 end

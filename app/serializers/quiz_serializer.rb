@@ -1,7 +1,7 @@
 class QuizSerializer < ActiveModel::Serializer
   attributes :id, :name, :quiz_score_id, :user_id
   has_many :games
-  has_many :question_and_answers
+  has_many :question_and_answers, include_nested_associations: true
   has_many :quiz_categories
   has_many :categories, through: :quiz_categories
   has_many :comments
