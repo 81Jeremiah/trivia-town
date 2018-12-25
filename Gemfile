@@ -22,7 +22,7 @@ gem 'pry'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5'  #be careful of how it loads the JS
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -46,7 +46,9 @@ gem 'dotenv-rails'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'database_cleaner'
-gem 'dynamic_form' 
+gem 'dynamic_form'
+gem 'active_model_serializers'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
