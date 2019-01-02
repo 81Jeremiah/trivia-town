@@ -17,7 +17,8 @@ class Quiz < ApplicationRecord
 	#class method to see what quizzes have been played the most
   scope :most_games, -> {joins(:games).group(:id).order("COUNT(games.id) DESC").limit(5)}
   #class method to filter by category given in the argument
-	scope :by_category, -> (category_id){joins(:categories).where("categories.id=?", category_id)}
+	#scope :by_category, -> (category_id){joins(:categories).where("categories.id=?", category_id)}
+  scope :by_category, -> (category_name){joins(:categories).where("categories.name=?", category_name)}
   #class mehod to show top 5 scores per game
 	scope :top_5_scores, -> (quiz){joins(:games).where quiz_id = "?", quiz.id}
   #custom category attribute writer - doesn't duplicate and doesn't save blank
