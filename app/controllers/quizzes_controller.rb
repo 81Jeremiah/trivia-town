@@ -5,6 +5,10 @@ class QuizzesController < ApplicationController
 
   def index
     @quizzes = Quiz.all
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @quizzes, status: 200}
+    end
   end
 
   def new
@@ -17,6 +21,7 @@ class QuizzesController < ApplicationController
   end
 
   def show
+    # render json: @quiz, status: 200
 
   end
 
@@ -24,6 +29,7 @@ class QuizzesController < ApplicationController
   def create
   	@quiz = Quiz.new(quiz_params)
     @quiz.user_id = current_user.id
+    @quiz.save
     render json: @quiz, status: 201
      # if
      #   @quiz.save
