@@ -4,13 +4,16 @@ $( document ).ready(function() {
 
 function attachListeners(){
   $('form[id=new_quiz]').submit((e) => {
-
+       $('#quiz-form').empty()
 
     e.preventDefault();
+
     var values = $(e.currentTarget).serialize();
     var posting = $.post('/quizzes', values);
 
     posting.done(function(data) {
+
+
         var quiz = data;
          $("#quizName").text(quiz["name"]);
          $("#question1").text(quiz.question_and_answers[0].question);
@@ -28,13 +31,13 @@ function attachListeners(){
 
   })
   $('#category').change(() =>{
+    $('.page-body').empty()
     let cat = $('#category').val();
-    debugger
-    $.get("/quizzes/categories" + cat, function(data, status) {
+    // debugger
+    $.get("/quizzes/categories/" + cat, function(data) {
       console.log(data)
-      console.log(status)
       // Replace text of body-id div
-      // $("#body-" + id).html(data["description"]);
+      $('.page-body').html(data);
     });
 
   })
