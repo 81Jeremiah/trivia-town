@@ -71,6 +71,20 @@ function attachListeners(){
     console.log(q)
     // debugger
    $("#" + q).click((e) =>{
+
+     let url = this.attributes.href.textContent
+     console.log(url)
+     debugger
+     $.get(url, function(data){
+       $('.page-body').empty()
+       let quizPage = data
+       debugger
+       $('.page-body').append(quizPage.name + quizPage.games[0].score)
+       let source = $("#quiz-form-template")
+       let template = Handlebars.compile(source)
+       let conext = {name: quizPage.name}
+       let html = template(context)
+     })
      alert('getting damn close')
      e.preventDefault();
    })
