@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :handelbars, only: :index
   root 'home#index'
   get "games/games_score", to: 'games#games_score'
   resources :users, only: [:new, :create, :index, :show]
