@@ -78,11 +78,13 @@ function attachListeners(){
      $.get(url, function(data){
        $('.page-body').empty()
        let quizPage = data
+       let quizName = quizPage.name
        debugger
-       $('.page-body').append(quizPage.name + quizPage.games[0].score)
-       let source = $("#quiz-form-template")
+       // $('.page-body').append(quizPage.name + quizPage.games[0].score)
+
+       let source = $("#quiz-form-template")[0].innerHTML
        let template = Handlebars.compile(source)
-       let conext = {name: quizPage.name}
+       let context = {name: "name"}
        let html = template(context)
      })
      alert('getting damn close')
