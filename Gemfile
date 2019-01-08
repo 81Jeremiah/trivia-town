@@ -42,14 +42,15 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
-gem 'handlebars_assets'
+# gem 'handlebars_assets'
 
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'database_cleaner'
 gem 'dynamic_form'
 gem 'active_model_serializers'
-gem 'handlebars', '~> 0.8.0'
+# gem 'handlebars', '~> 0.8.0'
+gem 'handlebars-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
