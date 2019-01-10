@@ -3,12 +3,13 @@ $(document).ready(function() {
 });
 
 function attachListeners(){
-
-  $('form[id=new_quiz]').submit((e) => {
+  $( document ).delegate('form[id=quiz-form]', "submit", function(e){
+  // $('form[id=quiz-form]').submit((e) => {
 
     e.preventDefault();
 
-    var values = $(e.currentTarget).serialize();
+    var values = $(this).serialize();
+    debugger
     var posting = $.post('/quizzes', values);
 
     posting.done(function(data) {
@@ -100,12 +101,21 @@ function attachListeners(){
   //
   // })
 
+  $('#create-quiz').click((e) =>{
+    loadQuizForm()
+    e.preventDefault()
+  })
 }
 
+function loadQuizForm() {
 
-  $("#link-this").click((e) =>{
-    alert('work mother flower')
-  })
+   let source = document.getElementById("quiz-form-template").innerHTML
+   let template = Handlebars.compile(source)
+   let context = {}
+   let html = template(context)
+   $('.page-body').empty()
+   $('.page-body').append(html)
+}
 
 
 // def show
