@@ -3,14 +3,16 @@ $(document).ready(function() {
 });
 
 function attachListeners(){
-  $( document ).delegate('form[id=quiz-form]', "submit", function(e){
-  // $('form[id=quiz-form]').submit((e) => {
+  $( document ).delegate('form[id=new_quiz]', "submit", function(e){
 
+  // $('form[id=new_quiz]').submit((e) => {
+     alert('is this working?')
     e.preventDefault();
 
     var values = $(this).serialize();
     debugger
     var posting = $.post('/quizzes', values);
+    debugger
 
     posting.done(function(data) {
       $('#quiz-form').empty()
@@ -102,7 +104,11 @@ function attachListeners(){
   // })
 
   $('#create-quiz').click((e) =>{
-    loadQuizForm()
+    // loadQuizForm()
+    $.get('quizzes/new', function(data){
+      let html = data
+      $('.page-body').html(html)
+    })
     e.preventDefault()
   })
 }
