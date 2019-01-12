@@ -1,28 +1,32 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <tr>
-      <td><strong>Quiz Name</strong></td>
-      <td><strong>Quiz Created By:</strong></td>
-      <td><strong>Top Score</strong></td>
-    </tr>
-    <% @quizzes.each do |quiz| %>
+  <table class="table list-quizzes">
+    <thead>
       <tr>
-
-        <td><%= link_to quiz.name, quiz_path(quiz) %></td>
-        <td><%= quiz.user.username %></td>
-            <% if  Game.top_score(quiz).first %>
-                        <!-- top score for game -->
-              <td> <%= Game.top_score(quiz).first.score %></td> 
-            <% else %>
-               <td>This Game Hasn't Been Played </td>
-            <% end %>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><strong>Quiz Name</strong></td>
+        <td><strong>Quiz Created By:</strong></td>
+        <td><strong>Top Score</strong></td>
+      </tr>
+      <div class="list-quizzes">
+      <% @quizzes.each do |quiz| %>
+        <tr>
+
+          <td><%= link_to quiz.name, quiz_path(quiz), class: "indv-quiz", id: "quiz-#{quiz.id}" %></td>
+          <td><%= quiz.user.username %></td>
+              <% if  Game.top_score(quiz).first %>
+                          <!-- top score for game -->
+                <td> <%= Game.top_score(quiz).first.score %></td>
+              <% else %>
+                 <td>This Game Hasn't Been Played </td>
+              <% end %>
+
+        </tr>
+      </div>
+      <% end %>
+    </tbody>
+  </table>

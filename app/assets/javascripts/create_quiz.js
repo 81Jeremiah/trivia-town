@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    attachListeners();
+$( document ).on('turbolinks:load', function(){
+      attachListeners();
 });
 
 function attachListeners(){
@@ -58,18 +58,21 @@ function attachListeners(){
   })
 
   $('.all-quizzes').click((e) =>{
+    alert('was this clicked?')
     $('.page-body').empty()
 
     $.get("/quizzes", function(data){
-      data.forEach((e)=> {
-      $('.page-body').append(`<p><a class="list-quizzes" id="quiz-${e.id}" href='/quizzes/${e.id}'>${e.name}</a> <br> ${e.games.length} </p>`);
-      })
+      $('.page-body').html(data)
+      // data.forEach((e)=> {
+      // $('.page-body').append(`<p><a class="list-quizzes" id="quiz-${e.id}" href='/quizzes/${e.id}'>${e.name}</a> <br> ${e.games.length} </p>`);
+      // })
     })
     e.preventDefault();
   })
 
   // $("#quiz-1").on('click', function(e){
-  $( document ).delegate('.list-quizzes', "mouseover", function(e){
+  $( document ).delegate('.indv-quiz', "mouseover", function(e){
+  // $('.indv-quiz').on("mouseover", function(e) {
     let q = this.id
     console.log(q)
     // debugger
@@ -77,18 +80,21 @@ function attachListeners(){
 
      let url = this.attributes.href.textContent
      console.log(url)
-     debugger
+      $('.page-body').empty()
+
      $.get(url, function(data){
-       $('.page-body').empty()
+
+
+
        let quizPage = data
        let quizName = quizPage.name
-       debugger
+       $('.page-body').html(quizPage)
        // $('.page-body').append(quizPage.name + quizPage.games[0].score)
-
-       let source = $("#quiz-form-template")[0].innerHTML
-       let template = Handlebars.compile(source)
-       let context = {name: "name"}
-       let html = template(context)
+       //
+       // let source = $("#quiz-form-template")[0].innerHTML
+       // let template = Handlebars.compile(source)
+       // let context = {name: "name"}
+       // let html = template(context)
      })
      alert('getting damn close')
      e.preventDefault();
