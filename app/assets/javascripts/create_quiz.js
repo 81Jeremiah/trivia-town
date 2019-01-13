@@ -118,6 +118,24 @@ function attachListeners(){
     })
     e.preventDefault()
   })
+
+  $('#load-games').click((e) =>{
+    // alert("whats up cheif")
+    $.get('/users/games_users_played', function(games){
+      $('#games-played').html(games)
+    })
+      $('#games-played').toggle();
+    e.preventDefault()
+  })
+
+  $('#load-quizzes-created').click((e) => {
+    $.get('users/quizzes_user_created', function(createdQuizzes){
+      $('#quizzes-created').html(createdQuizzes)
+
+    })
+    $('#quizzes-created').toggle();
+    e.preventDefault()
+  })
 }
 
 function loadQuizForm() {

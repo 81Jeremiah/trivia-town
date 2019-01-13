@@ -1,2 +1,19 @@
-<h1>Welcome Home</h1>
-<%= link_to "all quizzes", quizzes_path, class: "all-quizzes" %>
+
+<div class="center">
+<h1>Welcome <%= @user.username %></h1>
+
+<h3> Would you like to?</h3>
+  <%= link_to "Create a new quiz", new_quiz_path , class: "btn btn-primary btn-light"%>
+  <%= link_to "Take a quiz", quizzes_path, class: "all-quizzes btn btn-primary btn-light" %>
+
+
+<h2><%= @user.username %> has played these games! </h2>
+<a id="load-games" href = 'users/games_users_played'> load games</a>
+  <div id="games-played"></div>
+</div>
+
+<div class="center">
+<h2><%= @user.username %> has created these quizzes! </h2>
+<a id="load-quizzes-created" href="#"> load quizzes you've created</a>
+  <div id="quizzes-created"> </div>
+</div>

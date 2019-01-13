@@ -24,6 +24,14 @@ def create
 
 end
 
+def games_users_played
+  render 'users/games_users_played', layout: false
+end
+
+def games_user_created
+  render 'users/quizzes_user_created', layout: false
+end
+
 private
   def user_params
     params.require(:user).permit(:username, :email, :password)
