@@ -43,7 +43,8 @@ function attachListeners(){
       // Replace text of body-id div
      // let name = data["0"].name
      data.forEach((e)=> {
-     $('.page-body').append(`<p><a href='/quizzes/${e.id}'>${e.name}</a> <br> ${e.games.length} </p>`);
+       quiz = new Quiz(e)
+     $('.page-body').append('<p>' + quiz.createLi() + '</p>');
    });
 
     });
@@ -129,6 +130,23 @@ function loadQuizForm() {
    $('.page-body').append(html)
 }
 
+class Quiz {
+  constructor(quizJson) {
+    this.name = quizJson.name
+
+    this.id = quizJson.id
+    this.userName = quizJson.user.username
+    this.userId = quizJson.user_id
+    this.scores = quizJson.games.map((game) => game.score)
+    this.highScore = this.scores.length === 0 ? 0 :  Math.max.apply(null,this.scores)
+    // this.highScore = 0 || Math.max.apply(null,this.scores)
+
+   }
+
+   createLi() {
+     return `Quiz Name: <a href="quizzes/${this.id}">${this.name} </a> Created By: <a href="users/${this.userId}"> ${this.userName} </a> High Score: ${this.highScore}`
+   }
+}
 
 // def show
 //   category = Category.find_by_name(params[:category])
