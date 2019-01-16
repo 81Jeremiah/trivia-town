@@ -18,7 +18,11 @@ function attachListeners(){
         let quiz = new Quiz(data)
         quiz.createHtmlForQuizName()
         quiz.createHtmlForCategories()
-        quiz.createHtmlForQuestionsAndAnswers()
+        quiz.createHtmlForQuestionsAndAnswers().forEach(function(html){
+          return html
+        })
+
+        quiz.addLinks()
         //  debugger
         // var quiz = data;
         //  $("#quizName").text(quiz["name"]);
@@ -197,21 +201,34 @@ class Quiz {
    createHtmlForQuizName(){
      return  $("#quizName").text(`Quiz Name: ${this.name}`);
    }
+
    createHtmlForCategories(){
-     let listEach = () => {
-       this.categories.forEach((category) => {
-         category + '&nbsp'
-       })
-     }
-     return $('#categories').text(`Categories: ${listEach()}`)
-     }
+       let categories = this.categories
+
+     return $('#categories').text(`Categories: ${categories}`)
+    }
 
    createHtmlForQuestionsAndAnswers(){
-     let i = 0
-     for (i = 0; i < this.questionAndAnwers.length; i++) {
-       return $(`#question${i+1}`).text(this.questionAndAnwers[i][0]);
-              $(`#answer${i+1}`).text(this.questionAndAnwers[i][1])
-     }
+     // let i = 0
+     // for (i = 0; i < this.questionAndAnwers.length; i++) {
+     //       let answer = this.questionAndAnwers[i]["question"]
+     //   debugger
+       let qa = this.questionAndAnwers
+       let qaArray = []
+       qa.forEach(function (object) {
+         let idNum = qa.indexOf(object) + 1
+         let questionHtml = $('#question'+ idNum).text(`Question: ${object.question}`)
+         let answerHtml = $('#answer' +idNum).text(`Answer: ${object.answer}`)
+         qaArray.push(question1,answerHtml)
+     })
+     return qaArray
+     //   return $(`#question${i+1}`).text(this.questionAndAnwers[i]["question"]);
+     //          $(`#answer${i+1}`).text(this.questionAndAnwers[i]["answer"])
+      // }
+   }
+
+   addLinks(){
+     $('footer').html(`<a href='/quizzes/${this.id}/edit'> Edit</a>   <a href='/quizzes'> Quizzes</a>`)
    }
  }
 
