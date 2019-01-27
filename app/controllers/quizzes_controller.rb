@@ -5,6 +5,7 @@ class QuizzesController < ApplicationController
 
   def index
     @quizzes = Quiz.all
+
     respond_to do |format|
       format.html { render :index }
       format.json { render json: @quizzes, status: 200}
@@ -21,7 +22,11 @@ class QuizzesController < ApplicationController
   end
 
   def show
-    # render json: @quiz, status: 200
+    respond_to do |format|
+      format.html { render :show, :layout => false }
+      format.json { render json: @quiz, status: 200}
+    end
+
 
   end
 
@@ -29,14 +34,13 @@ class QuizzesController < ApplicationController
   def create
   	@quiz = Quiz.new(quiz_params)
     @quiz.user_id = current_user.id
+    if
     @quiz.save
-    render json: @quiz, status: 201
-     # if
-     #   @quiz.save
-     #   redirect_to quiz_path(@quiz)
-     # else
-     #   render :new
-     # end
+      render json: @quiz, status: 201
+  
+      else
+       render :new
+     end
    end
 
   def edit
