@@ -7,7 +7,5 @@ class CategoriesController < ApplicationController
 
      @quizzes = Quiz.by_category(category.name)
      render json: @quizzes, status: 200
+    end
   end
-  end
-
-end
