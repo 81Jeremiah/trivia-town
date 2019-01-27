@@ -7,12 +7,12 @@ class SessionsController < ApplicationController
     if auth_hash
       @user = facebook_login
       session[:user_id] = @user.id
-      redirect_to @user
+      redirect_to root_path
     else
       @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
           session[:user_id] = @user.id
-          redirect_to @user
+          redirect_to root_path
         else
           flash[:message]="Incorrect email or password. Please try again."
           render :new
