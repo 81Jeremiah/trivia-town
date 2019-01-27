@@ -135,8 +135,7 @@ class Quiz {
      return qaArray
 
    }
-
    addLinks(){
-     $('footer').html(`<a href='/quizzes/${this.id}/edit'> Edit</a>   <a href='/quizzes'> Quizzes</a>`)
+     $('footer').html(`<button type="button" class="btn btn-outline-primary"><a href='/quizzes/${this.id}/edit'>Edit</a></button>    <button type="button" class="btn btn-outline-primary">  <a href='/quizzes'> Quizzes</a></button>`)
    }
  }

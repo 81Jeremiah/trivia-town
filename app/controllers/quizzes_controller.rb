@@ -23,7 +23,7 @@ class QuizzesController < ApplicationController
 
   def show
     respond_to do |format|
-      format.html { render :show, :layout => false }
+      format.html { render :show }
       format.json { render json: @quiz, status: 200}
     end
 
@@ -37,7 +37,7 @@ class QuizzesController < ApplicationController
     if
     @quiz.save
       render json: @quiz, status: 201
-  
+
       else
        render :new
      end

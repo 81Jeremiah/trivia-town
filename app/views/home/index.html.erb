@@ -1,19 +1,36 @@
+<div class="welcome-page">
+  <div class="center">
+  <h1>Welcome <%= @user.username %></h1>
 
-<div class="center">
-<h1>Welcome <%= @user.username %></h1>
-
-<h3> Would you like to?</h3>
-  <%= link_to "Create a new quiz", new_quiz_path , class: "btn btn-primary btn-light"%>
-  <%= link_to "Take a quiz", quizzes_path, class: "all-quizzes btn btn-primary btn-light" %>
+  <h3> Would you like to?</h3>
+    <%= link_to "Create a new quiz", new_quiz_path , class: "btn btn-primary btn-light"%>
+    <%= link_to "Take a quiz", quizzes_path, class: "all-quizzes btn btn-primary btn-light" %>
 
 
-<h2><%= @user.username %> has played these games! </h2>
-<a id="load-games" href = 'users/games_users_played'> load games</a>
-  <div id="games-played"></div>
+  <h2><%= @user.username %> has played these games! </h2>
+<button type="button" id="load-games" class="btn btn-outline-primary"><a  href = '/users/games_users_played'> Load games</a></button>
+    <div id="games-played"></div>
+  </div>
+
+  <div class="center">
+  <h2><%= @user.username %> has created these quizzes! </h2>
+  <button type="button" id="load-quizzes-created" class="btn btn-outline-primary"><a  href="/users/quizzes_user_created"> Load Quizzes You've Created</a> </button>
+    <div id="quizzes-created"> </div>
+  </div>
 </div>
 
-<div class="center">
-<h2><%= @user.username %> has created these quizzes! </h2>
-<a id="load-quizzes-created" href="#"> load quizzes you've created</a>
-  <div id="quizzes-created"> </div>
-</div>
+<table class="table list-quizzes">
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id='quiz-name'><strong></strong></td>
+      <td id= 'created-by'><strong></strong></td>
+      <td id= 'top-score'><strong></strong></td>
+    </tr>
+
+  </tbody>
+</table>
