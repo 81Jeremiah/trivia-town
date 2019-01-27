@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   resources :handelbars, only: :index
   root 'home#index'
   get "games/games_score", to: 'games#games_score'
-  get 'users/games_users_played', to: 'users#games_users_played'
-  get 'users/quizzes_user_created', to: 'users#quizzes_user_created'
+  get '/users/games_users_played', to: 'users#games_users_played'
+  get '/users/quizzes_user_created', to: 'users#quizzes_user_created'
 
 
   resources :users, only: [:new, :create, :index, :show]
