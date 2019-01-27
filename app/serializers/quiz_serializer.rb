@@ -5,7 +5,5 @@ class QuizSerializer < ActiveModel::Serializer
   has_many :question_and_answers, include_nested_associations: true
   has_many :quiz_categories
   has_many :categories, through: :quiz_categories
-  has_many :comments
-  has_many :users, through: :comments
   has_many :users, through: :games
 end
