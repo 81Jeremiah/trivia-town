@@ -6,17 +6,42 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
+  <header>
+    <!-- load navbar partial-->
+    <%= render "layouts/navbar" %>
+
+
+  </header>
+
   <body>
+    <div class="page-body">
+  <!-- content -->
+    <div class="center">
+      <div id="createdQuiz">
+        <h2 id="quizName"></h2>
+        <p id="categories"></p>
+        <p id="question1"></p>
+        <p id="answer1"></p>
+        <p id="question2"></p>
+        <p id="answer2"></p>
+        <p id="question3"></p>
+        <p id="answer3"></p>
+        <p id="question4"></p>
+        <p id="answer4"></p>
+        <p id="question5"></p>
+        <p id="answer5"></p>
 
-<!-- load navbar partial-->
-<%= render "layouts/navbar" %>
+   <footer></footer>
+    </div>
+  </div>
+</div>
 
-<!-- content -->
-<div class="container"  role="main">
     <%= yield %>
-
   </body>
 </html>
