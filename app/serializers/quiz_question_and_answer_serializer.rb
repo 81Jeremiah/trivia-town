@@ -1,3 +1,3 @@
-class QuizQuestionAndAnswerSerializer < ActiveModel::Serializer
-   attributes :name
-end
+# class QuizQuestionAndAnswerSerializer < ActiveModel::Serializer
+#    attributes :question, :answer, :id
+# end
