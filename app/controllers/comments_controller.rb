@@ -8,7 +8,8 @@ class CommentsController < ApplicationController
      @comment = @quiz.comments.build(comment_params)
      @comment.user = current_user
      @comment.save
-     redirect_to @quiz
+     render json: @comment, status: 201
+     # redirect_to @quiz
    end
   end
 
