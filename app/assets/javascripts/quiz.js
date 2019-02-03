@@ -23,7 +23,8 @@ function attachListeners(){
     })
   })
 //use Ajax and JS to select category without loading the page
-  $('#category').change(() =>{
+$( document ).delegate('#category', "change",() =>{
+
     $('.list-quizzes').empty()
     $('.list-quizzes').append('<tbody><tr><td>Quiz Name</td><td>Created By</td><td>The Top Score</td></tr></tbody>')
 
@@ -38,6 +39,11 @@ function attachListeners(){
 //load the quizzes index page and inject into a table
   $('.all-quizzes').click((e) =>{
     $('.welcome-page').hide()
+//search only loads with index page
+    $.get("/categories/searchbar", function(searchbar){
+        $('.category-filter').html(searchbar)
+
+    })
     $('#quiz-name').text('Quiz Name')
     $('#created-by').text('Created By')
     $('#top-score').text('The Top Score')

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/users/games_users_played', to: 'users#games_users_played'
   get '/users/quizzes_user_created', to: 'users#quizzes_user_created'
   get '/quizzes/comment_form', to: 'quizzes#comment_form'
+  get '/quizzes/categories', to: 'categories#index'
+  get '/categories/searchbar', to: 'categories#searhBar'
 
   resources :quizzes
 
