@@ -26,6 +26,8 @@ Challenge friends, make new friends and learn some things along the way.
 * Bootstrap-sass - theme heavily inspired by Flatiron School's Amusement Park lesson
 * Omniauth
 * Ruby '2.3.3'
+* JavaScript/Jquery
+
 
 
 ## Contributing
