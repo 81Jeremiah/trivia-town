@@ -4,23 +4,24 @@ Rails.application.routes.draw do
   get "games/games_score", to: 'games#games_score'
   get '/users/games_users_played', to: 'users#games_users_played'
   get '/users/quizzes_user_created', to: 'users#quizzes_user_created'
+  get '/quizzes/comment_form', to: 'quizzes#comment_form'
 
+  resources :quizzes
 
   resources :users, only: [:new, :create, :index, :show]
 
   get "quizzes/top_quizzes", to: 'quizzes#top_quizzes'
 
+  resources :quizzes, only: :index do
+    resources :categories, path: "/", :only => [:index, :show]
+  end
 
-
-  resources :quizzes
 
   resources :quizzes, only: :show do
   	resources :games, only: [:new, :show]
   end
 
-  resources :quizzes, only: :index do
-    resources :categories, path: "/", :only => [:index, :show]
-  end
+
 
   resources :quizzes, only: :show do
     resources :comments, only: :create
