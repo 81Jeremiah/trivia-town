@@ -7,8 +7,8 @@ function attachListeners(){
   $( document ).delegate('form[id=new_quiz]', "submit", function(e){
 
     e.preventDefault();
-    var values = $(this).serialize();
-    var posting = $.post('/quizzes', values);
+    let values = $(this).serialize();
+    let posting = $.post('/quizzes', values);
 
     posting.done(function(data) {
       $('#quiz-form').empty()
@@ -51,21 +51,21 @@ function attachListeners(){
     })
     e.preventDefault();
   })
-  // go to the quiz show page my mousing over link
-  $( document ).delegate('.indv-quiz', "mouseover", function(e){
-    let q = this.id
-    console.log(q)
-   $("#" + q).click((e) =>{
-     let url = this.attributes.href.textContent
-      $('.page-body').empty()
-        $.get(url, function(data){
-           let quizPage = data;
-           let quizName = quizPage.name;
-           $('.page-body').html(quizPage);
-        })
-     e.preventDefault();
-   })
-})
+  // go to the quiz show page my mousing over link -new feature - working on
+//   $( document ).delegate('.indv-quiz', "mouseover", function(e){
+//     let q = this.id
+//     console.log(q)
+//    $("#" + q).click((e) =>{
+//      let url = this.attributes.href.textContent
+//       $('.page-body').empty()
+//         $.get(url, function(data){
+//            let quizPage = data;
+//            let quizName = quizPage.name;
+//            $('.page-body').html(quizPage);
+//         })
+//      e.preventDefault();
+//    })
+// })
 //load all the games a use has played on the home page
   $('#load-games').click((e) => {
     $.get('/users/games_users_played', function(games){
@@ -92,6 +92,8 @@ function attachListeners(){
     $('#quizzes-created').hide();
     e.preventDefault();
   });
+
+
 }
 //quiz class with contructors to build out quiz objects and call functions
 class Quiz {
