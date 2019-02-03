@@ -1,6 +1,6 @@
-
-<% if params[:id].to_i == current_user.id %>
 <div class="center">
+<% if params[:id].to_i == current_user.id %>
+
 <h1>Welcome <%= @user.username %></h1>
 
 <h3> Would you like to?</h3>
@@ -9,10 +9,18 @@
 <% end %>
 
 <h2><%= @user.username %> has played these games! </h2>
-</div>
-<%= render 'games_users_played' %>
 
-<div class="center">
+<button type="button" id="load-games" class="btn btn-outline-primary"><a  href = '/users/games_users_played'> Load games</a></button>
+  <div id="games-played"></div>
+
+
+
 <h2><%= @user.username %> has created these quizzes! </h2>
-</div>
-<%= render 'quizzes_user_created' %>
+
+<button type="button" id="load-quizzes-created" class="btn btn-outline-primary"><a  href="/users/quizzes_user_created"> Load Quizzes Created</a> </button>
+  <div id="quizzes-created"> </div>
+
+
+
+<%= link_to "See All Quizzes", quizzes_path, class: "btn btn-primary btn-light" %>
+</div
