@@ -26,8 +26,6 @@ class QuizzesController < ApplicationController
       format.html { render :show }
       format.json { render json: @quiz, status: 200}
     end
-
-
   end
 
 
@@ -59,6 +57,10 @@ class QuizzesController < ApplicationController
     redirect_to user_path(User.find(session[:user_id]))
   end
 
+ def comment_form
+   @quiz = Quiz.find_by(id: params[:quiz_id])
+   render 'quizzes/comment_form', layout: false
+ end
 
 
   private
