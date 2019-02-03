@@ -1,3 +1,10 @@
+<div class="category-filter">
+<%= form_tag("/quizzes/categories/:id", method: "get") do %>
+  <%= select_tag "category", options_from_collection_for_select(Category.all, "name", "name"), include_blank: "All" %>
+
+<% end %>
+</div>
+
 <div class="welcome-page">
   <div class="center">
   <h1>Welcome <%= @user.username %></h1>
