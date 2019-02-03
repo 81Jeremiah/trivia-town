@@ -3,7 +3,19 @@
     <%= comment.content %></p>
   <% end %></p>
 
+<div class="new-comment-form"></div>
 <%= form_for [@quiz, @quiz.comments.build] do |f| %>
   <%= f.text_area :content %>
   <%= f.button :submit,class: "btn btn-primary btn-light" %>
 <% end %>
+
+<main id="main"></main>
+<script id="comment-form" type="text/x-handlebars-template">
+  <form id="comment-form" onsubmit="{{submitAction}};return false;">
+  Comment: <input id="new-comment" type="text" value="{{comment}}"><br>
+
+  <input type="submit" value= "Comment">
+    </form>
+</script>
+
+<div class="comment-list"> </div>
