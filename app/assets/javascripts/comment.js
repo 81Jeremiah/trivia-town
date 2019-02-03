@@ -1,6 +1,6 @@
 //add comment form to page
 $( document ).ready(() => {
-  $("#add-comment").click((e) => {
+  $( document ).delegate("#add-comment", "click", (e) => {
     $.get(e.target.href,(data) =>{
       $(".new-comment-form").html(data)
     })
