@@ -17,5 +17,4 @@
 //= require bootstrap-sprockets
 //= require_tree .
 //= require quiz
-//= handelbars-form
 //= require comment
