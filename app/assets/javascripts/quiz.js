@@ -23,7 +23,7 @@ function attachListeners(){
     })
   })
 //use Ajax and JS to select category without loading the page
-$( document ).delegate('#category', "change",() =>{
+$( document ).delegate('#category', "change",() => {
 
     $('.list-quizzes').empty()
     $('.list-quizzes').append('<tbody><tr><td>Quiz Name</td><td>Created By</td><td>The Top Score</td></tr></tbody>')
@@ -49,8 +49,8 @@ $( document ).delegate('#category', "change",() =>{
     $('#top-score').text('The Top Score')
 
     $.get("/quizzes.json", function(quizzes){
-      quizzes.forEach((e)=> {
-        quiz = new Quiz(e)
+      quizzes.forEach((e) => {
+       const quiz = new Quiz(e)
 
       $('.list-quizzes tr:last').after(quiz.createTr())
       })
@@ -99,9 +99,26 @@ $( document ).delegate('#category', "change",() =>{
     e.preventDefault();
   });
 
+  $('#load-quiz').click((e) => {
+    quizUrl = e.currentTarget.href
+   $.get(quizUrl + ".json", (quiz) => {
+
+     const loadedQuiz = new Quiz(quiz)
+     const name = loadedQuiz.createHtmlForQuizName();
+     const categories= loadedQuiz.createHtmlForCategories();
+     const sorted = loadedQuiz.sortByAnswer()
+     const qaOrdered = sorted.forEach(function(html){
+       return html
+     });
+     debugger
+     $("body").append(name, categories, qaOrdered)
+   } )
+
+    e.preventDefault();
+  })
 
 }
-//quiz class with contructors to build out quiz objects and call functions
+//quiz class with contructors to build out quiz objects and call methods
 class Quiz {
   constructor(quizJson) {
     this.name = quizJson.name
@@ -146,4 +163,23 @@ class Quiz {
    addLinks(){
      $('footer').html(`<button type="button" class="btn btn-outline-primary"><a href='/quizzes/${this.id}/edit'>Edit</a></button>    <button type="button" class="btn btn-outline-primary">  <a href='/quizzes'> Quizzes</a></button>`)
    }
- }
+
+   sortByAnswer() {
+     const sortedArray = this.questionAndAnwers.sort((a,b) => {
+       if(a.answer > b.answer) {
+         1
+       }else {
+         -1
+       }
+     })
+     const qaArray = []
+     sortedArray.forEach(function (object) {
+       let idNum = sortedArray.indexOf(object) + 1
+       let questionHtml = $('#question'+ idNum).text(`Question: ${object.question}`)
+       let answerHtml = $('#answer' +idNum).text(`Answer: ${object.answer}`)
+       qaArray.push(question1,answerHtml)
+
+     })
+     return qaArray
+  }
+}

@@ -26,7 +26,8 @@
     <%=link_to "TAKE THIS QUIZ?",  new_quiz_game_path(@quiz.id), class: "btn btn-success btn-lg" %> <h3>
 </div>
 <% end %>
-
+<%= link_to "load quiz", quiz_path(@quiz),id: "load-quiz" %>
+<div class="ordered-quiz"></div>
 <h2>Top Scores:</h2>
 <%= render 'top_score_table' %>
 
